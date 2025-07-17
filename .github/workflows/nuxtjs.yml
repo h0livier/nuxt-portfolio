@@ -59,6 +59,8 @@ jobs:
           #
           # You may remove this line if you want to manage the configuration yourself.
           static_site_generator: nuxt
+      - name: Inject baseURL for GitHub Pages
+        run: echo "NUXT_APP_BASE_URL=/${{ github.event.repository.name }}/" >> $GITHUB_ENV
       - name: Restore cache
         uses: actions/cache@v4
         with:
