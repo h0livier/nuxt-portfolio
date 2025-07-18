@@ -2,12 +2,12 @@
 import type { Place, WorkPlace } from '~/types'
 
 const experiences: WorkPlace[] = [
-    { name: 'Wavenet', description: "Développement et maintenance d'applications Web.", date: "Depuis mars 2022", title: 'Analyste développeur .NET' },
-    { name: 'Easi', description: "Développement et maintenance d'outils visant à améliorer et simplifier la gestion du cloud SaaS d'Adfinity. Création d'applications spécifiques web et desktop", date: "Septembre 2022 - Mars 2024", title: 'Software Developer | DevOps' },
-    { name: 'Université Libre de Bruxelles', description: "Développements orientés technologies Web, améliorations d'intranet, extranet, bases de données, outils existants concernant la gestion et la valorisation de la Recherche menée au sein de l'Université.", date: "Février 2022 - Mai 2022", title: 'Développeur Web Stagiaire' },
+    { name: 'Wavenet', description: "Building and maintaining robust web applications with .NET Core, TypeScript (React/Next.js), and Azure. Focusing on scalability, performance, and clean architecture.", date: "Since march 2022", title: '.NET Analyst Developer' },
+    { name: 'Easi', description: "Development and maintenance of tools aimed at improving and simplifying the management of Adfinity's SaaS cloud. Built tailored web and desktop applications to meet specific business needs.", date: "September 2022 - March 2024", title: 'Software Developer | DevOps' },
+    { name: 'Free University of Brusells', description: "Focused on web technologies to enhance intranet, extranet, databases, and internal tools supporting the management and promotion of research activities within the University.", date: "February 2022 - May 2022", title: 'Web Developer Intern' },
 ]
 const educations: Place[] = [
-    { name: 'Haute école en Hainaut', description: "Bachelier en Informatique et Systèmes orientation télécommunications et réseaux", date: "2019 - 2022" }
+    { name: 'Haute école en Hainaut', description: "Bachelor’s Degree in Computer Science and Systems, specializing in Telecommunications and Networks", date: "2019 - 2022" }
 ]
 
 </script>
@@ -23,9 +23,11 @@ const educations: Place[] = [
                         class="max-w-[200px] lg:max-w-[275px] rounded-lg shadow-2xl lg:me-10" />
                     <div class="max-w-md">
                         <h1 class="text-5xl font-bold">Hi, I'm Olivier 👋</h1>
-                        <p class="py-6">
-                            Full Stack Web Developer with {{ new Date().getFullYear() - new Date(2022, 9, 22).getFullYear() }} years of web experience. 
-                        </p>
+                        <div class="py-6 text-justify">
+                            I'm a Software Developer with hands-on experience in full-stack web development for over  {{ new Date().getFullYear() - new Date(2022, 9, 22).getFullYear() }} years
+                            My current stack includes <div class="badge badge-soft badge-primary">TypeScript</div> with Next.js or Nuxt on the front end, and <div class="badge badge-soft badge-primary">.NET Core</div> on the back end.
+                            <br />In my free time, I enjoy socializing with friends over a drink and tinkering with my home automation setup.
+                        </div>
                         <PrintButton></PrintButton>
                     </div>
                 </div>
