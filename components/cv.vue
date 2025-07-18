@@ -7,16 +7,16 @@ interface CVProps{
 }
 const props = defineProps<CVProps>()
 
-const educations = ref(props.educations)
-const experiences = ref(props.experiences)
+const educations = props.educations
+const experiences = props.experiences
 const contacts = ref<ListOption[]>([
-    { name: 'Téléphone', value: '+32471646015' },
-    { name: 'Email', value: 'olivier.hayot.dev@gmail.com' },
-    { name: 'Site Web', value: 'https://olivier.hayot.cloud' },
+    { name: 'Phone number', value: '+32471646015' },
+    { name: 'Mail', value: 'olivier.hayot.dev@gmail.com' },
+    { name: 'Website', value: 'https://olivier.hayot.cloud' },
 ])
 const languages = ref<ListOption[]>([
-    { name: "Français", value: 'C2' },
-    { name: "Anglais", value: 'B2' },
+    { name: "French", value: 'C2' },
+    { name: "English", value: 'B2' },
 ])
 </script>
 <template>
@@ -42,11 +42,8 @@ const languages = ref<ListOption[]>([
             </div>
             <div>
                 <h1>Olivier Hayot</h1>
-                <h2>Analyste Développeur</h2>
-                <p>Informaticien passionné par la programmation et l'univers du DevOps. Ma curiosité m'a conduit à
-                    explorer divers langages de programmation ainsi que des outils d'automatisation et de gestion des
-                    infrastructures. J'apprécie particulièrement les défis techniques et la recherche de solutions
-                    efficaces pour optimiser les processus de développement.</p>
+                <h2>.NET Analyst Developer</h2>
+                <p>IT enthusiast passionate about programming and the world of DevOps. My curiosity has led me to explore various programming languages as well as automation and infrastructure management tools. I particularly enjoy technical challenges and finding efficient solutions to optimize development processes.</p>
                 <div>
                     <h3>Expériences</h3>
                     <div v-for="experience in experiences">
@@ -55,7 +52,6 @@ const languages = ref<ListOption[]>([
                         <p>{{ experience.title }}</p>
                         <p>{{ experience.description }}</p>
                     </div>
-                    <h4>Compétences</h4>
                 </div>
             </div>
         </div>
