@@ -1,5 +1,18 @@
+<script setup lang="ts">
+import type { Place, WorkPlace } from '~/types'
+
+const experiences: WorkPlace[] = [
+    { name: 'Wavenet', description: "Développement et maintenance d'applications Web.", date: "Depuis mars 2022", title: 'Analyste développeur .NET' },
+    { name: 'Easi', description: "Développement et maintenance d'outils visant à améliorer et simplifier la gestion du cloud SaaS d'Adfinity. Création d'applications spécifiques web et desktop", date: "Septembre 2022 - Mars 2024", title: 'Software Developer | DevOps' },
+    { name: 'Université Libre de Bruxelles', description: "Développements orientés technologies Web, améliorations d'intranet, extranet, bases de données, outils existants concernant la gestion et la valorisation de la Recherche menée au sein de l'Université.", date: "Février 2022 - Mai 2022", title: 'Développeur Web Stagiaire' },
+]
+const educations: Place[] = [
+    { name: 'Haute école en Hainaut', description: "Bachelier en Informatique et Systèmes orientation télécommunications et réseaux", date: "2019 - 2020" }
+]
+
+</script>
 <template>
-    <Cv />
+    <Cv :experiences="experiences" :educations="educations" />
     <div class="min-h-screen print:hidden">
         <p><a href="mailto:olivier.hayot.dev@gmail.com">olivier.hayot.dev@gmail.com</a></p>
         <div class="hero min-h-[80vh]">

@@ -1,33 +1,22 @@
 <script setup lang="ts">
-interface ListOption {
-    name: string
-    value: string
-}
-interface Place {
-    name: string
-    description: string
-    date: string
-}
-interface WorkPlace extends Place {
-    title: string
-}
+import type { ListOption, Place, WorkPlace } from '~/types'
 
+interface CVProps{
+    educations: Place[]
+    experiences: WorkPlace[]
+}
+const props = defineProps<CVProps>()
+
+const educations = ref(props.educations)
+const experiences = ref(props.experiences)
 const contacts = ref<ListOption[]>([
     { name: 'Téléphone', value: '+32471646015' },
     { name: 'Email', value: 'olivier.hayot.dev@gmail.com' },
     { name: 'Site Web', value: 'https://olivier.hayot.cloud' },
 ])
-const educations = ref<Place[]>([
-    { name: 'Haute école en Hainaut', description: "Bachelier en Informatique et Systèmes orientation télécommunications et réseaux", date: "2019 - 2020" }
-])
 const languages = ref<ListOption[]>([
     { name: "Français", value: 'C2' },
     { name: "Anglais", value: 'B2' },
-])
-const experiences = ref<WorkPlace[]>([
-    { name: 'Wavenet', description: "Développement et maintenance d'applications Web.", date: "Depuis mars 2022", title: 'Analyste développeur .NET' },
-    { name: 'Easi', description: "Développement et maintenance d'outils visant à améliorer et simplifier la gestion du cloud SaaS d'Adfinity. Création d'applications spécifiques web et desktop", date: "Septembre 2022 - Mars 2024", title: 'Software Developer | DevOps' },
-    { name: 'Université Libre de Bruxelles', description: "Développements orientés technologies Web, améliorations d'intranet, extranet, bases de données, outils existants concernant la gestion et la valorisation de la Recherche menée au sein de l'Université.", date: "Février 2022 - Mai 2022", title: 'Développeur Web Stagiaire' },
 ])
 </script>
 <template>
