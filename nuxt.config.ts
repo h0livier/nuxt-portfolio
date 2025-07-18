@@ -21,7 +21,7 @@ export default defineNuxtConfig({
       routes: [ '/', '/robots.txt']
     }
   },
-  ssr: false,
+  ssr: true,
   app: {
     buildAssetsDir: "assets"
   },
