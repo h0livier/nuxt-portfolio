@@ -9,6 +9,7 @@ export default defineNuxtConfig({
   },
   css: ["~/assets/app.css"],
   nitro: {
+    preset: 'static',
     prerender: {
       routes: [ '/robots.txt']
     }
