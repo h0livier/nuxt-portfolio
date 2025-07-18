@@ -12,7 +12,7 @@ const educations = ref(props.educations)
 const experiences = ref(props.experiences)
 </script>
 <template>
-    <h3>My Journey</h3>
+    <h2 class="text-2xl mb-10 mt-[10vh]">My Journey</h2>
     <ul class="timeline timeline-snap-icon timeline-compact timeline-vertical">
         <li v-for="experience in experiences">
             <hr class="bg-blue-500" />
@@ -23,11 +23,17 @@ const experiences = ref(props.experiences)
                         clip-rule="evenodd" />
                 </svg>
             </div>
-            <div class="timeline-end md:mb-10">
-                <time class="font-mono italic">{{ experience.date }}</time>
-                <div class="text-lg font-black">{{ experience.name }}</div>
-                <div class="text-sm italic mb-1">{{ experience.title }}</div>
-                {{ experience.description }}
+            <div class="timeline-end ms-10 md:mb-10 w-[100%]">
+                <div class="card">
+                    <div class="card-body px-5 py-1">
+                        <time class="font-mono italic">{{ experience.date }}</time>
+                        <div>
+                            <div class="text-lg font-black">{{ experience.name }}</div>
+                            <h3 class="text-sm italic mb-1">{{ experience.title }}</h3>
+                        </div>                       
+                        {{ experience.description }}
+                    </div>
+                </div>
             </div>
             <hr class="bg-blue-500" />
         </li>
@@ -40,12 +46,15 @@ const experiences = ref(props.experiences)
                         clip-rule="evenodd" />
                 </svg>
             </div>
-            <div class="timeline-end md:mb-10">
-                <time class="font-mono italic">{{ education.date }}</time>
-                <div class="text-lg font-black">{{ education.name }}</div>
-                {{ education.description }}
+            <div class="timeline-end ms-10 md:mb-10">
+                <div class="card">
+                    <div class="card-body px-5 py-1">
+                        <time class="font-mono italic">{{ education.date }}</time>
+                        <h3 class="text-lg font-black">{{ education.name }}</h3>
+                        {{ education.description }}
+                    </div>
+                </div>
             </div>
-            <hr class="bg-blue-500" />
         </li>
     </ul>
 </template>

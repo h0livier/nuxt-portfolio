@@ -21,11 +21,11 @@ export default defineNuxtConfig({
       routes: [ '/', '/robots.txt']
     }
   },
-  ssr: true,
+  ssr: false,
   app: {
     buildAssetsDir: "assets"
   },
   site: {
-    url: 'https://olivier.hayot.cloud'
+    url: 'http://localhost'
   }
 })
