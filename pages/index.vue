@@ -2,7 +2,7 @@
 import type { Place, WorkPlace } from '~/types'
 
 const experiences: WorkPlace[] = [
-    { name: 'Wavenet', description: "Building and maintaining robust web applications with .NET Core, TypeScript (React/Next.js), and Azure. Focusing on scalability, performance, and clean architecture.", date: "Since march 2022", title: '.NET Analyst Developer' },
+    { name: 'Wavenet', description: "Building and maintaining robust web applications with .NET Core, TypeScript (React/Next.js), and Azure. Focusing on scalability, performance, and clean code.", date: "Since march 2022", title: '.NET Analyst Developer' },
     { name: 'Easi', description: "Development and maintenance of tools aimed at improving and simplifying the management of Adfinity's SaaS cloud. Built tailored web and desktop applications to meet specific business needs.", date: "September 2022 - March 2024", title: 'Software Developer | DevOps' },
     { name: 'Free University of Brusells', description: "Focused on web technologies to enhance intranet, extranet, databases, and internal tools supporting the management and promotion of research activities within the University.", date: "February 2022 - May 2022", title: 'Web Developer Intern' },
 ]
@@ -12,8 +12,8 @@ const educations: Place[] = [
 
 </script>
 <template>
+    <Cv :experiences="experiences" :educations="educations" />
     <div class="flex justify-center">
-        <Cv :experiences="experiences" :educations="educations" />
         <div class="min-h-screen print:hidden max-w-[90vw] md:max-w-[75vw] lg:max-w-[60vw] xl:max-w-[50vw]">
             <p class="mt-10 lg:mt-20 mb-10"><a href="mailto:olivier.hayot.dev@gmail.com">olivier.hayot.dev@gmail.com</a></p>
             <div class="hero min-h-[80vh]">
