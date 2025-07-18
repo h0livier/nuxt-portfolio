@@ -24,5 +24,8 @@ export default defineNuxtConfig({
   ssr: false,
   app: {
     buildAssetsDir: "assets"
+  },
+  site: {
+    url: 'https://olivier.hayot.cloud'
   }
 })
