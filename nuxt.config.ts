@@ -10,16 +10,18 @@ export default defineNuxtConfig({
   css: ["~/assets/app.css"],
   postcss: {
     plugins: {
-      tailwindcss: {},
+      '@tailwindcss/postcss': {},
       autoprefixer: {},
     },
   },
   nitro: {
     preset: 'static',
     prerender: {
-      crawlLinks: true,
-      routes: [ '/robots.txt']
+      routes: [ '/', '/robots.txt']
     }
   },
   ssr: false,
+  app: {
+    buildAssetsDir: "assets"
+  }
 })
