@@ -15,12 +15,12 @@ const educations: Place[] = [
     <div class="flex justify-center">
         <Cv :experiences="experiences" :educations="educations" />
         <div class="min-h-screen print:hidden max-w-[90vw] md:max-w-[75vw] lg:max-w-[60vw] xl:max-w-[50vw]">
-            <p class="mt-20"><a href="mailto:olivier.hayot.dev@gmail.com">olivier.hayot.dev@gmail.com</a></p>
+            <p class="mt-10 lg:mt-20 mb-10"><a href="mailto:olivier.hayot.dev@gmail.com">olivier.hayot.dev@gmail.com</a></p>
             <div class="hero min-h-[80vh]">
                 <div class="hero-content lg:place-self-start lg:self-center flex-col lg:flex-row">
                     <img src="../assets/picture.jpg"
-                    alt="Développeur web full stack Olivier Hayot spécialisé Next.js .NET"
-                    class="max-w-[275px] rounded-lg shadow-2xl lg:me-10" />
+                        alt="Développeur web full stack Olivier Hayot spécialisé Next.js .NET"
+                        class="max-w-[200px] lg:max-w-[275px] rounded-lg shadow-2xl lg:me-10" />
                     <div class="max-w-md">
                         <h1 class="text-5xl font-bold">Hi, I'm Olivier 👋</h1>
                         <p class="py-6">
@@ -48,7 +48,7 @@ const educations: Place[] = [
                 </div>
             </div>
             <Timeline :experiences="experiences" :educations="educations" />
-            <div class="flex flex-col items-center gap-5 my-16">
+            <div class="flex flex-col items-center gap-5 my-20">
                 <h2 class="text-3xl">Want to get in touch ?</h2>
                 <p class=" text-xl">Reach out via the social links below.</p>
                 <p class="flex gap-4">

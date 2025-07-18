@@ -23,7 +23,7 @@ const experiences = ref(props.experiences)
                         clip-rule="evenodd" />
                 </svg>
             </div>
-            <div class="timeline-end ms-10 md:mb-10 w-[100%]">
+            <div class="timeline-end lg:ms-10 md:mb-10 w-[100%]">
                 <div class="card">
                     <div class="card-body px-5 py-1">
                         <time class="font-mono italic">{{ experience.date }}</time>
@@ -46,7 +46,7 @@ const experiences = ref(props.experiences)
                         clip-rule="evenodd" />
                 </svg>
             </div>
-            <div class="timeline-end ms-10 md:mb-10">
+            <div class="timeline-end lg:ms-10 md:mb-10">
                 <div class="card">
                     <div class="card-body px-5 py-1">
                         <time class="font-mono italic">{{ education.date }}</time>
