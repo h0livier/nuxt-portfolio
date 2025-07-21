@@ -22,7 +22,7 @@ const educations: Place[] = [
                         alt="Développeur web full stack Olivier Hayot spécialisé Next.js .NET"
                         class="max-w-[200px] lg:max-w-[275px] rounded-lg shadow-2xl lg:me-10" />
                     <div class="max-w-md">
-                        <h1 class="text-5xl font-bold">Hi, I'm Olivier 👋</h1>
+                        <h1 class="text-5xl font-bold">Hi, I'm <b>Olivier</b>👋</h1>
                         <div class="py-6 text-justify">
                             I'm a Software Developer with hands-on experience in full-stack web development for over  {{ new Date().getFullYear() - new Date(2022, 9, 22).getFullYear() }} years
                             My current stack includes <div class="badge badge-soft badge-primary">TypeScript</div> with Next.js or Nuxt on the front end, and <div class="badge badge-soft badge-primary">.NET Core</div> on the back end.
