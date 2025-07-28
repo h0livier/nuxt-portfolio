@@ -27,7 +27,7 @@ const skills = ref<ListOption[]>([
 ])
 </script>
 <template>
-    <div class="hidden print:block">
+    <div class="hidden print:block bg-white text-black">
         <div class="flex gap-5">
             <div class="grow-2">
                 <p><img src="../assets/picture.jpg" alt="picture" class=" rounded-lg" /></p>
