@@ -32,7 +32,7 @@ const educations: Place[] = [
                     </div>
                 </div>
             </div>
-            <div class="my-2">
+            <div class="mt-[10vh] md:my-2">
                 <h2 class="text-2xl mb-5">What drives me</h2>
                 <div class="flex flex-col gap-4 lg:flex-row lg:gap-8">
                     <div class="grow card bg-base-300">
