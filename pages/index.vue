@@ -35,13 +35,13 @@ const educations: Place[] = [
             <div class="mt-[10vh] md:my-2">
                 <h2 class="text-2xl mb-5">What drives me</h2>
                 <div class="flex flex-col gap-4 lg:flex-row lg:gap-8">
-                    <div class="grow card bg-base-300">
+                    <div class="grow card bg-base-200 shadow-md">
                         <div class="card-body">
                             <p class="text-xl"><b>Solving Problems</b></p>
                             <p>I enjoy building user-friendly and efficient web applications that solve real problems.</p>
                         </div>
                     </div>
-                    <div class="grow card bg-base-300">
+                    <div class="grow card bg-base-200 shadow-md">
                         <div class="card-body">
                             <p  class="text-xl"><b>Automation & Creating Tools</b></p>
                             <p>Turning small ideas into practical solutions is what keeps me curious and motivated.</p>
