@@ -12,7 +12,7 @@ const experiences = props.experiences
 const contacts = ref<ListOption[]>([
     { name: 'Phone number', value: '+32471646015' },
     { name: 'Mail', value: 'olivier.hayot.dev@gmail.com' },
-    { name: 'Website', value: 'https://olivier.hayot.cloud' },
+    { name: 'Website', value: 'https://cv.olivierhayot.be' },
 ])
 const languages = ref<ListOption[]>([
     { name: "French", value: 'C2' },
@@ -31,21 +31,23 @@ const skills = ref<ListOption[]>([
         <div class="flex gap-5">
             <div class="grow-2">
                 <p><img src="../assets/picture.jpg" alt="picture" class=" rounded-lg" /></p>
-                <h3 class="text-2xl pt-3 border-b-1">Contact</h3>
-                <div v-for="contact in contacts" class="pt-1">
-                    <p class="font-bold">{{ contact.name }}</p>
-                    <p>{{ contact.value }}</p>
-                </div>
-                <h3 class="text-2xl pt-3 border-b-1">Education</h3>
-                <div v-for="education in educations" class="pt-1">
-                    <p class="text-sm italic">{{ education.date }}</p>
-                    <p class="font-bold">{{ education.name }}</p>
-                    <p class="text-xs">{{ education.description }}</p>
-                </div>
-                <h3 class="text-2xl pt-3 border-b-1">Languages</h3>
-                <div v-for="language in languages" class="pt-1 flex justify-between">
-                    <p>{{ language.name }}</p>
-                    <p>{{ language.value }}</p>
+                <div class="mt-5 p-2">
+                    <h3 class="text-2xl border-b-1 ">Contact</h3>
+                    <div v-for="contact in contacts" class="pt-1">
+                        <p class="font-bold">{{ contact.name }}</p>
+                        <p>{{ contact.value }}</p>
+                    </div>
+                    <h3 class="text-2xl pt-3 border-b-1">Education</h3>
+                    <div v-for="education in educations" class="pt-1">
+                        <p class="text-sm italic">{{ education.date }}</p>
+                        <p class="font-bold">{{ education.name }}</p>
+                        <p class="text-xs">{{ education.description }}</p>
+                    </div>
+                    <h3 class="text-2xl pt-3 border-b-1">Languages</h3>
+                    <div v-for="language in languages" class="pt-1 flex justify-between">
+                        <p>{{ language.name }}</p>
+                        <p>{{ language.value }}</p>
+                    </div>
                 </div>
             </div>
             <div class="grow-3 ps-5">
