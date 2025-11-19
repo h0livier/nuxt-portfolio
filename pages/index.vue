@@ -1,12 +1,9 @@
 <script setup lang="ts">
 import { useProfileData } from '~/services/useProfileData'
-import type { Place, WorkPlace } from '~/types'
 
 const { locale, locales, setLocale } = useI18n()
 const {experiences, educations, contacts, languages} = useProfileData()
-
 const years = new Date().getFullYear() - new Date(2022, 9, 22).getFullYear()
-
 </script>
 <template>
     <Cv :experiences="experiences" :educations="educations" :contacts="contacts" :languages="languages" />
@@ -56,7 +53,7 @@ const years = new Date().getFullYear() - new Date(2022, 9, 22).getFullYear()
             <Timeline :experiences="experiences" :educations="educations" />
             <div class="flex flex-col items-center gap-5 my-20">
                 <h2 class="text-3xl">{{ $t("getInTouchTitle") }}</h2>
-                <p class=" text-xl">{{ $t("getInTouchText") }}</p>
+                <p class="text-center text-xl">{{ $t("getInTouchText") }}</p>
                 <p class="flex gap-4">
                     <NuxtLink href="https://github.com/h0livier">Github</NuxtLink>
                     <NuxtLink href="https://www.linkedin.com/in/olivier-hayot/">Linkedin</NuxtLink>
