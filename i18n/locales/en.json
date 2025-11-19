@@ -1,0 +1,62 @@
+{
+  "welcome": "Hi, I'm ",
+  "presentation_1": "I'm a Software Developer with hands-on experience in full-stack web development for over %YEARS% years.",
+  "presentation_2": " My current stack includes TypeScript with Next.js or Nuxt on the front end, and .NET Core on the back end.",
+  "presentation_3": "In my free time, I enjoy socializing with friends over a drink and tinkering with my home automation setup.",
+  "drivesMe": "What drives me",
+  "firstMotivationTitle": "Solving Problems",
+  "firstMotivationText": "I enjoy building user-friendly and efficient web applications that solve real problems.",
+  "secondMotivationTitle": "Automation & Creating Tools",
+  "secondMotivationText": "Turning small ideas into practical solutions is what keeps me curious and motivated.",
+  "getInTouchTitle": "Want to get in touch ?",
+  "getInTouchText": "Reach out via the social links below.",
+  "printButton": "Check out my resume",
+  "timelineTitle": "My Journey",
+
+  "experiences": {
+    "wavenet": {
+      "description": "Building and maintaining robust web applications with .NET Core, TypeScript (React/Next.js), and Azure. Focusing on scalability, performance, and clean code.",
+      "date": "Since March 2024",
+      "title": ".NET Analyst Developer"
+    },
+    "easi": {
+      "description": "Development and maintenance of tools aimed at improving and simplifying the management of Adfinity's SaaS cloud. Built tailored web and desktop applications to meet specific business needs.",
+      "date": "September 2022 - March 2024",
+      "title": "Software Developer"
+    },
+    "ulb": {
+      "description": "Focused on web technologies to enhance intranet, extranet, databases, and internal tools supporting the management and promotion of research activities within the University.",
+      "date": "February 2022 - May 2022",
+      "title": "Web Developer Intern"
+    }
+  },
+
+  "educations": {
+    "heh": {
+      "description": "Bachelor’s Degree in Computer Science and Systems, specializing in Telecommunications and Networks",
+      "date": "2019 - 2022"
+    }
+  },
+
+  "contacts": {
+    "phone": "Phone number",
+    "mail": "Mail",
+    "website": "Website"
+  },
+  "languages": {
+    "french": "French",
+    "english": "English"
+  },
+
+  
+    "aboutMe": "About Me",
+    "workExperience": "Work Experience",
+    "education": "Education",
+    "skills": "Skills",
+    "languagesTitle": "Languages",
+
+    "cvHeader": {
+        "title": ".NET Analyst Developer",
+        "description": "IT enthusiast passionate about programming and the world of DevOps. My curiosity has led me to explore various programming languages as well as automation and infrastructure management tools. I particularly enjoy technical challenges and finding efficient solutions to optimize development processes."
+    }
+}

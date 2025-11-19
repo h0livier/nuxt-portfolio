@@ -12,7 +12,7 @@ const educations = ref(props.educations)
 const experiences = ref(props.experiences)
 </script>
 <template>
-    <h2 class="text-2xl mb-10 mt-[10vh]">My Journey</h2>
+    <h2 class="text-2xl mb-10 mt-[10vh]">{{$t("timelineTitle")}}</h2>
     <ul class="timeline timeline-snap-icon timeline-compact timeline-vertical">
         <li v-for="experience in experiences">
             <hr class="bg-blue-500" />

@@ -23,7 +23,7 @@ const skills = ["C#", ".Net Core", "EF Core", "XUnit/NUnit", "Blazor", "TypeScri
                 </p>
                 <div>
                     <h1 class="text-4xl">Olivier Hayot</h1>
-                    <h2 class="text-3xl py-2">.NET Analyst Developer</h2>
+                    <h2 class="text-3xl py-2">{{ $t("cvHeader.title") }}</h2>
                     <p class="text-md">
                         <span v-for="(item, index) in contacts">
                             <span class="mx-1" v-if="index !== 0"> | </span>
@@ -34,11 +34,11 @@ const skills = ["C#", ".Net Core", "EF Core", "XUnit/NUnit", "Blazor", "TypeScri
             </div>
         </div>
         
-        <cv-lined-section title="About Me">
-            <p class="pt-3 text-sm">IT enthusiast passionate about programming and the world of DevOps. My curiosity has led me to explore various programming languages as well as automation and infrastructure management tools. I particularly enjoy technical challenges and finding efficient solutions to optimize development processes.</p>
+        <cv-lined-section :title='$t("aboutMe")'>
+            <p class="pt-3 text-sm">{{ $t("cvHeader.description") }}</p>
         </cv-lined-section>
 
-        <cv-lined-section title="Work Experience">
+        <cv-lined-section :title='$t("workExperience")'>
             <cv-lined-experience
                 v-for="(experience, index) in experiences"
                 :key="index"
@@ -48,7 +48,7 @@ const skills = ["C#", ".Net Core", "EF Core", "XUnit/NUnit", "Blazor", "TypeScri
                 :description="experience.description" />
         </cv-lined-section>
         
-        <cv-lined-section title="Education">
+        <cv-lined-section :title='$t("education")'>
             <cv-lined-experience
                 v-for="(education, index) in educations"
                 :key="index"
@@ -57,7 +57,7 @@ const skills = ["C#", ".Net Core", "EF Core", "XUnit/NUnit", "Blazor", "TypeScri
                 :description="education.description" />
         </cv-lined-section>
 
-        <cv-lined-section title="Skills">
+        <cv-lined-section :title='$t("skills")'>
             <div className="grid grid-cols-5 grid-rows-4 gap-4">
                 <div v-for="item in skills" class="flex justify-start items-center">
                     <span class="text-sm font-semibold">{{ item }}</span>
@@ -65,7 +65,7 @@ const skills = ["C#", ".Net Core", "EF Core", "XUnit/NUnit", "Blazor", "TypeScri
             </div>
         </cv-lined-section>
 
-        <cv-lined-section title="Languages">
+        <cv-lined-section :title='$t("languagesTitle")'>
             <div v-for="item in languages" className="flex justify-between">
                 <span>{{ item.name }}</span>
                 <span class="font-bold">{{ item.value }}</span>

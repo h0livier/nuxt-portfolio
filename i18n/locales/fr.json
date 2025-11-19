@@ -1,0 +1,61 @@
+{
+  "welcome": "Hello, je suis ",
+  "presentation_1": "Je suis développeur logiciel avec une expérience pratique en développement web full-stack depuis plus de %YEARS% ans.",
+  "presentation_2": " Ma stack actuel inclut TypeScript avec Next.js ou Nuxt pour le front-end, et .NET Core pour le back-end.",
+  "presentation_3": "Pendant mon temps libre, j’aime sortir avec des amis boire un verre et améliorer mon chez-moi.",
+  "drivesMe": "Ce qui me motive",
+  "firstMotivationTitle": "Résoudre des problèmes",
+  "firstMotivationText": "J’aime créer des applications web conviviales et efficaces qui résolvent de vrais problèmes.",
+  "secondMotivationTitle": "Automatisation & Création d’outils",
+  "secondMotivationText": "Transformer de petites idées en solutions pratiques est ce qui nourrit ma curiosité et ma motivation.",
+  "getInTouchTitle": "Envie de me contacter ?",
+  "getInTouchText": "Contactez-moi via les liens sociaux ci-dessous.",
+  "printButton": "Consultez mon CV",
+  "timelineTitle": "Mon Parcours",
+
+  "experiences": {
+    "wavenet": {
+      "description": "Construction et maintenance d’applications web robustes avec .NET Core, TypeScript (React/Next.js) et Azure. Accent mis sur la scalabilité, la performance et la propreté du code.",
+      "date": "Depuis mars 2024",
+      "title": "Analyste Développeur .NET"
+    },
+    "easi": {
+      "description": "Développement et maintenance d’outils visant à améliorer et simplifier la gestion du cloud SaaS d’Adfinity. Création d’applications web et desktop sur mesure pour répondre à des besoins métiers spécifiques.",
+      "date": "Septembre 2022 - Mars 2024",
+      "title": "Développeur Logiciel"
+    },
+    "ulb": {
+      "description": "Travail axé sur les technologies web pour améliorer l’intranet, l’extranet, les bases de données et les outils internes soutenant la gestion et la valorisation des activités de recherche au sein de l’université.",
+      "date": "Février 2022 - Mai 2022",
+      "title": "Stagiaire Développeur Web"
+    }
+  },
+
+  "educations": {
+    "heh": {
+      "description": "Bachelier en Informatique et Systèmes, spécialisation Télécommunications et Réseaux",
+      "date": "2019 - 2022"
+    }
+  },
+
+  "contacts": {
+    "phone": "Numéro de téléphone",
+    "mail": "E-mail",
+    "website": "Site web"
+  },
+  "languages": {
+    "french": "Français",
+    "english": "Anglais"
+  },
+
+  "aboutMe": "À propos de moi",
+  "workExperience": "Expérience Professionnelle",
+  "education": "Formation",
+  "skills": "Compétences",
+  "languagesTitle": "Langues",
+
+  "cvHeader": {
+    "title": "Analyste Développeur .NET",
+    "description": "Passionné d'informatique, j'aime la programmation et le monde du DevOps. Ma curiosité m'a amené à explorer divers langages de programmation ainsi que des outils d'automatisation et de gestion d'infrastructure. J'apprécie particulièrement les défis techniques et la recherche de solutions efficaces pour optimiser les processus de développement."
+  }
+}

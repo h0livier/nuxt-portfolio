@@ -2,7 +2,7 @@
 import tailwindcss from "@tailwindcss/vite";
 
 export default defineNuxtConfig({
-  modules: ['@nuxtjs/sitemap'],
+  modules: ['@nuxtjs/sitemap', '@nuxtjs/i18n'],
   compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
   vite: {
@@ -27,5 +27,12 @@ export default defineNuxtConfig({
   },
   site: {
     url: 'http://localhost'
+  },
+  i18n: {
+    defaultLocale: 'fr',
+    locales: [
+      { code: 'en', name: 'English', file: 'en.json' },
+      { code: 'fr', name: 'French', file: 'fr.json' }
+    ]
   }
 })
