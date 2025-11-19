@@ -16,7 +16,7 @@ const skills = ["C#", ".Net Core", "EF Core", "XUnit/NUnit", "Blazor", "TypeScri
 </script>
 <template>
     <div class="hidden print:block bg-white text-black min-h-[100dvh]">
-        <div class="bg-slate-800 md:text-white text-black  p-5 w-[100vw] rounded-md">
+        <div class="text-black w-[100vw] rounded-md">
             <div class="flex">
                 <p class=" me-7">
                     <img src="../../../assets/picture_squared.jpg" alt="Olivier Hayot's Picture" class="rounded-lg max-w-[150px]" />
