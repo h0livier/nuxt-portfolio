@@ -10,7 +10,7 @@ const props = defineProps<CVProps>()
 const educations = props.educations
 const experiences = props.experiences
 const contacts = ref<ListOption[]>([
-    { name: 'Phone number', value: '+32471646015' },
+    { name: 'Phone number', value: '+32 471 64 60 15' },
     { name: 'Mail', value: 'olivier.hayot.dev@gmail.com' },
     { name: 'Website', value: 'https://cv.olivierhayot.be' },
 ])
@@ -27,7 +27,7 @@ const skills = ref<ListOption[]>([
 ])
 </script>
 <template>
-    <cv-basic
+    <cv-lined
         :educations="educations"
         :experiences="experiences"
         :contacts="contacts"
