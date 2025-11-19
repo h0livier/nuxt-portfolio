@@ -15,7 +15,7 @@ const contacts = props.contacts
 const skills = ["C#", ".Net Core", "EF Core", "XUnit/NUnit", "Blazor", "TypeScript", "Nuxt", "Vue.js", "React.js", "HTML5/CSS3", "PostgreSQL", "SQL Server", "Cosmos DB", "Docker", "Git", "Github", "CI/CD", "Powershell", "Azure", "Linux"]
 </script>
 <template>
-    <div class="hidden print:block bg-white text-black min-h-[100vh]">
+    <div class="hidden print:block bg-white text-black min-h-[100dvh]">
         <div class="bg-[#272C38] text-white p-5 w-[100vw] rounded-md">
             <div class="flex">
                 <p class=" me-7">
