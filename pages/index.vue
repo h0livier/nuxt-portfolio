@@ -1,7 +1,5 @@
 <script setup lang="ts">
 import { useProfileData } from '~/services/useProfileData'
-
-const { locale, locales, setLocale } = useI18n()
 const {experiences, educations, contacts, languages} = useProfileData()
 const years = new Date().getFullYear() - new Date(2022, 9, 22).getFullYear()
 </script>
@@ -11,11 +9,7 @@ const years = new Date().getFullYear() - new Date(2022, 9, 22).getFullYear()
         <div class="min-h-screen print:hidden max-w-[90vw] md:max-w-[75vw] lg:max-w-[60vw] xl:max-w-[50vw]">
             <div class="flex justify-between mt-10 lg:mt-20 mb-10">
                 <p><a href="mailto:olivier.hayot.dev@gmail.com">olivier.hayot.dev@gmail.com</a></p>
-                <div>
-                    <button v-for="l in locales" @click="setLocale(l.code)">
-                        <span v-if="l.code !== locale" > {{ l.name }}</span>
-                    </button>
-                </div>
+                <LanguageSwitch />
             </div>
             <div class="hero min-h-[80vh]">
                 <div class="hero-content lg:place-self-start lg:self-center flex-col lg:flex-row">

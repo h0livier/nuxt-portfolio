@@ -18,7 +18,7 @@ export const useProfileData = () => {
       title: t('experiences.easi.title')
     },
     { 
-      name: 'Free University of Brusells',
+      name: t('experiences.ulb.name'),
       description: t('experiences.ulb.description'),
       date: t('experiences.ulb.date'),
       title: t('experiences.ulb.title')
