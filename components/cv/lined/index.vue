@@ -30,6 +30,12 @@ const skills = ["C#", ".Net Core", "EF Core", "XUnit/NUnit", "Blazor", "TypeScri
                             {{ item.value }}
                         </span>
                     </p>
+                    <p class="text-md flex flex-wrap gap-4">
+                        <div v-for="item in languages">
+                            <span>{{ item.name }} | </span>
+                            <span class="font-bold">{{ item.value }}</span>
+                        </div>
+                    </p>
                 </div>
             </div>
         </div>
@@ -45,7 +51,8 @@ const skills = ["C#", ".Net Core", "EF Core", "XUnit/NUnit", "Blazor", "TypeScri
                 :title="experience.title"
                 :place="experience.name"
                 :date="experience.date"
-                :description="experience.description" />
+                :description="experience.description"
+                :missions="experience.missions" />
         </cv-lined-section>
         
         <cv-lined-section :title='$t("education")'>
@@ -62,13 +69,6 @@ const skills = ["C#", ".Net Core", "EF Core", "XUnit/NUnit", "Blazor", "TypeScri
                 <div v-for="item in skills" class="flex justify-start items-center">
                     <span class="text-sm font-semibold">{{ item }}</span>
                 </div>
-            </div>
-        </cv-lined-section>
-
-        <cv-lined-section :title='$t("languagesTitle")'>
-            <div v-for="item in languages" className="flex justify-between">
-                <span>{{ item.name }}</span>
-                <span class="font-bold">{{ item.value }}</span>
             </div>
         </cv-lined-section>
     </div>
