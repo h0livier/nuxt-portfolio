@@ -1,15 +1,23 @@
 import { useI18n } from 'vue-i18n'
-import type { ListOption, Place, WorkPlace } from '~/types'
+import type { ListOption, Mission, Place, WorkPlace } from '~/types'
 
 export const useProfileData = () => {
   const { t } = useI18n()
+
+  const oresMission: Mission = {
+    title: t('experiences.wavenet.missions.0.title'),
+    enterprise: t('experiences.wavenet.missions.0.enterprise'),
+    date: t('experiences.wavenet.missions.0.date'),
+    description: t('experiences.wavenet.missions.0.description')
+  }
 
   const experiences: WorkPlace[] = [
     { 
       name: 'Wavenet',
       description: t('experiences.wavenet.description'),
       date: t('experiences.wavenet.date'),
-      title: t('experiences.wavenet.title')
+      title: t('experiences.wavenet.title'),
+      missions: [ oresMission ]
     },
     { 
       name: 'Easi',
@@ -17,6 +25,7 @@ export const useProfileData = () => {
       date: t('experiences.easi.date'),
       title: t('experiences.easi.title')
     },
+
     { 
       name: t('experiences.ulb.name'),
       description: t('experiences.ulb.description'),

@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { pluralize } from '~/helpers/string';
 import type { WorkPlace, Place } from '~/types';
 
 interface TimeLineProps {
@@ -10,9 +11,11 @@ const props = defineProps<TimeLineProps>()
 
 const educations = ref(props.educations)
 const experiences = ref(props.experiences)
+
+console.log(experiences.value[0]);
 </script>
 <template>
-    <h2 class="text-2xl mb-10 mt-[10vh]">{{$t("timelineTitle")}}</h2>
+    <h2 class="text-2xl mb-10 mt-[10vh]">{{ $t("timelineTitle") }}</h2>
     <ul class="timeline timeline-snap-icon timeline-compact timeline-vertical">
         <li v-for="experience in experiences">
             <hr class="bg-blue-500" />
@@ -30,8 +33,24 @@ const experiences = ref(props.experiences)
                         <div>
                             <div class="text-lg font-black">{{ experience.name }}</div>
                             <h3 class="text-sm italic mb-1">{{ experience.title }}</h3>
-                        </div>                       
+                        </div>
                         {{ experience.description }}
+
+                        <div v-if="experience.missions && experience.missions.length > 0">
+                            <h4 class="font-semibold mb-1 text-lg">{{ pluralize($t("mission"), experience.missions.length) }} : </h4>
+                            <div v-for="(mission, index) in experience.missions" :key="mission.date" class="ml-3">
+                                <div class="collapse collapse-plus">
+                                    <input type="radio" name="my-accordion-4" :checked="false" />
+                                    <p class="collapse-title">
+                                        <span class="font-semibold text-lg">{{ mission.enterprise}} |</span> {{ mission.date }}
+                                    </p>
+                                    <div class="collapse-content">
+                                        <p class="text-sm italic mb-2 block">{{ mission.title }}</p>
+                                        <p class="block">{{ mission.description }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

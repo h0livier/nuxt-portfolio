@@ -12,12 +12,21 @@
   "getInTouchText": "Reach out via the social links below.",
   "printButton": "Check out my resume",
   "timelineTitle": "My Journey",
+  "mission": "Mission",
 
   "experiences": {
     "wavenet": {
       "description": "Building and maintaining robust web applications with .NET Core, TypeScript (React/Next.js), and Azure. Focusing on scalability, performance, and clean code.",
       "date": "Since March 2024",
-      "title": ".NET Analyst Developer"
+      "title": ".NET Analyst Developer",
+      "missions": [
+        {
+          "title": ".NET Analyst Developer",
+          "enterprise": "ORES",
+          "date": "March 2025 - December 2025",
+          "description": "Development of a hybrid mobile application using .NET Core, .NET MAUI and Blazor for ORES field agents to facilitate their work."
+        }
+      ]
     },
     "easi": {
       "description": "Development and maintenance of tools aimed at improving and simplifying the management of Adfinity's SaaS cloud. Built tailored web and desktop applications to meet specific business needs.",

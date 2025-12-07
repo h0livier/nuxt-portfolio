@@ -12,12 +12,21 @@
   "getInTouchText": "Contactez-moi via les liens ci-dessous.",
   "printButton": "Consultez mon CV",
   "timelineTitle": "Mon Parcours",
+  "mission": "Mission",
 
   "experiences": {
     "wavenet": {
       "description": "Construction et maintenance d’applications web robustes avec .NET Core, TypeScript (React/Next.js) et Azure. Accent mis sur la scalabilité, la performance et la propreté du code.",
       "date": "Depuis mars 2024",
-      "title": "Analyste Développeur .NET"
+      "title": "Analyste Développeur .NET",
+      "missions": [
+        {
+          "title": "Analyste Développeur .NET",
+          "enterprise": "ORES",
+          "date": "Mars 2025 - Décembre 2025",
+          "description": "Développement d'une application mobile hybride en utilisant .NET Core, .NET MAUI et Blazor à destination des agents de terrain d'ORES pour faciliter leurs interventions."
+        }
+      ]
     },
     "easi": {
       "description": "Développement et maintenance d’outils visant à améliorer et simplifier la gestion du cloud SaaS d’Adfinity. Création d’applications web et desktop sur mesure pour répondre à des besoins métiers spécifiques.",
