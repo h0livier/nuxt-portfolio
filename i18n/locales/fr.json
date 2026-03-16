@@ -16,7 +16,7 @@
 
   "experiences": {
     "wavenet": {
-      "description": "Construction et maintenance d’applications web robustes avec .NET Core, TypeScript (React/Next.js) et Azure. Accent mis sur la scalabilité, la performance et la propreté du code.",
+      "description": "Construction et maintenance d’applications web robustes avec .NET Core, TypeScript (Vue.js/React.js) et Azure. Accent mis sur la scalabilité, la performance et la propreté du code.",
       "date": "Depuis mars 2024",
       "title": "Analyste Développeur .NET",
       "missions": [
@@ -44,7 +44,7 @@
   "educations": {
     "heh": {
       "description": "Bachelier en Informatique et Systèmes, spécialisation Télécommunications et Réseaux",
-      "date": "2019 - 2022"
+      "date": "Septembre 2019 - Juin 2022"
     }
   },
 
@@ -58,6 +58,19 @@
     "english": "Anglais"
   },
 
+  "skill": {
+    "languages": "Langages de programmation",
+    "webBackend": "Web Back-end",
+    "webFrontend": "Web Front-end",
+    "databases": "Bases de données",
+    "devOps": "DevOps",
+    "soft": "Compétences humaines",
+    "analytic": "Analyse et résolution de problèmes",
+    "team": "Travail d’équipe",
+    "communication": "Communication",
+    "adaptive": "Adaptabilité"
+  },
+
   "aboutMe": "À propos de moi",
   "workExperience": "Expérience Professionnelle",
   "education": "Formation",
@@ -66,6 +79,6 @@
 
   "cvHeader": {
     "title": "Analyste Développeur .NET",
-    "description": "Passionné d'informatique, j'aime la programmation et le monde du DevOps. Ma curiosité m'a amené à explorer divers langages de programmation ainsi que des outils d'automatisation et de gestion d'infrastructure. J'apprécie particulièrement les défis techniques et la recherche de solutions efficaces pour optimiser les processus de développement."
+    "description": "Analyste développeur .NET Full Stack avec près de 4 ans d’expérience dans le développement d’applications web. Spécialisé en .NET Core (back-end) et Vue.js (front-end), j’interviens sur l’ensemble du cycle de développement ainsi que sur les aspects DevOps et infrastructure. Curieux et orienté solutions, j’apprécie relever des défis techniques et optimiser les processus."
   }
 }

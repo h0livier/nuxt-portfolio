@@ -11,8 +11,6 @@ const props = defineProps<TimeLineProps>()
 
 const educations = ref(props.educations)
 const experiences = ref(props.experiences)
-
-console.log(experiences.value[0]);
 </script>
 <template>
     <h2 class="text-2xl mb-10 mt-[10vh]">{{ $t("timelineTitle") }}</h2>

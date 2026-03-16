@@ -24,14 +24,14 @@ export const useProfileData = () => {
       description: t('experiences.easi.description'),
       date: t('experiences.easi.date'),
       title: t('experiences.easi.title')
-    },
-
+    },/*
     { 
       name: t('experiences.ulb.name'),
       description: t('experiences.ulb.description'),
       date: t('experiences.ulb.date'),
-      title: t('experiences.ulb.title')
-    }
+      title: t('experiences.ulb.title'),
+      internship: true
+    }*/
   ]
 
   const educations: Place[] = [
@@ -53,5 +53,14 @@ export const useProfileData = () => {
     { name: t('languages.english'), value: 'B2' }
   ]
 
-  return { experiences, educations, contacts, languages }
+    const skills: ListOption[] = [
+      {name: t('skill.languages'), value: 'C#, Typescript, SQL'},
+      {name: t('skill.webBackend'), value: '.Net 8/10, ASP.NET Core, API REST, EF Core, XUnit/NUnit'},
+      {name: t('skill.webFrontend'), value: 'Vue, React, Blazor, HTML5 / CSS3 / SASS'},
+      {name: t('skill.databases'), value: 'PostgreSQL, SQL Server, Cosmos DB, SQLite'},
+      {name: t('skill.devOps'), value: 'Microsoft Azure, Docker, Terraform, Git, Github, CI/CD'},
+      {name: t('skill.soft'), value: `${t('skill.analytic')}, ${t('skill.team')}, ${t('skill.communication')}, ${t('skill.adaptive')}`}
+    ]
+
+  return { experiences, educations, contacts, languages, skills }
 }

@@ -6,6 +6,7 @@ interface CVProps{
     experiences: WorkPlace[]
     contacts: ListOption[]
     languages: ListOption[]
+    skills: ListOption[]
 }
 const props = defineProps<CVProps>()
 
@@ -13,14 +14,7 @@ const educations = props.educations
 const experiences = props.experiences
 const contacts = props.contacts
 const languages = props.languages
-
-const skills = ref<ListOption[]>([
-    {name: 'Web Back-end', value: '.Net Core, C#, Node.js, Typescript, Laravel, PHP'},
-    {name: 'Web Front-end', value: 'HTML5, CSS3, Sass, React.js, Next.js, Typescript'},
-    {name: 'Databases', value: 'MySQL, PostgreSQL, SQL Server, Cosmos DB'},
-    {name: 'OS & Scripting', value: 'Windows Serveur, Powershell, Linux, bash'},
-    {name: 'DevOps', value: 'Git, CI/CD, Docker, Terraform, Azure'}
-])
+const skills = props.skills
 </script>
 <template>
     <cv-lined

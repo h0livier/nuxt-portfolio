@@ -1,7 +1,7 @@
 {
   "welcome": "Hi, I'm ",
   "presentation_1": "I'm a Software Developer with hands-on experience in full-stack web development for over %YEARS% years.",
-  "presentation_2": " My current stack includes TypeScript with Next.js or Nuxt on the front end, and .NET Core on the back end.",
+  "presentation_2": " My current stack includes TypeScript with Vue.js or Nuxt on the front end, and .NET Core on the back end.",
   "presentation_3": "In my free time, I enjoy socializing with friends over a drink and tinkering with my home automation setup.",
   "drivesMe": "What drives me",
   "firstMotivationTitle": "Solving Problems",
@@ -16,7 +16,7 @@
 
   "experiences": {
     "wavenet": {
-      "description": "Building and maintaining robust web applications with .NET Core, TypeScript (React/Next.js), and Azure. Focusing on scalability, performance, and clean code.",
+      "description": "Building and maintaining robust web applications with .NET Core, TypeScript (Vue.js/React.js), and Azure. Focusing on scalability, performance, and clean code.",
       "date": "Since March 2024",
       "title": ".NET Analyst Developer",
       "missions": [
@@ -34,7 +34,7 @@
       "title": "Software Developer"
     },
     "ulb": {
-      "name": "Free University of Brusells",
+      "name": "Free University of Brussels",
       "description": "Focused on web technologies to enhance intranet, extranet, databases, and internal tools supporting the management and promotion of research activities within the University.",
       "date": "February 2022 - May 2022",
       "title": "Web Developer Intern"
@@ -44,7 +44,7 @@
   "educations": {
     "heh": {
       "description": "Bachelor’s Degree in Computer Science and Systems, specializing in Telecommunications and Networks",
-      "date": "2019 - 2022"
+      "date": "September 2019 - June 2022"
     }
   },
 
@@ -58,6 +58,19 @@
     "english": "English"
   },
 
+  "skill": {
+    "languages": "Programming languages",
+    "webBackend": "Backend",
+    "webFrontend": "Frontend",
+    "databases": "Databases",
+    "devOps": "DevOps",
+    "soft": "Soft Skills",
+    "analytic": "Analysis and problem-solving",
+    "team": "Teamwork",
+    "communication": "Communication",
+    "adaptive": "Adaptability"
+  },
+
   
     "aboutMe": "About Me",
     "workExperience": "Work Experience",
@@ -67,6 +80,6 @@
 
     "cvHeader": {
         "title": ".NET Analyst Developer",
-        "description": "IT enthusiast passionate about programming and the world of DevOps. My curiosity has led me to explore various programming languages as well as automation and infrastructure management tools. I particularly enjoy technical challenges and finding efficient solutions to optimize development processes."
+        "description": "Full-stack .NET developer with nearly four years’ experience in web application development. Specialising in .NET Core (back-end) and Vue.js (front-end), I am involved in the entire development lifecycle as well as DevOps and infrastructure. I am curious and solution-oriented, and I enjoy tackling technical challenges and optimising processes."
     }
 }

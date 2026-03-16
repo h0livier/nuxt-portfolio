@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import { useProfileData } from '~/services/useProfileData'
-const {experiences, educations, contacts, languages} = useProfileData()
+const {experiences, educations, contacts, languages, skills} = useProfileData()
 const years = new Date().getFullYear() - new Date(2022, 9, 22).getFullYear()
 </script>
 <template>
-    <Cv :experiences="experiences" :educations="educations" :contacts="contacts" :languages="languages" />
+    <Cv :experiences="experiences" :educations="educations" :contacts="contacts" :languages="languages" :skills="skills" />
     <div class="flex justify-center">
         <div class="min-h-screen print:hidden max-w-[90vw] md:max-w-[75vw] lg:max-w-[60vw] xl:max-w-[50vw]">
             <div class="flex justify-between mt-10 lg:mt-20 mb-10">

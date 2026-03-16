@@ -17,4 +17,5 @@ export interface WorkPlace extends Place {
     title: string
     ores_date?: string
     missions?: Mission[]
+    internship?: boolean
 }

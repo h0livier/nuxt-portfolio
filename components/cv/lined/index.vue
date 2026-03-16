@@ -6,24 +6,25 @@ interface CVProps{
     experiences: WorkPlace[]
     contacts: ListOption[]
     languages: ListOption[]
+    skills: ListOption[]
 }
 const props = defineProps<CVProps>()
 
 const educations = props.educations
 const experiences = props.experiences
 const contacts = props.contacts
-const skills = ["C#", ".Net Core", "EF Core", "XUnit/NUnit", "Blazor", "TypeScript", "Nuxt", "Vue.js", "React.js", "HTML5/CSS3", "PostgreSQL", "SQL Server", "Cosmos DB", "Docker", "Git", "Github", "CI/CD", "Powershell", "Azure", "Linux"]
+const skills = props.skills // ["C#", ".Net Core", "EF Core", "XUnit/NUnit", "Blazor", "TypeScript", "Nuxt", "Vue.js", "React.js", "HTML5/CSS3", "PostgreSQL", "SQL Server", "Cosmos DB", "Docker", "Git", "Github", "CI/CD", "Powershell", "Azure", "Linux"]
 </script>
 <template>
     <div class="hidden print:block bg-white text-black min-h-[100dvh]">
         <div class="text-black w-[100vw] rounded-md">
             <div class="flex">
-                <p class=" me-7">
+                <p class="me-7">
                     <img src="../../../assets/picture_squared.jpg" alt="Olivier Hayot's Picture" class="rounded-lg max-w-[150px]" />
                 </p>
                 <div>
                     <h1 class="text-4xl">Olivier Hayot</h1>
-                    <h2 class="text-3xl py-2">{{ $t("cvHeader.title") }}</h2>
+                    <h2 class="text-2xl py-2 font-semibold">{{ $t("cvHeader.title") }}</h2>
                     <p class="text-md">
                         <span v-for="(item, index) in contacts">
                             <span class="mx-1" v-if="index !== 0"> | </span>
@@ -52,7 +53,8 @@ const skills = ["C#", ".Net Core", "EF Core", "XUnit/NUnit", "Blazor", "TypeScri
                 :place="experience.name"
                 :date="experience.date"
                 :description="experience.description"
-                :missions="experience.missions" />
+                :missions="experience.missions"
+                :showMission="true" />
         </cv-lined-section>
         
         <cv-lined-section :title='$t("education")'>
@@ -65,11 +67,10 @@ const skills = ["C#", ".Net Core", "EF Core", "XUnit/NUnit", "Blazor", "TypeScri
         </cv-lined-section>
 
         <cv-lined-section :title='$t("skills")'>
-            <div className="grid grid-cols-5 grid-rows-4 gap-4">
-                <div v-for="item in skills" class="flex justify-start items-center">
-                    <span class="text-sm font-semibold">{{ item }}</span>
-                </div>
-            </div>
+            <cv-lined-skills
+                v-for="(skill, index) in skills"
+                :key="index"
+                :skill="skill" />
         </cv-lined-section>
     </div>
 </template>
