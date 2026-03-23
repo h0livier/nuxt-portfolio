@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@nuxtjs/i18n": "^10.2.3",
-    "@nuxtjs/sitemap": "^7.4.3",
+    "@nuxtjs/sitemap": "^7.6.0",
     "@tailwindcss/postcss": "^4.1.11",
     "@tailwindcss/vite": "^4.1.6",
     "autoprefixer": "^10.4.21",
