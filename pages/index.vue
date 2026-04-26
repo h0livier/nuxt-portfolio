@@ -52,7 +52,7 @@ const years = new Date().getFullYear() - new Date(2022, 9, 22).getFullYear()
                     <NuxtLink href="https://github.com/h0livier">Github</NuxtLink>
                     <NuxtLink href="https://www.linkedin.com/in/olivier-hayot/">Linkedin</NuxtLink>
                 </p>
-                <ContactForm class="w-full mt-4" />
+                <!--<ContactForm class="w-full mt-4" />-->
             </div>
         </div>
     </div>
