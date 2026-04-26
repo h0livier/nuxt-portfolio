@@ -1,5 +1,5 @@
 import { useI18n } from 'vue-i18n'
-import type { ListOption, Mission, Place, WorkPlace } from '~/types'
+import type { Certification, ListOption, Mission, Place, WorkPlace } from '~/types'
 
 export const useProfileData = () => {
   const { t } = useI18n()
@@ -42,6 +42,23 @@ export const useProfileData = () => {
     }
   ]
 
+  const certifications: Certification[] = [
+    {
+      name: t('certifications.terraform.name'),
+      description: t('certifications.terraform.description'),
+      date: t('certifications.terraform.date'),
+      link: 'https://www.credly.com/badges/example-terraform-associate',
+      validUntil: t('certifications.terraform.validUntil')
+    },
+    {
+      name: t('certifications.gh300.name'),
+      description: t('certifications.gh300.description'),
+      date: t('certifications.gh300.date'),
+      link: 'https://www.credly.com/badges/example-az-900',
+      validUntil: t('certifications.gh300.validUntil')
+    },
+  ]
+
   const contacts: ListOption[] = [
     { name: t('contacts.phone'), value: '+32 471 64 60 15' },
     { name: t('contacts.mail'), value: 'olivier.hayot.dev@gmail.com' },
@@ -62,5 +79,5 @@ export const useProfileData = () => {
       {name: t('skill.soft'), value: `${t('skill.analytic')}, ${t('skill.team')}, ${t('skill.communication')}, ${t('skill.adaptive')}`}
     ]
 
-  return { experiences, educations, contacts, languages, skills }
+  return { experiences, educations, certifications, contacts, languages, skills }
 }
