@@ -9,7 +9,40 @@
   "secondMotivationTitle": "Automatisation & Création d’outils",
   "secondMotivationText": "Transformer de petites idées en solutions pratiques est ce qui nourrit ma curiosité et ma motivation.",
   "getInTouchTitle": "Envie de me contacter ?",
-  "getInTouchText": "Contactez-moi via les liens ci-dessous.",
+  "getInTouchText": "Remplissez le formulaire ci-dessous ou contactez-moi via les liens suivants.",
+
+  "contact": {
+    "formTitle": "Formulaire de contact",
+    "submit": "Envoyer",
+    "successMessage": "Merci ! Votre messagerie s'est ouverte avec le message pré-rempli.",
+    "mailFrom": "Message de",
+    "fields": {
+      "name": "Nom",
+      "email": "Email",
+      "phone": "Téléphone",
+      "subject": "Sujet",
+      "message": "Message"
+    },
+    "placeholders": {
+      "name": "Votre nom",
+      "email": "votre{'@'}email.com",
+      "phone": "+32 400 00 00 00",
+      "subject": "Choisissez un sujet",
+      "message": "Votre message..."
+    },
+    "subjects": {
+      "jobOffer": "Offre d'emploi",
+      "freelance": "Mission freelance",
+      "other": "Autre"
+    },
+    "errors": {
+      "nameMin": "Le nom doit comporter au moins 2 caractères.",
+      "emailInvalid": "Adresse e-mail invalide.",
+      "phoneInvalid": "Numéro de téléphone invalide.",
+      "subjectRequired": "Veuillez sélectionner un sujet.",
+      "messageMin": "Le message doit comporter au moins 10 caractères."
+    }
+  },
   "printButton": "Consultez mon CV",
   "timelineTitle": "Mon Parcours",
   "mission": "Mission",

@@ -9,7 +9,40 @@
   "secondMotivationTitle": "Automation & Creating Tools",
   "secondMotivationText": "Turning small ideas into practical solutions is what keeps me curious and motivated.",
   "getInTouchTitle": "Want to get in touch ?",
-  "getInTouchText": "Reach out via the social links below.",
+  "getInTouchText": "Fill in the form below or reach out via the social links.",
+
+  "contact": {
+    "formTitle": "Contact Form",
+    "submit": "Send",
+    "successMessage": "Thanks! Your email client opened with the message pre-filled.",
+    "mailFrom": "Message from",
+    "fields": {
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone",
+      "subject": "Subject",
+      "message": "Message"
+    },
+    "placeholders": {
+      "name": "Your name",
+      "email": "your{'@'}email.com",
+      "phone": "+32 400 00 00 00",
+      "subject": "Choose a subject",
+      "message": "Your message..."
+    },
+    "subjects": {
+      "jobOffer": "Job offer",
+      "freelance": "Freelance mission",
+      "other": "Other"
+    },
+    "errors": {
+      "nameMin": "Name must be at least 2 characters.",
+      "emailInvalid": "Invalid email address.",
+      "phoneInvalid": "Invalid phone number.",
+      "subjectRequired": "Please select a subject.",
+      "messageMin": "Message must be at least 10 characters."
+    }
+  },
   "printButton": "Check out my resume",
   "timelineTitle": "My Journey",
   "mission": "Mission",
