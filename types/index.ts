@@ -19,3 +19,8 @@ export interface WorkPlace extends Place {
     missions?: Mission[]
     internship?: boolean
 }
+
+export interface Certification extends Place {
+    link: string
+    validUntil: string
+}

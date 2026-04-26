@@ -4,7 +4,7 @@ const props = defineProps<{
 }>()
 </script>
 <template>
-    <div class="my-4">
+    <div class="my-3">
         <cv-lined-title :value="props.title" />
         <slot />    
     </div>

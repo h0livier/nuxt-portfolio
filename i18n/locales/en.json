@@ -81,6 +81,21 @@
     }
   },
 
+  "certifications": {
+    "gh300": {
+      "name": "Microsoft Certified: Github Copilot (GH-300)",
+      "description": "Fundamentals of GitHub Copilot, effective use of the tool to improve productivity and code quality.",
+      "date": "February 2026",
+      "validUntil": "February 2028"
+    },
+    "terraform": {
+      "name": "HashiCorp Certified: Terraform Associate 004",
+      "description": "Proficiency in Infrastructure as Code principles, Terraform state management, and automation workflows.",
+      "date": "April 2026",
+      "validUntil": "April 2028"
+    }
+  },
+
   "contacts": {
     "phone": "Phone number",
     "mail": "Mail",
@@ -108,8 +123,10 @@
     "aboutMe": "About Me",
     "workExperience": "Work Experiences",
     "education": "Education",
+    "certificationsTitle": "Certifications",
     "skills": "Skills",
     "languagesTitle": "Languages",
+    "validUntil": "Valid until",
 
     "cvHeader": {
         "title": ".NET Analyst Developer",

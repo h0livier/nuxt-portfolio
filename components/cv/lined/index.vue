@@ -1,9 +1,10 @@
 <script setup lang="ts">
-import type { ListOption, Place, WorkPlace } from '~/types'
+import type { Certification, ListOption, Place, WorkPlace } from '~/types'
 
 interface CVProps{
     educations: Place[]
     experiences: WorkPlace[]
+    certifications: Certification[]
     contacts: ListOption[]
     languages: ListOption[]
     skills: ListOption[]
@@ -12,6 +13,7 @@ const props = defineProps<CVProps>()
 
 const educations = props.educations
 const experiences = props.experiences
+const certifications = props.certifications
 const contacts = props.contacts
 const skills = props.skills // ["C#", ".Net Core", "EF Core", "XUnit/NUnit", "Blazor", "TypeScript", "Nuxt", "Vue.js", "React.js", "HTML5/CSS3", "PostgreSQL", "SQL Server", "Cosmos DB", "Docker", "Git", "Github", "CI/CD", "Powershell", "Azure", "Linux"]
 </script>
@@ -54,7 +56,14 @@ const skills = props.skills // ["C#", ".Net Core", "EF Core", "XUnit/NUnit", "Bl
                 :date="experience.date"
                 :description="experience.description"
                 :missions="experience.missions"
-                :showMission="true" />
+                :showMission="false" />
+        </cv-lined-section>
+
+        <cv-lined-section :title='$t("certificationsTitle")'>
+            <cv-lined-certification
+                v-for="(certification, index) in certifications"
+                :key="index"
+                :certification="certification" />
         </cv-lined-section>
         
         <cv-lined-section :title='$t("education")'>
