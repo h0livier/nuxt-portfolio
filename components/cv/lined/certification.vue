@@ -7,11 +7,11 @@ const props = defineProps<{
 </script>
 
 <template>
-  <div class="flex my-3">
+  <div class="flex my-2.5 break-inside-avoid">
     <div class="flex-2">
       <p class="italic text-sm">{{ props.certification.date }}</p>
     </div>
-    <div class="flex-8 pl-5">
+    <div class="flex-8 pl-4">
       <h4 class="font-bold">{{ props.certification.name }}</h4>
       <p class="pt-1 text-sm">
         {{ props.certification.description }}
