@@ -81,6 +81,21 @@
     }
   },
 
+  "certifications": {
+    "gh300": {
+      "name": "Microsoft Certified: Github Copilot (GH-300)",
+      "description": "Fondamentaux de GitHub Copilot, utilisation efficace de l'outil pour améliorer la productivité et la qualité du code.",
+      "date": "Février 2026",
+      "validUntil": "Février 2028"
+    },
+    "terraform": {
+      "name": "HashiCorp Certified: Terraform Associate 004",
+      "description": "Maîtrise des principes Infrastructure as Code, gestion d'état Terraform et workflows d'automatisation.",
+      "date": "Avril 2026",
+      "validUntil": "Avril 2028"
+    }
+  },
+
   "contacts": {
     "phone": "Numéro de téléphone",
     "mail": "E-mail",
@@ -105,13 +120,16 @@
   },
 
   "aboutMe": "À propos",
-  "workExperience": "Expérience Professionnelle",
+  "workExperience": "Expériences Professionnelles",
   "education": "Formation",
+  "certificationsTitle": "Certifications",
   "skills": "Compétences",
   "languagesTitle": "Langues",
+  "validUntil": "Valide jusqu'à",
+  "viewBadge": "Voir le badge",
 
   "cvHeader": {
     "title": "Analyste Développeur .NET",
-    "description": "Analyste développeur .NET Full Stack avec près de 4 ans d’expérience dans le développement d’applications web. Spécialisé en .NET Core (back-end) et Vue.js (front-end), j’interviens sur l’ensemble du cycle de développement ainsi que sur les aspects DevOps et infrastructure. Curieux et orienté solutions, j’apprécie relever des défis techniques et optimiser les processus."
+    "description": "Analyste développeur .NET Full Stack avec près de 4 ans d’expérience dans le développement d’applications web. Spécialisé en .NET Core (back-end), Vue.js et Blazor (front-end), j’interviens sur l’ensemble du cycle de développement ainsi que sur les aspects DevOps et infrastructure. Curieux et orienté solutions, j’apprécie relever des défis techniques et optimiser les processus."
   }
 }

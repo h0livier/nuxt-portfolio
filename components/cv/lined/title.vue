@@ -4,9 +4,9 @@ const props = defineProps<{
 }>()
 </script>
 <template>
-    <h4 class="flex justify-center items-center mb-2">
+    <h4 class="flex justify-center items-center mb-1.5">
         <hr class="flex-1" />
-        <span class="tex-3xl font-bold mx-4">{{ props.value }}</span>
+        <span class="tex-3xl font-bold mx-3">{{ props.value }}</span>
         <hr class="flex-8"/>
     </h4>
 </template>
