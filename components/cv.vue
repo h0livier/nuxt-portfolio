@@ -1,9 +1,10 @@
 <script setup lang="ts">
-import type { ListOption, Place, WorkPlace } from '~/types'
+import type { Certification, ListOption, Place, WorkPlace } from '~/types'
 
 interface CVProps{
     educations: Place[]
     experiences: WorkPlace[]
+    certifications: Certification[]
     contacts: ListOption[]
     languages: ListOption[]
     skills: ListOption[]
@@ -12,6 +13,7 @@ const props = defineProps<CVProps>()
 
 const educations = props.educations
 const experiences = props.experiences
+const certifications = props.certifications
 const contacts = props.contacts
 const languages = props.languages
 const skills = props.skills
@@ -20,6 +22,7 @@ const skills = props.skills
     <cv-lined
         :educations="educations"
         :experiences="experiences"
+        :certifications="certifications"
         :contacts="contacts"
         :languages="languages"
         :skills="skills" />

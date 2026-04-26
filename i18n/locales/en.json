@@ -81,6 +81,21 @@
     }
   },
 
+  "certifications": {
+    "gh300": {
+      "name": "Microsoft Certified: Github Copilot (GH-300)",
+      "description": "Fundamentals of GitHub Copilot, effective use of the tool to improve productivity and code quality.",
+      "date": "February 2026",
+      "validUntil": "February 2028"
+    },
+    "terraform": {
+      "name": "HashiCorp Certified: Terraform Associate 004",
+      "description": "Proficiency in Infrastructure as Code principles, Terraform state management, and automation workflows.",
+      "date": "April 2026",
+      "validUntil": "April 2028"
+    }
+  },
+
   "contacts": {
     "phone": "Phone number",
     "mail": "Mail",
@@ -106,13 +121,16 @@
 
   
     "aboutMe": "About Me",
-    "workExperience": "Work Experience",
+    "workExperience": "Work Experiences",
     "education": "Education",
+    "certificationsTitle": "Certifications",
     "skills": "Skills",
     "languagesTitle": "Languages",
+    "validUntil": "Valid until",
+    "viewBadge": "View badge",
 
     "cvHeader": {
         "title": ".NET Analyst Developer",
-        "description": "Full-stack .NET developer with nearly four years’ experience in web application development. Specialising in .NET Core (back-end) and Vue.js (front-end), I am involved in the entire development lifecycle as well as DevOps and infrastructure. I am curious and solution-oriented, and I enjoy tackling technical challenges and optimising processes."
+        "description": "Full-stack .NET developer with nearly four years’ experience in web application development. Specialising in .NET Core (back-end), Vue.js and Blazor (front-end), I am involved in the entire development lifecycle as well as DevOps and infrastructure. I am curious and solution-oriented, and I enjoy tackling technical challenges and optimising processes."
     }
 }

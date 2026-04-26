@@ -1,11 +1,11 @@
 <script setup lang="ts">
 const props = defineProps<{
-    title: string
+    title?: string
 }>()
 </script>
 <template>
-    <div class="my-4">
-        <cv-lined-title :value="props.title" />
+    <div class="my-2.5">
+        <cv-lined-title v-if="props.title && props.title.length > 0" :value="props.title" />
         <slot />    
     </div>
 </template>
