@@ -45,6 +45,26 @@ const years = new Date().getFullYear() - new Date(2022, 9, 22).getFullYear()
                 </div>
             </div>
             <Timeline :experiences="experiences" :educations="educations" />
+            <div class="mt-[10vh] md:my-16">
+                <h2 class="text-2xl mb-5">{{ $t("certificationsTitle") }}</h2>
+                <div class="flex flex-col gap-4 lg:flex-row lg:flex-wrap lg:gap-8">
+                    <a v-for="cert in certifications" :key="cert.name"
+                        :href="cert.link || undefined"
+                        target="_blank" rel="noopener noreferrer"
+                        class="grow card bg-base-100 transition-all hover:bg-base-200 cursor-pointer">
+                        <div class="card-body">
+                            <div class="flex flex-col-reverse items-center gap-4 md:flex-row md:items-center">
+                                <img v-if="cert.logo" :src="cert.logo" :alt="cert.name" class="w-30 h-30 object-contain" />
+                                <div>
+                                    <p class="text-xl font-bold">{{ cert.name }}</p>
+                                    <p class="text-sm text-base-content/60 py-2">{{ cert.date }} &mdash; {{ $t("validUntil") }} {{ cert.validUntil }}</p>
+                                    <p>{{ cert.description }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
             <div class="flex flex-col items-center gap-5 my-20">
                 <h2 class="text-3xl">{{ $t("getInTouchTitle") }}</h2>
                 <p class="text-center text-xl">{{ $t("getInTouchText") }}</p>
