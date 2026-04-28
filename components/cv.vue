@@ -9,6 +9,9 @@ interface CVProps{
     languages: ListOption[]
     skills: ListOption[]
     variant?: CVPrintVariant
+    showMissions?: boolean
+    showCertifications?: boolean
+    showAbout?: boolean
 }
 const props = defineProps<CVProps>()
 
@@ -27,7 +30,10 @@ const skills = props.skills
         :certifications="certifications"
         :contacts="contacts"
         :languages="languages"
-        :skills="skills" />
+        :skills="skills"
+        :show-missions="props.showMissions"
+        :show-certifications="props.showCertifications"
+        :show-about="props.showAbout" />
     <cv-columns
         v-else
         :educations="educations"
@@ -35,5 +41,8 @@ const skills = props.skills
         :certifications="certifications"
         :contacts="contacts"
         :languages="languages"
-        :skills="skills" />
+        :skills="skills"
+        :show-missions="props.showMissions"
+        :show-certifications="props.showCertifications"
+        :show-about="props.showAbout" />
 </template>

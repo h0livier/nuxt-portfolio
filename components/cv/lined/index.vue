@@ -8,6 +8,9 @@ interface CVProps{
     contacts: ListOption[]
     languages: ListOption[]
     skills: ListOption[]
+    showMissions?: boolean
+    showCertifications?: boolean
+    showAbout?: boolean
 }
 const props = defineProps<CVProps>()
 
@@ -43,7 +46,7 @@ const skills = props.skills // ["C#", ".Net Core", "EF Core", "XUnit/NUnit", "Bl
             </div>
         </div>
         
-        <cv-lined-section :title='$t("aboutMe")'>
+        <cv-lined-section v-if="props.showAbout !== false" :title='$t("aboutMe")'>
             <p class="pt-2.5 text-sm">{{ $t("cvHeader.description") }}</p>
         </cv-lined-section>
 
@@ -56,11 +59,12 @@ const skills = props.skills // ["C#", ".Net Core", "EF Core", "XUnit/NUnit", "Bl
                 :date="experience.date"
                 :description="experience.description"
                 :missions="experience.missions"
-                :showMission="false" />
+                :showMission="props.showMissions ?? true" />
         </cv-lined-section>
         
         <cv-lined-section :title='$t("education")'>
             <cv-lined-certification
+                v-if="props.showCertifications !== false"
                 v-for="(certification, index) in certifications"
                 :key="index"
                 :certification="certification" />

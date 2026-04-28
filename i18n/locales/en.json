@@ -49,6 +49,9 @@
   "cvPrintLayout": "Choose the CV layout to print",
   "cvPrintLayoutSquared": "Columns",
   "cvPrintLayoutLined": "Vertical",
+  "cvPrintShowMissions": "Show missions",
+  "cvPrintShowCertifications": "Show certifications",
+  "cvPrintShowAbout": "Show About section",
   "timelineTitle": "My Journey",
   "mission": "Mission",
 

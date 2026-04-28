@@ -8,6 +8,9 @@ interface CVProps {
 	contacts: ListOption[]
 	languages: ListOption[]
 	skills: ListOption[]
+	showMissions?: boolean
+	showCertifications?: boolean
+	showAbout?: boolean
 }
 
 const props = defineProps<CVProps>()
@@ -31,7 +34,10 @@ const skills = props.skills
 			<cv-columns-content
 				:educations="educations"
 				:experiences="experiences"
-				:certifications="certifications" />
+				:certifications="certifications"
+				:show-missions="props.showMissions"
+				:show-certifications="props.showCertifications"
+				:show-about="props.showAbout" />
 		</div>
 	</div>
 </template>
