@@ -25,3 +25,5 @@ export interface Certification extends Place {
     validUntil: string
     logo?: string
 }
+
+export type CVPrintVariant = 'lined' | 'squared'

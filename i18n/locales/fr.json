@@ -10,6 +10,8 @@
   "secondMotivationText": "Transformer de petites idées en solutions pratiques est ce qui nourrit ma curiosité et ma motivation.",
   "getInTouchTitle": "Envie de me contacter ?",
   "getInTouchText": "Remplissez le formulaire ci-dessous ou contactez-moi via les liens suivants.",
+  "cancel": "Annuler",
+  "print": "Imprimer",
 
   "contact": {
     "formTitle": "Formulaire de contact",
@@ -44,6 +46,9 @@
     }
   },
   "printButton": "Consultez mon CV",
+  "cvPrintLayout": "Choisissez la mise en page du CV à imprimer",
+  "cvPrintLayoutSquared": "Colonnes",
+  "cvPrintLayoutLined": "Vertical",
   "timelineTitle": "Mon Parcours",
   "mission": "Mission",
 
