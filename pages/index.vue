@@ -1,13 +1,18 @@
 <script setup lang="ts">
 import type { CVPrintVariant } from '~/types'
-import { ref } from 'vue'
+import { reactive, ref } from 'vue'
 import { useProfileData } from '~/services/useProfileData'
 const {experiences, educations, certifications, contacts, languages, skills} = useProfileData()
 const years = new Date().getFullYear() - new Date(2022, 9, 22).getFullYear()
 const cvVariant = ref<CVPrintVariant>('squared')
+const cvPrintOptions = reactive({
+    showMissions: true,
+    showCertifications: true,
+    showAbout: true,
+})
 </script>
 <template>
-    <Cv :experiences="experiences" :educations="educations" :certifications="certifications" :contacts="contacts" :languages="languages" :skills="skills" :variant="cvVariant" />
+    <Cv :experiences="experiences" :educations="educations" :certifications="certifications" :contacts="contacts" :languages="languages" :skills="skills" :variant="cvVariant" :show-missions="cvPrintOptions.showMissions" :show-certifications="cvPrintOptions.showCertifications" :show-about="cvPrintOptions.showAbout" />
     <div class="flex justify-center">
         <div class="min-h-screen print:hidden max-w-[90vw] md:max-w-[75vw] lg:max-w-[60vw] xl:max-w-[50vw]">
             <div class="flex justify-between mt-10 lg:mt-20 mb-10">
@@ -26,7 +31,7 @@ const cvVariant = ref<CVPrintVariant>('squared')
                             {{ $t("presentation_2") }}
                             <br />{{ $t("presentation_3") }}
                         </div>
-                        <PrintButton :variant="cvVariant" @update:variant="cvVariant = $event"></PrintButton>
+                        <PrintButton :variant="cvVariant" :show-missions="cvPrintOptions.showMissions" :show-certifications="cvPrintOptions.showCertifications" :show-about="cvPrintOptions.showAbout" @update:variant="cvVariant = $event" @update:showMissions="cvPrintOptions.showMissions = $event" @update:showCertifications="cvPrintOptions.showCertifications = $event" @update:showAbout="cvPrintOptions.showAbout = $event"></PrintButton>
                     </div>
                 </div>
             </div>

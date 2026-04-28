@@ -3,11 +3,17 @@ import type { CVPrintVariant } from '~/types'
 
 interface PrintButtonProps {
     variant: CVPrintVariant
+    showMissions: boolean
+    showCertifications: boolean
+    showAbout: boolean
 }
 
 const props = defineProps<PrintButtonProps>()
 const emit = defineEmits<{
     (e: 'update:variant', value: CVPrintVariant): void
+    (e: 'update:showMissions', value: boolean): void
+    (e: 'update:showCertifications', value: boolean): void
+    (e: 'update:showAbout', value: boolean): void
 }>()
 
 const modal = ref<HTMLDialogElement | null>(null)
@@ -22,6 +28,18 @@ function updateVariant(value: string) {
     }
 }
 
+function updateShowMissions(value: boolean) {
+    emit('update:showMissions', value)
+}
+
+function updateShowCertifications(value: boolean) {
+    emit('update:showCertifications', value)
+}
+
+function updateShowAbout(value: boolean) {
+    emit('update:showAbout', value)
+}
+
 function print(){
     window.print()
 }
@@ -29,12 +47,36 @@ function print(){
 <template>
     <dialog ref="modal" class="modal modal-bottom sm:modal-middle">
         <div class="modal-box">
-            <h3 class="text-lg font-bold">{{ $t("printButton") }}</h3>
-            <p class="py-4">{{ $t("cvPrintLayout") }}</p>
+            <h3 class="text-xl font-bold">{{ $t("printButton") }}</h3>
+            <p class="pt-4 py-6">{{ $t("cvPrintLayout") }}</p>
             <select class="select select-bordered w-full mb-4" :value="props.variant" @change="updateVariant(($event.target as HTMLSelectElement).value)">
                 <option value="squared">{{ $t("cvPrintLayoutSquared") }}</option>
                 <option value="lined">{{ $t("cvPrintLayoutLined") }}</option>
             </select>
+            <label class="label cursor-pointer justify-start gap-3 mb-2">
+                <input
+                    type="checkbox"
+                    class="checkbox checkbox-primary"
+                    :checked="props.showMissions"
+                    @change="updateShowMissions(($event.target as HTMLInputElement).checked)">
+                <span class="label-text">{{ $t("cvPrintShowMissions") }}</span>
+            </label>
+            <label class="label cursor-pointer justify-start gap-3 mb-2">
+                <input
+                    type="checkbox"
+                    class="checkbox checkbox-primary"
+                    :checked="props.showCertifications"
+                    @change="updateShowCertifications(($event.target as HTMLInputElement).checked)">
+                <span class="label-text">{{ $t("cvPrintShowCertifications") }}</span>
+            </label>
+            <label class="label cursor-pointer justify-start gap-3 mb-2">
+                <input
+                    type="checkbox"
+                    class="checkbox checkbox-primary"
+                    :checked="props.showAbout"
+                    @change="updateShowAbout(($event.target as HTMLInputElement).checked)">
+                <span class="label-text">{{ $t("cvPrintShowAbout") }}</span>
+            </label>
             <div class="modal-action">
                 <form method="dialog" class="gap-5">
                     <button class="btn btn-outline hover:bg-gray-700 mr-4">{{$t("cancel")}}</button>
