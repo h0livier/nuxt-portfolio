@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Certification, ListOption, Place, WorkPlace } from '~/types'
+import type { CVPrintVariant, Certification, ListOption, Place, WorkPlace } from '~/types'
 
 interface CVProps{
     educations: Place[]
@@ -8,6 +8,7 @@ interface CVProps{
     contacts: ListOption[]
     languages: ListOption[]
     skills: ListOption[]
+    variant?: CVPrintVariant
 }
 const props = defineProps<CVProps>()
 
@@ -20,6 +21,15 @@ const skills = props.skills
 </script>
 <template>
     <cv-lined
+        v-if="props.variant === 'lined'"
+        :educations="educations"
+        :experiences="experiences"
+        :certifications="certifications"
+        :contacts="contacts"
+        :languages="languages"
+        :skills="skills" />
+    <cv-columns
+        v-else
         :educations="educations"
         :experiences="experiences"
         :certifications="certifications"

@@ -10,6 +10,8 @@
   "secondMotivationText": "Turning small ideas into practical solutions is what keeps me curious and motivated.",
   "getInTouchTitle": "Want to get in touch ?",
   "getInTouchText": "Fill in the form below or reach out via the social links.",
+  "cancel": "Cancel",
+  "print": "Print",
 
   "contact": {
     "formTitle": "Contact Form",
@@ -44,6 +46,9 @@
     }
   },
   "printButton": "Check out my resume",
+  "cvPrintLayout": "Choose the CV layout to print",
+  "cvPrintLayoutSquared": "Columns",
+  "cvPrintLayoutLined": "Vertical",
   "timelineTitle": "My Journey",
   "mission": "Mission",
 

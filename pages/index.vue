@@ -1,10 +1,13 @@
 <script setup lang="ts">
+import type { CVPrintVariant } from '~/types'
+import { ref } from 'vue'
 import { useProfileData } from '~/services/useProfileData'
 const {experiences, educations, certifications, contacts, languages, skills} = useProfileData()
 const years = new Date().getFullYear() - new Date(2022, 9, 22).getFullYear()
+const cvVariant = ref<CVPrintVariant>('squared')
 </script>
 <template>
-    <Cv :experiences="experiences" :educations="educations" :certifications="certifications" :contacts="contacts" :languages="languages" :skills="skills" />
+    <Cv :experiences="experiences" :educations="educations" :certifications="certifications" :contacts="contacts" :languages="languages" :skills="skills" :variant="cvVariant" />
     <div class="flex justify-center">
         <div class="min-h-screen print:hidden max-w-[90vw] md:max-w-[75vw] lg:max-w-[60vw] xl:max-w-[50vw]">
             <div class="flex justify-between mt-10 lg:mt-20 mb-10">
@@ -23,7 +26,7 @@ const years = new Date().getFullYear() - new Date(2022, 9, 22).getFullYear()
                             {{ $t("presentation_2") }}
                             <br />{{ $t("presentation_3") }}
                         </div>
-                        <PrintButton></PrintButton>
+                        <PrintButton :variant="cvVariant" @update:variant="cvVariant = $event"></PrintButton>
                     </div>
                 </div>
             </div>
