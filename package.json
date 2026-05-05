@@ -13,7 +13,7 @@
     "@nuxtjs/i18n": "^10.2.3",
     "@nuxtjs/sitemap": "^7.6.0",
     "@tailwindcss/postcss": "^4.2.2",
-    "@tailwindcss/vite": "^4.1.6",
+    "@tailwindcss/vite": "^4.2.4",
     "autoprefixer": "^10.4.27",
     "daisyui": "^5.5.19",
     "nuxt": "^3.17.2",
