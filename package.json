@@ -10,6 +10,7 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@microsoft/applicationinsights-web": "^3.4.1",
     "@nuxtjs/i18n": "^10.2.1",
     "@nuxtjs/sitemap": "^7.4.3",
     "@tailwindcss/postcss": "^4.1.11",
