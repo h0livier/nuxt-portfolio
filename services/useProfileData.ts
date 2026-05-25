@@ -1,5 +1,5 @@
 import { useI18n } from 'vue-i18n'
-import type { ListOption, Mission, Place, WorkPlace } from '~/types'
+import type { Certification, ListOption, Mission, Place, WorkPlace } from '~/types'
 
 export const useProfileData = () => {
   const { t } = useI18n()
@@ -42,6 +42,25 @@ export const useProfileData = () => {
     }
   ]
 
+  const certifications: Certification[] = [
+    {
+      name: t('certifications.terraform.name'),
+      description: t('certifications.terraform.description'),
+      date: t('certifications.terraform.date'),
+      link: 'https://www.credly.com/badges/19129d90-2993-4fe8-a301-1460a0c7f5b4/public_url',
+      validUntil: t('certifications.terraform.validUntil'),
+      logo: "https://img-c.udemycdn.com/open-badges/v2/badge-class/1256144051/d0da6cb2-8edb-438f-b6b2-abaf0acf6f0b11682161235118687450.png"
+    },
+    {
+      name: t('certifications.gh300.name'),
+      description: t('certifications.gh300.description'),
+      date: t('certifications.gh300.date'),
+      link: 'https://learn.microsoft.com/api/credentials/share/fr-fr/OlivierHayot-3879/959D372E9B54FE26?sharingId=F6F8F4EC39C38103',
+      validUntil: t('certifications.gh300.validUntil'),
+      logo: "https://img-c.udemycdn.com/open-badges/v2/badge-class/1999319323/9a132d12-47a7-4c8e-8954-27fe0e5f0a1d12569602178324077995.png"
+    },
+  ]
+
   const contacts: ListOption[] = [
     { name: t('contacts.phone'), value: '+32 471 64 60 15' },
     { name: t('contacts.mail'), value: 'olivier.hayot.dev@gmail.com' },
@@ -62,5 +81,5 @@ export const useProfileData = () => {
       {name: t('skill.soft'), value: `${t('skill.analytic')}, ${t('skill.team')}, ${t('skill.communication')}, ${t('skill.adaptive')}`}
     ]
 
-  return { experiences, educations, contacts, languages, skills }
+  return { experiences, educations, certifications, contacts, languages, skills }
 }

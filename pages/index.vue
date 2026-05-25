@@ -1,10 +1,18 @@
 <script setup lang="ts">
+import type { CVPrintVariant } from '~/types'
+import { reactive, ref } from 'vue'
 import { useProfileData } from '~/services/useProfileData'
-const {experiences, educations, contacts, languages, skills} = useProfileData()
+const {experiences, educations, certifications, contacts, languages, skills} = useProfileData()
 const years = new Date().getFullYear() - new Date(2022, 9, 22).getFullYear()
+const cvVariant = ref<CVPrintVariant>('squared')
+const cvPrintOptions = reactive({
+    showMissions: true,
+    showCertifications: true,
+    showAbout: true,
+})
 </script>
 <template>
-    <Cv :experiences="experiences" :educations="educations" :contacts="contacts" :languages="languages" :skills="skills" />
+    <Cv :experiences="experiences" :educations="educations" :certifications="certifications" :contacts="contacts" :languages="languages" :skills="skills" :variant="cvVariant" :show-missions="cvPrintOptions.showMissions" :show-certifications="cvPrintOptions.showCertifications" :show-about="cvPrintOptions.showAbout" />
     <div class="flex justify-center">
         <div class="min-h-screen print:hidden max-w-[90vw] md:max-w-[75vw] lg:max-w-[60vw] xl:max-w-[50vw]">
             <div class="flex justify-between mt-10 lg:mt-20 mb-10">
@@ -23,7 +31,7 @@ const years = new Date().getFullYear() - new Date(2022, 9, 22).getFullYear()
                             {{ $t("presentation_2") }}
                             <br />{{ $t("presentation_3") }}
                         </div>
-                        <PrintButton></PrintButton>
+                        <PrintButton :variant="cvVariant" :show-missions="cvPrintOptions.showMissions" :show-certifications="cvPrintOptions.showCertifications" :show-about="cvPrintOptions.showAbout" @update:variant="cvVariant = $event" @update:showMissions="cvPrintOptions.showMissions = $event" @update:showCertifications="cvPrintOptions.showCertifications = $event" @update:showAbout="cvPrintOptions.showAbout = $event"></PrintButton>
                     </div>
                 </div>
             </div>
@@ -45,6 +53,26 @@ const years = new Date().getFullYear() - new Date(2022, 9, 22).getFullYear()
                 </div>
             </div>
             <Timeline :experiences="experiences" :educations="educations" />
+            <div class="mt-[10vh] md:my-16">
+                <h2 class="text-2xl mb-5">{{ $t("certificationsTitle") }}</h2>
+                <div class="flex flex-col gap-4 lg:flex-row lg:flex-wrap lg:gap-8">
+                    <a v-for="cert in certifications" :key="cert.name"
+                        :href="cert.link || undefined"
+                        target="_blank" rel="noopener noreferrer"
+                        class="grow card bg-base-100 transition-all hover:bg-base-200 cursor-pointer">
+                        <div class="card-body">
+                            <div class="flex flex-col-reverse items-center gap-4 md:flex-row md:items-center">
+                                <img v-if="cert.logo" :src="cert.logo" :alt="cert.name" class="w-30 h-30 object-contain" />
+                                <div>
+                                    <p class="text-xl font-bold">{{ cert.name }}</p>
+                                    <p class="text-sm text-base-content/60 py-2">{{ cert.date }} &mdash; {{ $t("validUntil") }} {{ cert.validUntil }}</p>
+                                    <p>{{ cert.description }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
             <div class="flex flex-col items-center gap-5 my-20">
                 <h2 class="text-3xl">{{ $t("getInTouchTitle") }}</h2>
                 <p class="text-center text-xl">{{ $t("getInTouchText") }}</p>
@@ -52,6 +80,7 @@ const years = new Date().getFullYear() - new Date(2022, 9, 22).getFullYear()
                     <NuxtLink href="https://github.com/h0livier">Github</NuxtLink>
                     <NuxtLink href="https://www.linkedin.com/in/olivier-hayot/">Linkedin</NuxtLink>
                 </p>
+                <!--<ContactForm class="w-full mt-4" />-->
             </div>
         </div>
     </div>

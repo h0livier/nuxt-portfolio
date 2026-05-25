@@ -9,8 +9,49 @@
   "secondMotivationTitle": "Automation & Creating Tools",
   "secondMotivationText": "Turning small ideas into practical solutions is what keeps me curious and motivated.",
   "getInTouchTitle": "Want to get in touch ?",
-  "getInTouchText": "Reach out via the social links below.",
+  "getInTouchText": "Fill in the form below or reach out via the social links.",
+  "cancel": "Cancel",
+  "print": "Print",
+
+  "contact": {
+    "formTitle": "Contact Form",
+    "submit": "Send",
+    "successMessage": "Thanks! Your email client opened with the message pre-filled.",
+    "mailFrom": "Message from",
+    "fields": {
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone",
+      "subject": "Subject",
+      "message": "Message"
+    },
+    "placeholders": {
+      "name": "Your name",
+      "email": "your{'@'}email.com",
+      "phone": "+32 400 00 00 00",
+      "subject": "Choose a subject",
+      "message": "Your message..."
+    },
+    "subjects": {
+      "jobOffer": "Job offer",
+      "freelance": "Freelance mission",
+      "other": "Other"
+    },
+    "errors": {
+      "nameMin": "Name must be at least 2 characters.",
+      "emailInvalid": "Invalid email address.",
+      "phoneInvalid": "Invalid phone number.",
+      "subjectRequired": "Please select a subject.",
+      "messageMin": "Message must be at least 10 characters."
+    }
+  },
   "printButton": "Check out my resume",
+  "cvPrintLayout": "Choose the CV layout to print",
+  "cvPrintLayoutSquared": "Columns",
+  "cvPrintLayoutLined": "Vertical",
+  "cvPrintShowMissions": "Show missions",
+  "cvPrintShowCertifications": "Show certifications",
+  "cvPrintShowAbout": "Show About section",
   "timelineTitle": "My Journey",
   "mission": "Mission",
 
@@ -48,6 +89,21 @@
     }
   },
 
+  "certifications": {
+    "gh300": {
+      "name": "Microsoft Certified: Github Copilot (GH-300)",
+      "description": "Fundamentals of GitHub Copilot, effective use of the tool to improve productivity and code quality.",
+      "date": "February 2026",
+      "validUntil": "February 2028"
+    },
+    "terraform": {
+      "name": "HashiCorp Certified: Terraform Associate 004",
+      "description": "Proficiency in Infrastructure as Code principles, Terraform state management, and automation workflows.",
+      "date": "April 2026",
+      "validUntil": "April 2028"
+    }
+  },
+
   "contacts": {
     "phone": "Phone number",
     "mail": "Mail",
@@ -73,13 +129,16 @@
 
   
     "aboutMe": "About Me",
-    "workExperience": "Work Experience",
+    "workExperience": "Work Experiences",
     "education": "Education",
+    "certificationsTitle": "Certifications",
     "skills": "Skills",
     "languagesTitle": "Languages",
+    "validUntil": "Valid until",
+    "viewBadge": "View badge",
 
     "cvHeader": {
         "title": ".NET Analyst Developer",
-        "description": "Full-stack .NET developer with nearly four years’ experience in web application development. Specialising in .NET Core (back-end) and Vue.js (front-end), I am involved in the entire development lifecycle as well as DevOps and infrastructure. I am curious and solution-oriented, and I enjoy tackling technical challenges and optimising processes."
+        "description": "Full-stack .NET developer with nearly four years’ experience in web application development. Specialising in .NET Core (back-end), Vue.js and Blazor (front-end), I am involved in the entire development lifecycle as well as DevOps and infrastructure. I am curious and solution-oriented, and I enjoy tackling technical challenges and optimising processes."
     }
 }
