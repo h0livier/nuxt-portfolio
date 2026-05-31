@@ -57,7 +57,7 @@
 
   "experiences": {
     "wavenet": {
-      "description": "Construction et maintenance d’applications web robustes avec .NET Core, TypeScript (Vue.js/React.js) et Azure. Accent mis sur la scalabilité, la performance et la propreté du code.",
+      "description": "Construction et maintenance d’applications web robustes avec .NET Core (API, Blazor), TypeScript (Vue.js) et Azure. Accent mis sur la scalabilité, la performance et la propreté du code.",
       "date": "Depuis mars 2024",
       "title": "Analyste Développeur .NET",
       "missions": [
