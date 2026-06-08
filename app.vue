@@ -1,4 +1,10 @@
 <script setup lang="ts">
+import { useAppInsights } from './helpers/appinsight'
+
+const appInsights = useAppInsights();
+appInsights.trackPageView('HomePage', '/');
+appInsights.trackTrace('Application has started successfully.');
+
 useHead({
   title: 'Olivier Hayot - Analyst Developer',
   meta: [

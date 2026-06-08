@@ -1,5 +1,8 @@
 <script setup lang="ts">
 import type { CVPrintVariant } from '~/types'
+import { useAppInsights } from '~/helpers/appinsight'
+
+const appInsights = useAppInsights();
 
 interface PrintButtonProps {
     variant: CVPrintVariant
@@ -41,6 +44,7 @@ function updateShowAbout(value: boolean) {
 }
 
 function print(){
+    appInsights.trackTrace('PrintButtonClicked');
     window.print()
 }
 </script>

@@ -1,7 +1,7 @@
 {
   "welcome": "Hello, je suis ",
-  "presentation_1": "Je suis développeur logiciel avec une expérience pratique en développement web full-stack depuis plus de %YEARS% ans.",
-  "presentation_2": " Ma stack actuel inclut TypeScript avec Next.js ou Nuxt pour le front-end, et .NET Core pour le back-end.",
+  "presentation_1": "Je suis Analyste Développeur avec une expérience pratique en développement web full-stack depuis plus de %YEARS% ans.",
+  "presentation_2": " Je travaille principalement avec .NET Core pour le back-end et Vue.js/Blazor pour le front-end tout en gérant les aspects DevOps et infrastructure. Curieux et orienté solutions, j’aime relever des défis techniques et optimiser les processus.",
   "presentation_3": "Pendant mon temps libre, j’aime sortir avec des amis boire un verre et améliorer mon chez-moi.",
   "drivesMe": "Ce qui me motive",
   "firstMotivationTitle": "Résoudre des problèmes",
