@@ -1,7 +1,7 @@
 {
   "welcome": "Hi, I'm ",
-  "presentation_1": "I'm a Software Developer with hands-on experience in full-stack web development for over %YEARS% years.",
-  "presentation_2": " My current stack includes TypeScript with Vue.js or Nuxt on the front end, and .NET Core on the back end.",
+  "presentation_1": "I am an Analyst Developer with practical experience in full-stack web development for more than %YEARS% years.",
+  "presentation_2": " I work primarily with .NET Core for the back-end and Vue.js/Blazor for the front-end while managing DevOps and infrastructure aspects. Curious and solution-oriented, I enjoy tackling technical challenges and optimizing processes.",
   "presentation_3": "In my free time, I enjoy socializing with friends over a drink and tinkering with my home automation setup.",
   "drivesMe": "What drives me",
   "firstMotivationTitle": "Solving Problems",

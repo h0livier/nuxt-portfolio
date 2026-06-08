@@ -29,7 +29,6 @@ const cvPrintOptions = reactive({
                         <div class="py-6 text-justify">
                             {{ $t("presentation_1").replace("%YEARS%", years.toString()) }}
                             {{ $t("presentation_2") }}
-                            <br />{{ $t("presentation_3") }}
                         </div>
                         <PrintButton :variant="cvVariant" :show-missions="cvPrintOptions.showMissions" :show-certifications="cvPrintOptions.showCertifications" :show-about="cvPrintOptions.showAbout" @update:variant="cvVariant = $event" @update:showMissions="cvPrintOptions.showMissions = $event" @update:showCertifications="cvPrintOptions.showCertifications = $event" @update:showAbout="cvPrintOptions.showAbout = $event"></PrintButton>
                     </div>
