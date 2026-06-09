@@ -57,7 +57,7 @@
 
   "experiences": {
     "wavenet": {
-      "description": "Construction et maintenance d’applications web robustes avec .NET Core (API, Blazor), TypeScript (Vue.js) et Azure. Accent mis sur la scalabilité, la performance et la propreté du code.",
+      "description": "Construction et maintenance d'applications web robustes avec .NET Core (API, Blazor), TypeScript (Vue.js) et Azure. Accent mis sur la scalabilité, la performance et la propreté du code. Automatisation de la création d'infrastructures avec Terraform, réduisant le temps de déploiement de 2 heures et permettant une provisionning rapide des environnements.",
       "date": "Depuis mars 2024",
       "title": "Analyste Développeur .NET",
       "missions": [
