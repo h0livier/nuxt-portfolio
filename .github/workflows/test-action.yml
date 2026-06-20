@@ -2,11 +2,6 @@ name: Test Action
 
 on:
   workflow_dispatch:
-    inputs:
-      name:
-        description: 'A description of your input here'
-        required: true
-        default: 'default value here'
 
 jobs:
   test:
@@ -15,11 +10,13 @@ jobs:
       - name: Checkout
         id: checkout
         uses: actions/checkout@v6
-
-      - name: Install Dependencies
-        run: npm i
     
       - name: Run your action
+        id: test-action
         uses: h0livier/action-test@main
         with:
           name: "nuxt"
+
+      - name: Print Output
+        id: output
+        run: echo "${{ steps.test-action.outputs.hello }}"
