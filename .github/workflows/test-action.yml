@@ -17,6 +17,6 @@ jobs:
         uses: actions/checkout@v6
 
       - name: Run your action
-        uses: h0livier/test-action@main
+        uses: h0livier/action-test@main
         with:
           name: "nuxt"
