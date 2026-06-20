@@ -1,0 +1,22 @@
+name: Test Action
+
+on:
+  workflow_dispatch:
+    inputs:
+      name:
+        description: 'A description of your input here'
+        required: true
+        default: 'default value here'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        id: checkout
+        uses: actions/checkout@v6
+
+      - name: Run your action
+        uses: h0livier/test-action@main
+        with:
+          name: "nuxt"
