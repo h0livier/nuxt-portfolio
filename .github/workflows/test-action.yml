@@ -16,6 +16,9 @@ jobs:
         id: checkout
         uses: actions/checkout@v6
 
+      - name: Install Dependencies
+        run: npm i
+    
       - name: Run your action
         uses: h0livier/action-test@main
         with:
