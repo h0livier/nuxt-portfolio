@@ -1,5 +1,6 @@
 {
   "welcome": "Hi, I'm ",
+  "profession": ".NET Full-Stack Developer",
   "presentation_1": "I am an Analyst Developer with practical experience in full-stack web development for more than %YEARS% years.",
   "presentation_2": " I work primarily with .NET Core for the back-end and Vue.js/Blazor for the front-end while managing DevOps and infrastructure aspects. Curious and solution-oriented, I enjoy tackling technical challenges and optimizing processes.",
   "presentation_3": "In my free time, I enjoy socializing with friends over a drink and tinkering with my home automation setup.",
@@ -12,6 +13,14 @@
   "getInTouchText": "Fill in the form below or reach out via the social links.",
   "cancel": "Cancel",
   "print": "Print",
+  "website": "Website",
+  "cv": "Curriculum Vitae",
+  "mail": "Mail",
+
+  "links": {
+    "portfolio": "Portfolio",
+    "contact": "Contact Information"
+  },
 
   "contact": {
     "formTitle": "Contact Form",
