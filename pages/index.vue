@@ -37,13 +37,13 @@ const cvPrintOptions = reactive({
             <div class="mt-[10vh] md:my-2">
                 <h2 class="text-2xl mb-5">{{ $t("drivesMe") }}</h2>
                 <div class="flex flex-col gap-4 lg:flex-row lg:gap-8">
-                    <div class="grow card bg-base-200 shadow-md">
+                    <div class="grow card bg-base-300 shadow-md">
                         <div class="card-body">
                             <p class="text-xl"><b>{{ $t("firstMotivationTitle") }}</b></p>
                             <p>{{ $t("firstMotivationText") }}</p>
                         </div>
                     </div>
-                    <div class="grow card bg-base-200 shadow-md">
+                    <div class="grow card bg-base-300 shadow-md">
                         <div class="card-body">
                             <p  class="text-xl"><b>{{ $t("secondMotivationTitle") }}</b></p>
                             <p>{{ $t("secondMotivationText") }}</p>

@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @plugin "daisyui" {
-    themes: dark --default, dark --prefersdark;
+  themes: all;
 }
 
 @media print {
@@ -11,10 +11,7 @@
 }
 
 @plugin "daisyui/theme" {
-  name: "dark";
-  default: false;
-  prefersdark: false;
-  color-scheme: "dark";
+  name: "default";
   --color-base-100: oklch(20% 0.008 250);
   --color-base-200: oklch(17% 0.007 250);
   --color-base-300: oklch(14% 0.006 250);
