@@ -25,7 +25,16 @@ const cvPrintOptions = reactive({
                         alt="Développeur web full stack Olivier Hayot spécialisé Next.js .NET"
                         class="max-w-[200px] lg:max-w-[275px] rounded-lg shadow-2xl lg:me-10" />
                     <div class="max-w-md">
-                        <h1 class="text-5xl font-bold">{{ $t('welcome') }}<b>Olivier</b>👋</h1>
+                        <h1 class="text-5xl font-bold">
+                            {{ $t('welcome') }}
+                            <span class="text-rotate duration-10000">
+                                <span>
+                                    <span><b>Olivier 👋</b></span>
+                                    <span><b>FullStack Developer</b></span>
+                                    <span><b>DevOps Enthusiast</b></span>
+                                </span> 
+                            </span>
+                        </h1>
                         <div class="py-6 text-justify">
                             {{ $t("presentation_1").replace("%YEARS%", years.toString()) }}
                             {{ $t("presentation_2") }}

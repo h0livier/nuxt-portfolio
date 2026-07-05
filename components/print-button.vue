@@ -92,5 +92,7 @@ function print(){
         </div>
     </dialog>
 
-    <button class="btn btn-primary lg:btn-lg bg-blue-500 border-0 shadow-blue-300 text-white" @click="openModal()">{{$t("printButton")}}</button>
+    <div class="aura aura-dual aura-xs duration-10000">
+        <button class="btn btn-primary lg:btn-lg bg-blue-500 border-0 shadow-blue-300 text-white" @click="openModal()">{{$t("printButton")}}</button>
+    </div>
 </template>
