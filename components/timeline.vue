@@ -33,7 +33,9 @@ const experiences = ref(props.experiences)
                             <h3 class="text-sm italic mb-1">{{ experience.title }}</h3>
                         </div>
                         {{ experience.description }}
-
+                        <div>
+                            <span v-for="(skill, index) in experience.skills" :key="index" class="badge badge-info badge-soft badge-sm me-1 mb-1">{{ skill }}</span>
+                        </div>
                         <div v-if="experience.missions && experience.missions.length > 0">
                             <h4 class="font-semibold mb-1 text-lg">{{ pluralize($t("mission"), experience.missions.length) }} : </h4>
                             <div v-for="(mission, index) in experience.missions" :key="mission.date" class="ml-3">
@@ -45,6 +47,9 @@ const experiences = ref(props.experiences)
                                     <div class="collapse-content">
                                         <p class="text-sm italic mb-2 block">{{ mission.title }}</p>
                                         <p class="block">{{ mission.description }}</p>
+                                        <div class="mt-2">
+                                            <span v-for="(skill, index) in mission.skills" :key="index" class="badge badge-info badge-soft badge-sm me-1 mb-1">{{ skill }}</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

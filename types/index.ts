@@ -12,12 +12,13 @@ export interface Mission {
     enterprise: string
     date: string
     description: string
+    skills?: string[]
 }
 export interface WorkPlace extends Place {
     title: string
-    ores_date?: string
     missions?: Mission[]
     internship?: boolean
+    skills?: string[]
 }
 
 export interface Certification extends Place {

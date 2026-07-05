@@ -8,7 +8,8 @@ export const useProfileData = () => {
     title: t('experiences.wavenet.missions.0.title'),
     enterprise: t('experiences.wavenet.missions.0.enterprise'),
     date: t('experiences.wavenet.missions.0.date'),
-    description: t('experiences.wavenet.missions.0.description')
+    description: t('experiences.wavenet.missions.0.description'),
+    skills: ['C#', 'ASP.NET Core', 'Blazor', 'SQL Server', 'Cosmos DB']
   }
 
   const experiences: WorkPlace[] = [
@@ -17,19 +18,22 @@ export const useProfileData = () => {
       description: t('experiences.wavenet.description'),
       date: t('experiences.wavenet.date'),
       title: t('experiences.wavenet.title'),
+      skills: ['C#', 'ASP.NET Core', 'Blazor', 'Typescript', 'Vue.js', 'SQL Server', 'Cosmos DB', 'Terraform', 'Azure', 'Github Actions'],
       missions: [ oresMission ]
     },
     { 
       name: 'Easi',
       description: t('experiences.easi.description'),
       date: t('experiences.easi.date'),
-      title: t('experiences.easi.title')
+      title: t('experiences.easi.title'),
+      skills: ['C#', '.NET Core', 'SQL Server', 'WPF', 'Powershell', 'Windows Server']
     },/*
     { 
       name: t('experiences.ulb.name'),
       description: t('experiences.ulb.description'),
       date: t('experiences.ulb.date'),
       title: t('experiences.ulb.title'),
+      skills: ['PHP', 'MySQL', 'HTML5', 'CSS3', 'Javascript', 'JQuery'],
       internship: true
     }*/
   ]
