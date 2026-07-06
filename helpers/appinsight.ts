@@ -20,9 +20,14 @@ export const useAppInsights = () => {
     appInsights.trackEvent({ name: message });
   }
 
+  const trackException = (exception: Error) => {
+    appInsights.trackException({ exception });
+  }
+
   return {
     trackPageView,
     trackTrace,
-    trackEvent
+    trackEvent,
+    trackException
   };
 }
