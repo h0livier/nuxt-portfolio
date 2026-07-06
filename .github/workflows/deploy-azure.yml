@@ -24,7 +24,6 @@ jobs:
         
       - name: Build Vue app
         env:
-          NODE_ENV: production
           NUXT_PUBLIC_API_URL: ${{ secrets.NUXT_PUBLIC_API_URL }}
         run: npm run build
         
