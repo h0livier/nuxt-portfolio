@@ -2,6 +2,9 @@
 import { z } from 'zod'
 
 const { t } = useI18n()
+const config = useRuntimeConfig()
+
+console.log('API URL:', config.public.apiUrl)
 
 const contactSchema = computed(() => z.object({
     name: z.string().min(2, t('contact.errors.nameMin')),
@@ -51,7 +54,7 @@ async function handleSubmit() {
     success.value = false
     if (!validate()) return
 
-    const result = await fetch('http://localhost:7071/api/PostMessage', {
+    const result = await fetch(config.public.apiUrl, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(form),
