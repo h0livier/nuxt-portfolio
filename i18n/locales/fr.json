@@ -25,7 +25,8 @@
   "contact": {
     "formTitle": "Formulaire de contact",
     "submit": "Envoyer",
-    "successMessage": "Merci ! Votre messagerie s'est ouverte avec le message pré-rempli.",
+    "successMessage": "Merci pour votre message ! Je vous répondrai dès que possible.",
+    "errorMessage": "Une erreur est survenue lors de l'envoi de votre message. Veuillez réessayer plus tard.",
     "mailFrom": "Message de",
     "fields": {
       "name": "Nom",

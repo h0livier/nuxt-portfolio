@@ -2,6 +2,9 @@
 import { z } from 'zod'
 
 const { t } = useI18n()
+const config = useRuntimeConfig()
+
+console.log('API URL:', config.public.apiUrl)
 
 const contactSchema = computed(() => z.object({
     name: z.string().min(2, t('contact.errors.nameMin')),
@@ -28,6 +31,7 @@ const form = reactive({
 const errors = reactive<Record<string, string>>({})
 const submitted = ref(false)
 const success = ref(false)
+const error = ref(false)
 
 function validate(): boolean {
     const result = contactSchema.value.safeParse(form)
@@ -44,32 +48,47 @@ function validate(): boolean {
     return true
 }
 
-const mailtoBody = computed(() => {
-    const phonePart = form.phone ? ` - ${form.phone}` : ''
-    return `${t('contact.mailFrom')} ${form.name} (${form.email})${phonePart}\n\n${form.message}`
-})
-
-function handleSubmit() {
+async function handleSubmit() {
     submitted.value = true
+    error.value = false
+    success.value = false
     if (!validate()) return
 
-    const mailtoLink = `mailto:olivier.hayot.dev@gmail.com?subject=${encodeURIComponent(form.subject)}&body=${encodeURIComponent(mailtoBody.value)}`
-    window.open(mailtoLink)
-    success.value = true
-    Object.assign(form, { name: '', email: '', phone: '', subject: '', message: '' })
-    Object.keys(errors).forEach(key => delete errors[key])
-    submitted.value = false
+    const result = await fetch(config.public.apiUrl, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+    })
+
+    if(result.ok) {
+        console.log('Message sent successfully', result)
+        success.value = true
+        Object.assign(form, { name: '', email: '', phone: '', subject: '', message: '' })
+        Object.keys(errors).forEach(key => delete errors[key])
+        submitted.value = false
+    } else {
+        const errorData = await result.json()
+        if (errorData.errors) {
+            Object.assign(errors, errorData.errors)
+        }
+        error.value = true
+    }
 }
 </script>
 <template>
-    <div class="card bg-base-200 shadow-md w-full">
+    <div class="card w-full">
         <div class="card-body">
-            <h3 class="card-title text-2xl mb-4">{{ $t('contact.formTitle') }}</h3>
             <div v-if="success" role="alert" class="alert alert-success mb-4">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 shrink-0 stroke-current" fill="none" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
                 <span>{{ $t('contact.successMessage') }}</span>
+            </div>
+            <div v-if="error" role="alert" class="alert alert-error mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 shrink-0 stroke-current" fill="none" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <span>{{ $t('contact.errorMessage') }}</span>
             </div>
             <form @submit.prevent="handleSubmit" novalidate>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
@@ -113,9 +132,11 @@ function handleSubmit() {
                     required
                 />
                 <div class="card-actions justify-end mt-4">
-                    <button type="submit" class="btn btn-primary bg-blue-500 border-0 shadow-blue-300 text-white">
-                        {{ $t('contact.submit') }}
-                    </button>
+                    <div class="aura aura-dual aura-xs duration-10000">
+                        <button type="submit" class="btn btn-primary bg-blue-500 border-0 shadow-blue-300 text-white">
+                            {{ $t('contact.submit') }}
+                        </button>
+                    </div>
                 </div>
             </form>
         </div>

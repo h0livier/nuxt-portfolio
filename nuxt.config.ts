@@ -2,6 +2,11 @@
 import tailwindcss from "@tailwindcss/vite";
 
 export default defineNuxtConfig({
+  runtimeConfig: {
+    public: {
+      apiUrl: process.env.NUXT_PUBLIC_API_URL || 'http://localhost:7071/api/PostMessage'
+    }
+  },
   modules: ['@nuxtjs/sitemap', '@nuxtjs/i18n'],
   compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
