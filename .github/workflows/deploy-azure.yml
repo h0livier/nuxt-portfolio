@@ -23,6 +23,8 @@ jobs:
         run: npm ci
         
       - name: Build Vue app
+        env:
+          NUXT_PUBLIC_API_URL: ${{ secrets.NUXT_PUBLIC_API_URL }}
         run: npm run build
         
       - name: Deploy to Azure Static Web Apps
