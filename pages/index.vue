@@ -81,14 +81,14 @@ const cvPrintOptions = reactive({
                     </a>
                 </div>
             </div>
-            <div class="flex flex-col items-center gap-5 my-20">
+            <div class="flex flex-col items-center my-26">
                 <h2 class="text-3xl">{{ $t("getInTouchTitle") }}</h2>
-                <p class="text-center text-xl">{{ $t("getInTouchText") }}</p>
+                <p class="text-center text-xl py-5">{{ $t("getInTouchText") }}</p>
                 <p class="flex gap-4">
-                    <NuxtLink href="https://github.com/h0livier">Github</NuxtLink>
-                    <NuxtLink href="https://www.linkedin.com/in/olivier-hayot/">Linkedin</NuxtLink>
+                    <NuxtLink class="text-xl font-semibold hover:underline" href="https://github.com/h0livier">Github</NuxtLink>
+                    <NuxtLink class="text-xl font-semibold hover:underline" href="https://www.linkedin.com/in/olivier-hayot/">Linkedin</NuxtLink>
                 </p>
-                <!--<ContactForm class="w-full mt-4" />-->
+                <ContactForm class="w-full mt-4" />
             </div>
         </div>
     </div>

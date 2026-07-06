@@ -44,27 +44,33 @@ function validate(): boolean {
     return true
 }
 
-const mailtoBody = computed(() => {
-    const phonePart = form.phone ? ` - ${form.phone}` : ''
-    return `${t('contact.mailFrom')} ${form.name} (${form.email})${phonePart}\n\n${form.message}`
-})
-
-function handleSubmit() {
+async function handleSubmit() {
     submitted.value = true
     if (!validate()) return
 
-    const mailtoLink = `mailto:olivier.hayot.dev@gmail.com?subject=${encodeURIComponent(form.subject)}&body=${encodeURIComponent(mailtoBody.value)}`
-    window.open(mailtoLink)
-    success.value = true
-    Object.assign(form, { name: '', email: '', phone: '', subject: '', message: '' })
-    Object.keys(errors).forEach(key => delete errors[key])
-    submitted.value = false
+    const result = await fetch('http://localhost:7071/api/PostMessage', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+    })
+
+    if(result.ok) {
+        console.log('Message sent successfully', result)
+        success.value = true
+        Object.assign(form, { name: '', email: '', phone: '', subject: '', message: '' })
+        Object.keys(errors).forEach(key => delete errors[key])
+        submitted.value = false
+    } else {
+        const errorData = await result.json()
+        if (errorData.errors) {
+            Object.assign(errors, errorData.errors)
+        }
+    }
 }
 </script>
 <template>
-    <div class="card bg-base-200 shadow-md w-full">
+    <div class="card w-full">
         <div class="card-body">
-            <h3 class="card-title text-2xl mb-4">{{ $t('contact.formTitle') }}</h3>
             <div v-if="success" role="alert" class="alert alert-success mb-4">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 shrink-0 stroke-current" fill="none" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -113,9 +119,11 @@ function handleSubmit() {
                     required
                 />
                 <div class="card-actions justify-end mt-4">
-                    <button type="submit" class="btn btn-primary bg-blue-500 border-0 shadow-blue-300 text-white">
-                        {{ $t('contact.submit') }}
-                    </button>
+                    <div class="aura aura-dual aura-xs duration-10000">
+                        <button type="submit" class="btn btn-primary bg-blue-500 border-0 shadow-blue-300 text-white">
+                            {{ $t('contact.submit') }}
+                        </button>
+                    </div>
                 </div>
             </form>
         </div>
