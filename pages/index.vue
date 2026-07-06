@@ -25,7 +25,7 @@ const cvPrintOptions = reactive({
                         alt="Développeur web full stack Olivier Hayot spécialisé Next.js .NET"
                         class="max-w-[200px] lg:max-w-[275px] rounded-lg shadow-2xl lg:me-10" />
                     <div class="max-w-md">
-                        <h1 class="text-5xl font-bold">
+                        <h1 class="text-2xl md:text-4xl lg:text-5xl font-bold">
                             {{ $t('welcome') }}
                             <span class="text-rotate duration-10000">
                                 <span>
