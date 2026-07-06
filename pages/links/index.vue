@@ -5,7 +5,8 @@ import LinkBrand from '~/components/links/link/Brand.vue'
 import LinkBasic from '~/components/links/link/basic.vue'
 
 const { locale } = useI18n()
-const url = locale.value === 'fr' ? '/' : `/${locale.value}`
+const cvUrl = 'https://cv.olivierhayot.be/'
+const url = locale.value === 'fr' ? cvUrl : `${cvUrl}${locale.value}`
 </script>
 <template>
     <main class="flex justify-center py-10 min-h-screen">
@@ -15,7 +16,7 @@ const url = locale.value === 'fr' ? '/' : `/${locale.value}`
             </div>
             <div>
                 <div class="avatar">
-                    <div class="w-50 rounded-full">
+                    <div class="w-30 md:w-40 lg:w-50 rounded-full">
                         <img src="../../assets/picture_squared.jpg" class="" alt="Olivier Hayot" />
                     </div>
                 </div>
