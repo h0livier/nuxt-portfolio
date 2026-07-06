@@ -28,6 +28,7 @@ const form = reactive({
 const errors = reactive<Record<string, string>>({})
 const submitted = ref(false)
 const success = ref(false)
+const error = ref(false)
 
 function validate(): boolean {
     const result = contactSchema.value.safeParse(form)
@@ -46,6 +47,8 @@ function validate(): boolean {
 
 async function handleSubmit() {
     submitted.value = true
+    error.value = false
+    success.value = false
     if (!validate()) return
 
     const result = await fetch('http://localhost:7071/api/PostMessage', {
@@ -65,6 +68,7 @@ async function handleSubmit() {
         if (errorData.errors) {
             Object.assign(errors, errorData.errors)
         }
+        error.value = true
     }
 }
 </script>
@@ -76,6 +80,12 @@ async function handleSubmit() {
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
                 <span>{{ $t('contact.successMessage') }}</span>
+            </div>
+            <div v-if="error" role="alert" class="alert alert-error mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 shrink-0 stroke-current" fill="none" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <span>{{ $t('contact.errorMessage') }}</span>
             </div>
             <form @submit.prevent="handleSubmit" novalidate>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
