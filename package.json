@@ -15,7 +15,7 @@
     "@microsoft/applicationinsights-web": "^3.4.1",
     "@tailwindcss/postcss": "^4.3.2",
     "@tailwindcss/vite": "^4.3.2",
-    "autoprefixer": "^10.5.0",
+    "autoprefixer": "^10.5.2",
     "daisyui": "^5.6.13",
     "nuxt": "^4.4.8",
     "postcss": "^8.5.6",
