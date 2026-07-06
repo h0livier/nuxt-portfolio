@@ -4,7 +4,7 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineNuxtConfig({
   runtimeConfig: {
     public: {
-      apiUrl: process.env.NUXT_PUBLIC_API_URL || 'http://portfolio-api.olivierhayot.be/api/PostMessage'
+      apiUrl: process.env.NUXT_PUBLIC_API_URL || 'https://portfolio-api.olivierhayot.be/api/PostMessage'
     }
   },
   modules: ['@nuxtjs/sitemap', '@nuxtjs/i18n'],
