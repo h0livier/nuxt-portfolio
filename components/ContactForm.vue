@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import { z } from 'zod'
+import { useAppInsights } from '~/helpers/appinsight'
 
 const { t } = useI18n()
 const config = useRuntimeConfig()
-
-console.log('API URL:', config.public.apiUrl)
+const appInsights = useAppInsights()
 
 const contactSchema = computed(() => z.object({
     name: z.string().min(2, t('contact.errors.nameMin')),
@@ -17,6 +17,7 @@ const contactSchema = computed(() => z.object({
 const subjectOptions = computed(() => [
     { label: t('contact.subjects.jobOffer'), value: 'job_offer' },
     { label: t('contact.subjects.freelance'), value: 'freelance' },
+    { label: t('contact.subjects.project'), value: 'project' },
     { label: t('contact.subjects.other'), value: 'other' },
 ])
 
@@ -29,7 +30,7 @@ const form = reactive({
 })
 
 const errors = reactive<Record<string, string>>({})
-const submitted = ref(false)
+const loading = ref(false)
 const success = ref(false)
 const error = ref(false)
 
@@ -49,29 +50,38 @@ function validate(): boolean {
 }
 
 async function handleSubmit() {
-    submitted.value = true
+    loading.value = true
     error.value = false
     success.value = false
-    if (!validate()) return
+    if (!validate()) {
+        loading.value = false
+        return
+    }
 
-    const result = await fetch(config.public.apiUrl, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(form),
-    })
+    try{
+        const result = await fetch(config.public.apiUrl, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(form),
+        })
 
-    if(result.ok) {
-        console.log('Message sent successfully', result)
-        success.value = true
-        Object.assign(form, { name: '', email: '', phone: '', subject: '', message: '' })
-        Object.keys(errors).forEach(key => delete errors[key])
-        submitted.value = false
-    } else {
-        const errorData = await result.json()
-        if (errorData.errors) {
-            Object.assign(errors, errorData.errors)
+        if(result.ok) {
+            success.value = true
+            Object.assign(form, { name: '', email: '', phone: '', subject: '', message: '' })
+            Object.keys(errors).forEach(key => delete errors[key])
+            appInsights.trackEvent('ContactFormSubmitted')
+        } else {
+            error.value = true
+            const errorData = await result.json()
+            if (errorData.errors) {
+                Object.assign(errors, errorData.errors)
+            }
         }
+    } catch (e) {
         error.value = true
+        appInsights.trackException(e as Error)
+    } finally {
+        loading.value = false
     }
 }
 </script>
@@ -133,8 +143,9 @@ async function handleSubmit() {
                 />
                 <div class="card-actions justify-end mt-4">
                     <div class="aura aura-dual aura-xs duration-10000">
-                        <button type="submit" class="btn btn-primary bg-blue-500 border-0 shadow-blue-300 text-white">
-                            {{ $t('contact.submit') }}
+                        <button :disabled="loading" type="submit" class="btn btn-primary bg-blue-500 border-0 shadow-blue-300 text-white">
+                            <span v-if="loading" class="loading loading-spinner loading-md"></span>
+                            <span v-else>{{ $t('contact.submit') }}</span>
                         </button>
                     </div>
                 </div>

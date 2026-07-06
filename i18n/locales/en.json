@@ -44,7 +44,8 @@
     },
     "subjects": {
       "jobOffer": "Job offer",
-      "freelance": "Freelance mission",
+      "freelance": "Freelance Mission",
+      "project": "Project",
       "other": "Other"
     },
     "errors": {

@@ -39,19 +39,19 @@ const experiences = ref(props.experiences)
                         <div v-if="experience.missions && experience.missions.length > 0">
                             <h4 class="font-semibold mb-1 text-lg">{{ pluralize($t("mission"), experience.missions.length) }} : </h4>
                             <div v-for="(mission, index) in experience.missions" :key="mission.date" class="ml-3">
-                                <div class="collapse collapse-plus">
-                                    <input type="radio" name="my-accordion-4" :checked="false" />
-                                    <p class="collapse-title">
-                                        <span class="font-semibold text-lg">{{ mission.enterprise}} |</span> {{ mission.date }}
-                                    </p>
+                                <details class="collapse collapse-plus" :name="mission.title" open>
+                                    <summary class="collapse-title">
+                                        <span class="font-semibold text-lg">{{ mission.enterprise}}</span> | {{ mission.date }}
+                                        <br />
+                                        <p class="text-sm italic block">{{ mission.title }}</p>
+                                    </summary>
                                     <div class="collapse-content">
-                                        <p class="text-sm italic mb-2 block">{{ mission.title }}</p>
                                         <p class="block">{{ mission.description }}</p>
                                         <div class="mt-2">
                                             <span v-for="(skill, index) in mission.skills" :key="index" class="badge badge-info badge-soft badge-sm me-1 mb-1">{{ skill }}</span>
                                         </div>
                                     </div>
-                                </div>
+                                </details>
                             </div>
                         </div>
                     </div>
