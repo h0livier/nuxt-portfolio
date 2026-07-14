@@ -102,16 +102,25 @@
 
   "certifications": {
     "gh300": {
-      "name": "Microsoft Certified: Github Copilot (GH-300)",
+      "name": "Github Copilot (GH-300)",
+      "issuer": "Microsoft",
       "description": "Fundamentals of GitHub Copilot, effective use of the tool to improve productivity and code quality.",
       "date": "February 2026",
       "validUntil": "February 2028"
     },
     "terraform": {
-      "name": "HashiCorp Certified: Terraform Associate 004",
+      "name": "Terraform Associate 004",
+      "issuer": "HashiCorp",
       "description": "Proficiency in Infrastructure as Code principles, Terraform state management, and automation workflows.",
       "date": "April 2026",
       "validUntil": "April 2028"
+    },
+    "gh200": {
+      "name": "Github Actions (GH-200)",
+      "issuer": "Microsoft",
+      "description": "Mastering Github Actions, CI/CD workflows, and automation of software development processes.",
+      "date": "July 2026",
+      "validUntil": "July 2028"
     }
   },
 
