@@ -2,6 +2,7 @@
 import type { CVPrintVariant } from '~/types'
 import { reactive, ref } from 'vue'
 import { useProfileData } from '~/services/useProfileData'
+import Fade from '~/components/animation/fade.vue'
 const {experiences, educations, certifications, contacts, languages, skills} = useProfileData()
 const years = new Date().getFullYear() - new Date(2022, 9, 22).getFullYear()
 const cvVariant = ref<CVPrintVariant>('squared')
@@ -19,77 +20,87 @@ const cvPrintOptions = reactive({
                 <p><a href="mailto:olivier.hayot.dev@gmail.com">olivier.hayot.dev@gmail.com</a></p>
                 <LanguageSwitch />
             </div>
-            <div class="hero min-h-[80vh]">
-                <div class="hero-content lg:place-self-start lg:self-center flex-col lg:flex-row">
-                    <img src="../assets/picture.jpg"
-                        alt="Développeur web full stack Olivier Hayot spécialisé Next.js .NET"
-                        class="max-w-[200px] lg:max-w-[275px] rounded-lg shadow-2xl lg:me-10" />
-                    <div class="max-w-md">
-                        <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold">
-                            {{ $t('welcome') }}
-                            <span class="text-rotate duration-10000">
-                                <span>
-                                    <span><b>Olivier 👋</b></span>
-                                    <span><b>FullStack Developer</b></span>
-                                    <span><b>DevOps Enthusiast</b></span>
-                                </span> 
-                            </span>
-                        </h1>
-                        <div class="py-6 text-justify">
-                            {{ $t("presentation_1").replace("%YEARS%", years.toString()) }}
-                            {{ $t("presentation_2") }}
-                        </div>
-                        <PrintButton :variant="cvVariant" :show-missions="cvPrintOptions.showMissions" :show-certifications="cvPrintOptions.showCertifications" :show-about="cvPrintOptions.showAbout" @update:variant="cvVariant = $event" @update:showMissions="cvPrintOptions.showMissions = $event" @update:showCertifications="cvPrintOptions.showCertifications = $event" @update:showAbout="cvPrintOptions.showAbout = $event"></PrintButton>
-                    </div>
-                </div>
-            </div>
-            <div class="mt-[10vh] md:my-2">
-                <h2 class="text-2xl mb-5">{{ $t("drivesMe") }}</h2>
-                <div class="flex flex-col gap-4 lg:flex-row lg:gap-8">
-                    <div class="grow card bg-base-300 shadow-md">
-                        <div class="card-body">
-                            <p class="text-xl"><b>{{ $t("firstMotivationTitle") }}</b></p>
-                            <p>{{ $t("firstMotivationText") }}</p>
-                        </div>
-                    </div>
-                    <div class="grow card bg-base-300 shadow-md">
-                        <div class="card-body">
-                            <p  class="text-xl"><b>{{ $t("secondMotivationTitle") }}</b></p>
-                            <p>{{ $t("secondMotivationText") }}</p>
+            <Fade>
+                <div class="hero min-h-[80vh]">
+                    <div class="hero-content lg:place-self-start lg:self-center flex-col lg:flex-row">
+                        <img src="../assets/picture.jpg"
+                            alt="Développeur web full stack Olivier Hayot spécialisé Next.js .NET"
+                            class="max-w-[200px] lg:max-w-[275px] rounded-lg shadow-2xl lg:me-10" />
+                        <div class="max-w-md">
+                            <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold">
+                                {{ $t('welcome') }}
+                                <span class="text-rotate duration-10000">
+                                    <span>
+                                        <span><b>Olivier 👋</b></span>
+                                        <span><b>FullStack Developer</b></span>
+                                        <span><b>DevOps Enthusiast</b></span>
+                                    </span> 
+                                </span>
+                            </h1>
+                            <div class="py-6 text-justify">
+                                {{ $t("presentation_1").replace("%YEARS%", years.toString()) }}
+                                {{ $t("presentation_2") }}
+                            </div>
+                            <PrintButton :variant="cvVariant" :show-missions="cvPrintOptions.showMissions" :show-certifications="cvPrintOptions.showCertifications" :show-about="cvPrintOptions.showAbout" @update:variant="cvVariant = $event" @update:showMissions="cvPrintOptions.showMissions = $event" @update:showCertifications="cvPrintOptions.showCertifications = $event" @update:showAbout="cvPrintOptions.showAbout = $event"></PrintButton>
                         </div>
                     </div>
                 </div>
-            </div>
-            <Timeline :experiences="experiences" :educations="educations" />
-            <div class="mt-[10vh] md:my-16">
-                <h2 class="text-2xl mb-5">{{ $t("certificationsTitle") }}</h2>
-                <div class="flex flex-col gap-4 lg:flex-row lg:flex-wrap lg:gap-8">
-                    <a v-for="cert in certifications" :key="cert.name"
-                        :href="cert.link || undefined"
-                        target="_blank" rel="noopener noreferrer"
-                        class="grow card bg-base-100 transition-all hover:bg-base-200 cursor-pointer">
-                        <div class="card-body">
-                            <div class="flex flex-col-reverse items-center gap-4 md:flex-row md:items-center">
-                                <img v-if="cert.logo" :src="cert.logo" :alt="cert.name" class="w-30 h-30 object-contain" />
-                                <div>
-                                    <p class="text-xl font-bold">{{ cert.name }}</p>
-                                    <p class="text-sm text-base-content/60 py-2">{{ cert.date }} &mdash; {{ $t("validUntil") }} {{ cert.validUntil }}</p>
-                                    <p>{{ cert.description }}</p>
-                                </div>
+            </Fade>
+            <Fade>
+                <div class="mt-[10vh] md:my-2">
+                    <h2 class="text-2xl mb-5">{{ $t("drivesMe") }}</h2>
+                    <div class="flex flex-col gap-4 lg:flex-row lg:gap-8">
+                        <div class="grow card bg-base-300 shadow-md">
+                            <div class="card-body">
+                                <p class="text-xl"><b>{{ $t("firstMotivationTitle") }}</b></p>
+                                <p>{{ $t("firstMotivationText") }}</p>
                             </div>
                         </div>
-                    </a>
+                        <div class="grow card bg-base-300 shadow-md">
+                            <div class="card-body">
+                                <p  class="text-xl"><b>{{ $t("secondMotivationTitle") }}</b></p>
+                                <p>{{ $t("secondMotivationText") }}</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="flex flex-col items-center my-26">
-                <h2 class="text-3xl">{{ $t("getInTouchTitle") }}</h2>
-                <p class="text-center text-xl py-5">{{ $t("getInTouchText") }}</p>
-                <p class="flex gap-4">
-                    <NuxtLink class="text-xl font-semibold hover:underline" href="https://github.com/h0livier">Github</NuxtLink>
-                    <NuxtLink class="text-xl font-semibold hover:underline" href="https://www.linkedin.com/in/olivier-hayot/">Linkedin</NuxtLink>
-                </p>
-                <ContactForm class="w-full mt-4" />
-            </div>
+            </Fade>
+            <Fade>
+                <Timeline :experiences="experiences" :educations="educations" />
+            </Fade>
+            <Fade>
+                <div class="mt-[10vh] md:my-16">
+                    <h2 class="text-2xl mb-5">{{ $t("certificationsTitle") }}</h2>
+                    <div class="flex flex-col gap-4 lg:flex-row lg:flex-wrap lg:gap-8">
+                        <a v-for="cert in certifications" :key="cert.name"
+                            :href="cert.link || undefined"
+                            target="_blank" rel="noopener noreferrer"
+                            class="grow card bg-base-100 transition-all hover:bg-base-200 cursor-pointer">
+                            <div class="card-body">
+                                <div class="flex flex-col-reverse items-center gap-4 md:flex-row md:items-center">
+                                    <img v-if="cert.logo" :src="cert.logo" :alt="cert.name" class="w-30 h-30 object-contain" />
+                                    <div>
+                                        <p class="text-xl font-bold">{{ cert.name }}</p>
+                                        <p class="text-sm text-base-content/60 py-2">{{ cert.date }} &mdash; {{ $t("validUntil") }} {{ cert.validUntil }}</p>
+                                        <p>{{ cert.description }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </Fade>
+            <Fade>
+                <div class="flex flex-col items-center my-26">
+                    <h2 class="text-3xl">{{ $t("getInTouchTitle") }}</h2>
+                    <p class="text-center text-xl py-5">{{ $t("getInTouchText") }}</p>
+                    <p class="flex gap-4">
+                        <NuxtLink class="text-xl font-semibold hover:underline" href="https://github.com/h0livier">Github</NuxtLink>
+                        <NuxtLink class="text-xl font-semibold hover:underline" href="https://www.linkedin.com/in/olivier-hayot/">Linkedin</NuxtLink>
+                    </p>
+                    <ContactForm class="w-full mt-4" />
+                </div>
+            </Fade>
         </div>
     </div>
 </template>
