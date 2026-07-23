@@ -44,7 +44,7 @@ const cvPrintOptions = reactive({
                 </div>
             </div>
             <div class="mt-[10vh] md:my-2">
-                <h2 class="text-2xl mb-5">{{ $t("drivesMe") }}</h2>
+                <h2 class="text-3xl font-semibold mb-5">{{ $t("drivesMe") }}</h2>
                 <div class="flex flex-col gap-4 lg:flex-row lg:gap-8">
                     <div class="grow card bg-base-300 shadow-md">
                         <div class="card-body">
@@ -62,12 +62,12 @@ const cvPrintOptions = reactive({
             </div>
             <Timeline :experiences="experiences" :educations="educations" />
             <div class="mt-[10vh] md:my-16">
-                <h2 class="text-2xl mb-5">{{ $t("certificationsTitle") }}</h2>
-                <div class="flex flex-col gap-4 lg:flex-row lg:flex-wrap lg:gap-8">
+                <h2 class="text-3xl font-semibold mb-5">{{ $t("certificationsTitle") }}</h2>
+                <div class="flex flex-col gap-4 lg:flex-row lg:flex-wrap lg:gap-6">
                     <a v-for="cert in certifications" :key="cert.name"
                         :href="cert.link || undefined"
                         target="_blank" rel="noopener noreferrer"
-                        class="grow card bg-base-100 transition-all hover:bg-base-200 cursor-pointer">
+                        class="grow card bg-base-100 lg:bg-base-200 transition-all hover:bg-base-300 cursor-pointer">
                         <div class="card-body">
                             <div class="flex flex-col-reverse items-center gap-4 md:flex-row md:items-center">
                                 <img v-if="cert.logo" :src="cert.logo" :alt="cert.name" class="w-30 h-30 object-contain" />
@@ -82,7 +82,7 @@ const cvPrintOptions = reactive({
                 </div>
             </div>
             <div class="flex flex-col items-center my-26">
-                <h2 class="text-3xl">{{ $t("getInTouchTitle") }}</h2>
+                <h2 class="text-4xl font-semibold">{{ $t("getInTouchTitle") }}</h2>
                 <p class="text-center text-xl py-5">{{ $t("getInTouchText") }}</p>
                 <p class="flex gap-4">
                     <NuxtLink class="text-xl font-semibold hover:underline" href="https://github.com/h0livier">Github</NuxtLink>

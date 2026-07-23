@@ -30,10 +30,10 @@ defineProps<ContentProps>()
         <p class="mt-1 leading-snug">{{ experience.description }}</p>
         <div v-if="showMissions !== false && experience.missions && experience.missions.length > 0">
           <p class="font-semibold mt-2 text-sm">{{ pluralize($t("mission"), experience.missions.length) }} : </p>
-          <div v-for="mission in experience.missions" :key="mission.date" class="ml-3 mt-2 text-sm">
+          <div v-for="mission in experience.missions" :key="mission.date" class="ml-2 mt-2 text-sm">
             <div class="flex items-baseline justify-between">
-              <p>
-                <span class="font-semibold">{{ mission.enterprise}} |</span> {{ mission.title}} 
+              <p class="font-semibold">
+                {{ mission.enterprise}}
               </p>
               <p><span class="italic">{{ mission.date }}</span></p>
             </div>
@@ -46,10 +46,9 @@ defineProps<ContentProps>()
     <cv-columns-section v-if="showCertifications !== false" :title="$t('certificationsTitle')">
       <div v-for="(certification, index) in certifications" :key="index" class="mt-3 break-inside-avoid">
         <div class="flex items-baseline justify-between gap-2">
-          <p class="font-semibold">{{ certification.name }}</p>
+          <p><span class="font-semibold">{{ certification.name }}</span> - {{ certification.issuer }}</p>
           <p class="italic text-right">{{ certification.date }}</p>
         </div>
-        <p class="mt-1 leading-snug">{{ certification.description }}</p>
       </div>
     </cv-columns-section>
 
