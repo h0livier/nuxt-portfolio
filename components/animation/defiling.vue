@@ -19,17 +19,17 @@ withDefaults(defineProps<Props>(), {
 <template>
   <div class="scrolling-container">
     <div class="scrolling-content" :class="{ reverse }" :style="{ '--duration': `${speed}s` }">
-      <div v-for="(item, index) in items" :key="index" class="card card-border border-2 scrolling-item mt-15">
-        <div class="card-body flex flex-col items-center justify-center min-w-37.5">
-            <i :class="[item.image, 'text-6xl']"></i>
-            <p>{{ item.name }}</p>
+      <div v-for="(item, index) in items" :key="index" class="card card-border border-2 scrolling-item mt-4 sm:mt-8 md:mt-12 lg:mt-15">
+        <div class="card-body flex flex-col items-center justify-center min-w-24 sm:min-w-32 md:min-w-40 lg:min-w-37.5 px-2 sm:px-3 md:px-4 py-2 sm:py-3">
+            <i :class="[item.image, 'text-3xl sm:text-4xl md:text-5xl lg:text-6xl']"></i>
+            <p class="text-xs sm:text-sm md:text-base mt-1 sm:mt-2">{{ item.name }}</p>
         </div>
       </div>
       <!-- Duplicate items for seamless loop -->
-      <div v-for="(item, index) in items" :key="`duplicate-${index}`" class="card card-border border-2 scrolling-item mt-15">
-        <div class="card-body flex flex-col items-center justify-center min-w-37.5">
-            <i :class="[item.image, 'text-6xl']"></i>
-            <p>{{ item.name }}</p>
+      <div v-for="(item, index) in items" :key="`duplicate-${index}`" class="card card-border border-2 scrolling-item mt-4 sm:mt-8 md:mt-12 lg:mt-15">
+        <div class="card-body flex flex-col items-center justify-center min-w-24 sm:min-w-32 md:min-w-40 lg:min-w-37.5 px-2 sm:px-3 md:px-4 py-2 sm:py-3">
+            <i :class="[item.image, 'text-3xl sm:text-4xl md:text-5xl lg:text-6xl']"></i>
+            <p class="text-xs sm:text-sm md:text-base mt-1 sm:mt-2">{{ item.name }}</p>
         </div>
       </div>
     </div>
@@ -45,7 +45,7 @@ withDefaults(defineProps<Props>(), {
 
 .scrolling-content {
   display: flex;
-  gap: 2rem;
+  gap: clamp(0.5rem, 2vw, 2rem);
   animation: scroll-right var(--duration) linear infinite;
 }
 
