@@ -5,10 +5,6 @@
   "presentation_2": " I work primarily with .NET Core for the back-end and Vue.js/Blazor for the front-end while managing DevOps and infrastructure aspects. Curious and solution-oriented, I enjoy tackling technical challenges and optimizing processes.",
   "presentation_3": "In my free time, I enjoy socializing with friends over a drink and tinkering with my home automation setup.",
   "drivesMe": "What drives me",
-  "firstMotivationTitle": "Solving Problems",
-  "firstMotivationText": "I enjoy building user-friendly and efficient web applications that solve real problems.",
-  "secondMotivationTitle": "Automation & Creating Tools",
-  "secondMotivationText": "Turning small ideas into practical solutions is what keeps me curious and motivated.",
   "getInTouchTitle": "Want to get in touch ?",
   "getInTouchText": "Fill in the form below or reach out via the social links.",
   "cancel": "Cancel",
@@ -138,6 +134,33 @@
     "adaptive": "Adaptability"
   },
 
+  "transverseSkillsTitle": "Transversal Skills",
+  "transverseSkills": {
+    "analysisAndDesign": {
+      "name": "Analysis and Design",
+      "description": "Transforming a business need into a robust and scalable technical solution."
+    },
+    "backendArchitecture": {
+      "name": "Backend Architecture",
+      "description": "Design and implementation of robust and scalable backend architectures."
+    },
+    "customFrontend": {
+      "name": "Custom Frontend",
+      "description": "Development of custom and responsive user interfaces."
+    },
+    "serviceIntegration": {
+      "name": "Service Integration",
+      "description": "Integration of third-party services and APIs to enhance application functionality."
+    },
+    "solvingProblems": {
+      "name": "Solving Problems",
+      "description": "Identifying and effectively solving technical and functional problems."
+    },
+    "automationAndTools": {
+      "name": "Automation and Creating Tools",
+      "description": "Automating processes and creating tools to improve productivity and efficiency."
+    }
+  },
   
     "aboutMe": "About Me",
     "workExperience": "Work Experiences",
