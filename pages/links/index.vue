@@ -9,7 +9,7 @@ const cvUrl = 'https://cv.olivierhayot.be/'
 const url = locale.value === 'fr' ? cvUrl : `${cvUrl}${locale.value}`
 </script>
 <template>
-    <main class="flex justify-center py-10 min-h-screen">
+    <main data-theme="default" class="flex justify-center py-10 min-h-screen bg-base-100">
         <div class="pt-2 px-5 w-[95vw] md:w-[50vw] lg:w-[40vw] xl:w-[30vw]">
             <div class="flex justify-end mb-10">
                 <LanguageSwitch />
@@ -21,7 +21,7 @@ const url = locale.value === 'fr' ? cvUrl : `${cvUrl}${locale.value}`
                     </div>
                 </div>
                 <h1 class="text-3xl font-bold mt-4">Olivier Hayot</h1>
-                <p class="text-xl text-gray-300">{{ $t('profession') }}</p>
+                <p class="text-xl">{{ $t('profession') }}</p>
             </div>
             <div>
                 <Section>

@@ -1,4 +1,5 @@
 import { useI18n } from 'vue-i18n'
+import type { ScrollingSkill } from '~/components/animation/defiling.vue'
 import type { Certification, ListOption, Mission, Place, WorkPlace } from '~/types'
 
 export const useProfileData = () => {
@@ -27,7 +28,8 @@ export const useProfileData = () => {
       date: t('experiences.easi.date'),
       title: t('experiences.easi.title'),
       skills: ['C#', '.NET Core', 'SQL Server', 'WPF', 'Powershell', 'Windows Server']
-    },/*
+    },
+    /*
     { 
       name: t('experiences.ulb.name'),
       description: t('experiences.ulb.description'),
@@ -36,6 +38,14 @@ export const useProfileData = () => {
       skills: ['PHP', 'MySQL', 'HTML5', 'CSS3', 'Javascript', 'JQuery'],
       internship: true
     }*/
+  ]
+
+  const transverseSkills: Place[] = [
+    { name: t('transverseSkills.analysisAndDesign.name'), description: t('transverseSkills.analysisAndDesign.description'), date: "" },
+    { name: t('transverseSkills.backendArchitecture.name'), description: t('transverseSkills.backendArchitecture.description'), date: "" },
+    { name: t('transverseSkills.serviceIntegration.name'), description: t('transverseSkills.serviceIntegration.description'), date: "" },
+    { name: t('transverseSkills.solvingProblems.name'), description: t('transverseSkills.solvingProblems.description'), date: "" },
+    { name: t('transverseSkills.automationAndTools.name'), description: t('transverseSkills.automationAndTools.description'), date: "" }
   ]
 
   const educations: Place[] = [
@@ -76,14 +86,38 @@ export const useProfileData = () => {
     { name: t('languages.english'), value: 'B2' }
   ]
 
-    const skills: ListOption[] = [
-      {name: t('skill.languages'), value: 'C#, Typescript, SQL'},
-      {name: t('skill.webBackend'), value: '.Net 8/10, ASP.NET Core, CQRS, EF Core, XUnit/NUnit/BUnit'},
-      {name: t('skill.webFrontend'), value: 'Vue.js,, Blazor(WASM/Server), HTML5/CSS3/SASS'},
-      {name: t('skill.databases'), value: 'PostgreSQL, SQL Server, Cosmos DB, SQLite'},
-      {name: t('skill.devOps'), value: 'Microsoft Azure, Docker, Terraform, Git, Github, CI/CD (Github Actions)'},
-      {name: t('skill.soft'), value: `${t('skill.analytic')}, ${t('skill.team')}, ${t('skill.communication')}, ${t('skill.adaptive')}`}
-    ]
+  const skills: ListOption[] = [
+    {name: t('skill.languages'), value: 'C#, Typescript, SQL'},
+    {name: t('skill.webBackend'), value: '.Net 8/10, ASP.NET Core, CQRS, EF Core, XUnit/NUnit/BUnit'},
+    {name: t('skill.webFrontend'), value: 'Vue.js,, Blazor(WASM/Server), HTML5/CSS3/SASS'},
+    {name: t('skill.databases'), value: 'PostgreSQL, SQL Server, Cosmos DB, SQLite'},
+    {name: t('skill.devOps'), value: 'Microsoft Azure, Docker, Terraform, Git, Github, CI/CD (Github Actions)'},
+    {name: t('skill.soft'), value: `${t('skill.analytic')}, ${t('skill.team')}, ${t('skill.communication')}, ${t('skill.adaptive')}`}
+  ]
 
-  return { experiences, educations, certifications, contacts, languages, skills }
+  const skillsWithImages: ScrollingSkill[] = [
+    {name: 'C#', image: 'devicon-csharp-plain'},
+    {name: '.NET', image: 'devicon-dotnetcore-plain'},
+    {name: '.NET', image: 'devicon-dot-net-plain'},
+    {name: 'Blazor', image: 'devicon-blazor-original'},
+    {name: 'Typescript', image: 'devicon-typescript-plain'},
+    {name: 'Vue.js', image: 'devicon-vuejs-plain'},
+    {name: 'HTML5', image: 'devicon-html5-plain'},
+    {name: 'CSS3', image: 'devicon-css3-plain'},
+  ]
+
+  const skillsWithImagesReverse: ScrollingSkill[] = [
+    {name: 'SQL', image: 'devicon-mysql-plain'},
+    {name: 'PostgreSQL', image: 'devicon-postgresql-plain'},
+    {name: 'SQL Server', image: 'devicon-microsoftsqlserver-plain'},
+    {name: 'Cosmos DB', image: 'devicon-mongodb-plain'},
+    {name: 'SQLite', image: 'devicon-sqlite-plain'},
+    {name: 'Microsoft Azure', image: 'devicon-azure-plain'},
+    {name: 'Docker', image: 'devicon-docker-plain'},
+    {name: 'Terraform', image: 'devicon-terraform-plain'},
+    {name: 'Git', image: 'devicon-git-plain'},
+    {name: 'CI/CD', image: 'devicon-github-original'}
+  ]
+
+  return { experiences, educations, certifications, contacts, languages, skills, transverseSkills, skillsWithImages, skillsWithImagesReverse }
 }

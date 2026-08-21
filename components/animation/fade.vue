@@ -1,6 +1,14 @@
 <script setup lang="ts">
 import { ref, onMounted, onBeforeUnmount, type Ref } from 'vue'
 
+interface Props {
+  duration?: number
+}
+
+withDefaults(defineProps<Props>(), {
+  duration: 0.8
+})
+
 const container: Ref<HTMLElement | null> = ref(null)
 let observer: IntersectionObserver | null = null
 
@@ -28,7 +36,7 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <div ref="container" class="fade-in">
+  <div ref="container" class="fade-in" :style="{ '--duration': `${duration}s` }">
     <slot />
   </div>
 </template>
@@ -37,7 +45,7 @@ onBeforeUnmount(() => {
 .fade-in {
   opacity: 0;
   transform: translateY(50px);
-  transition: opacity .8s ease, transform .8s ease;
+  transition: opacity var(--duration) ease, transform var(--duration) ease;
 }
 
 .fade-in.show {
