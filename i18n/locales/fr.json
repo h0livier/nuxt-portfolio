@@ -73,6 +73,12 @@
           "enterprise": "ORES",
           "date": "Mars 2025 - Décembre 2025",
           "description": "Développement d'une application mobile hybride en utilisant .NET Core, .NET MAUI et Blazor à destination des agents de terrain d'ORES pour faciliter leurs interventions."
+        },
+        {
+          "title": "Full Stack Developer .NET",
+          "enterprise": "Industeel - ArcelorMittal",
+          "date": "Depuis septembre 2026",
+          "description": "Migration d'applications web existantes vers .NET Core et Blazor, intégration de nouvelles fonctionnalités et optimisation des performances pour les applications internes d'Industeel."
         }
       ]
     },
