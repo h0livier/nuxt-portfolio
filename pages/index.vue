@@ -16,7 +16,7 @@ const cvPrintOptions = reactive({
 <template >
     <Cv :experiences="experiences" :educations="educations" :certifications="certifications" :contacts="contacts" :languages="languages" :skills="skills" :variant="cvVariant" :show-missions="cvPrintOptions.showMissions" :show-certifications="cvPrintOptions.showCertifications" :show-about="cvPrintOptions.showAbout" />
     <div data-theme="default" class="flex justify-center bg-base-100">
-        <div class="min-h-screen print:hidden max-w-[90vw] md:max-w-[75vw] lg:max-w-[60vw] xl:max-w-[50vw] xxl:max-w-[40vw] 2xl:max-w-[35vw] 3xl:max-w-[30vw] 4xl:max-w-[25vw] 5xl:max-w-[20vw] 6xl:max-w-[15vw]">
+        <div class="min-h-screen print:hidden max-w-[90vw] md:max-w-[75vw] lg:max-w-[60vw] xl:max-w-[50vw] xxl:max-w-[40vw]  2xl:max-w-[35vw]">
             <div class="flex justify-between mt-10 lg:mt-20 mb-10">
                 <p><a href="mailto:olivier.hayot.dev@gmail.com">olivier.hayot.dev@gmail.com</a></p>
                 <LanguageSwitch />
@@ -40,7 +40,7 @@ const cvPrintOptions = reactive({
                             </h1>
                             <div class="py-6 text-justify">
                                 {{ $t("presentation_1").replace("%YEARS%", years.toString()) }}
-                                {{ $t("presentation_2") }}
+                                <span class="mt-4">{{ $t("presentation_2") }}</span>
                             </div>
                             <PrintButton :variant="cvVariant" :show-missions="cvPrintOptions.showMissions" :show-certifications="cvPrintOptions.showCertifications" :show-about="cvPrintOptions.showAbout" @update:variant="cvVariant = $event" @update:showMissions="cvPrintOptions.showMissions = $event" @update:showCertifications="cvPrintOptions.showCertifications = $event" @update:showAbout="cvPrintOptions.showAbout = $event"></PrintButton>
                         </div>
@@ -77,7 +77,7 @@ const cvPrintOptions = reactive({
                             class="grow card bg-base-300 transition-all cursor-pointer">
                             <div class="card-body">
                                 <div class="flex flex-col-reverse items-center gap-4 md:flex-row md:items-center">
-                                    <img v-if="cert.logo" :src="cert.logo" :alt="cert.name" class="w-30 h-30 object-contain" />
+                                    <img v-if="cert.logo" :src="cert.logo" :alt="cert.name" class="w-30 h-30" />
                                     <div>
                                         <p class="text-xl font-bold">{{ cert.name }}</p>
                                         <p class="text-sm text-base-content/60 py-2">{{ cert.date }} &mdash; {{ $t("validUntil") }} {{ cert.validUntil }}</p>
@@ -97,8 +97,8 @@ const cvPrintOptions = reactive({
                 </div>
             </Fade>
             <Fade>
-                <div class="flex flex-col items-center mt-[10vh] mb-10 bg-base-300 rounded-lg px-0 lg:px-5 xl:px-10 py-15">
-                    <h2 class="text-5xl">{{ $t("getInTouchTitle") }}</h2>
+                <div class="flex flex-col items-center mt-[10vh] mb-10 rounded-lg px-0 lg:px-5 py-15">
+                    <h2 class="text-5xl text-center">{{ $t("getInTouchTitle") }}</h2>
                     <p class="text-center text-lg py-5">{{ $t("getInTouchText") }}</p>
                     <p class="flex gap-4">
                         <NuxtLink class="text-xl font-semibold hover:underline" href="https://github.com/h0livier"><i class="devicon-github-plain text-4xl"></i></NuxtLink>
