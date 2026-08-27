@@ -22,6 +22,7 @@ export interface WorkPlace extends Place {
 }
 
 export interface Certification extends Place {
+    issuer: string
     link: string
     validUntil: string
     logo?: string

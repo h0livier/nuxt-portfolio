@@ -58,7 +58,17 @@ export const useProfileData = () => {
 
   const certifications: Certification[] = [
     {
+      name: t('certifications.gh200.name'),
+      issuer: t('certifications.gh200.issuer'),
+      description: t('certifications.gh200.description'),
+      date: t('certifications.gh200.date'),
+      link: 'https://learn.microsoft.com/api/credentials/share/en-us/OlivierHayot-3879/4FFEFCB5AB822BCE?sharingId=F6F8F4EC39C38103',
+      validUntil: t('certifications.gh200.validUntil'),
+      logo: "https://img-c.udemycdn.com/open-badges/v2/badge-class/1911118423/0215972a-0912-4638-8cb0-8c655b8eaf0f2016309413550254902.png"
+    },
+    {
       name: t('certifications.terraform.name'),
+      issuer: t('certifications.terraform.issuer'),
       description: t('certifications.terraform.description'),
       date: t('certifications.terraform.date'),
       link: 'https://www.credly.com/badges/19129d90-2993-4fe8-a301-1460a0c7f5b4/public_url',
@@ -67,9 +77,10 @@ export const useProfileData = () => {
     },
     {
       name: t('certifications.gh300.name'),
+      issuer: t('certifications.gh300.issuer'),
       description: t('certifications.gh300.description'),
       date: t('certifications.gh300.date'),
-      link: 'https://learn.microsoft.com/api/credentials/share/fr-fr/OlivierHayot-3879/959D372E9B54FE26?sharingId=F6F8F4EC39C38103',
+      link: 'https://learn.microsoft.com/api/credentials/share/en-us/OlivierHayot-3879/959D372E9B54FE26?sharingId=F6F8F4EC39C38103',
       validUntil: t('certifications.gh300.validUntil'),
       logo: "https://img-c.udemycdn.com/open-badges/v2/badge-class/1999319323/9a132d12-47a7-4c8e-8954-27fe0e5f0a1d12569602178324077995.png"
     },
