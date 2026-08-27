@@ -1,6 +1,6 @@
 const linkUrls = [
   "taplink.olivierhayot.be",
-  "linktree.olivierhayot.be"
+  "links.olivierhayot.be"
 ]
 
 export default defineNuxtRouteMiddleware((to, from) => {

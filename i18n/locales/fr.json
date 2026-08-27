@@ -5,10 +5,6 @@
   "presentation_2": " Je travaille principalement avec .NET Core pour le back-end et Vue.js/Blazor pour le front-end tout en gérant les aspects DevOps et infrastructure. Curieux et orienté solutions, j’aime relever des défis techniques et optimiser les processus.",
   "presentation_3": "Pendant mon temps libre, j’aime sortir avec des amis boire un verre et améliorer mon chez-moi.",
   "drivesMe": "Ce qui me motive",
-  "firstMotivationTitle": "Résoudre des problèmes",
-  "firstMotivationText": "J’aime créer des applications web conviviales et efficaces qui résolvent de vrais problèmes.",
-  "secondMotivationTitle": "Automatisation & Création d’outils",
-  "secondMotivationText": "Transformer de petites idées en solutions pratiques est ce qui nourrit ma curiosité et ma motivation.",
   "getInTouchTitle": "Envie de me contacter ?",
   "getInTouchText": "Remplissez le formulaire ci-dessous ou contactez-moi via les liens suivants.",
   "cancel": "Annuler",
@@ -147,6 +143,34 @@
     "adaptive": "Adaptabilité"
   },
 
+  "transverseSkillsTitle": "Compétences transversales",
+  "transverseSkills": {
+    "analysisAndDesign": {
+      "name": "Analyse et conception",
+      "description": "Transformer un besoin métier en une solution technique robuste et évolutive."
+    },
+    "backendArchitecture": {
+      "name": "Architecture backend",
+      "description": "Conception et mise en œuvre d'architectures backend robustes et évolutives."
+    },
+    "customFrontend": {
+      "name": "Frontend sur mesure",
+      "description": "Développement d'interfaces utilisateur personnalisées et réactives."
+    },
+    "serviceIntegration": {
+      "name": "Intégration de services",
+      "description": "Intégration de services tiers et d'API pour enrichir les fonctionnalités des applications."
+    },
+    "solvingProblems": {
+      "name": "Résolution de problèmes",
+      "description": "Identifier et résoudre efficacement les problèmes techniques et fonctionnels."
+    },
+    "automationAndTools": {
+      "name": "Automatisation et création d'outils",
+      "description": "Automatiser les processus et créer des outils pour améliorer la productivité et l'efficacité."
+    }
+  },
+
   "aboutMe": "À propos",
   "workExperience": "Expériences Professionnelles",
   "education": "Formation",
@@ -157,7 +181,7 @@
   "viewBadge": "Voir le badge",
 
   "cvHeader": {
-    "title": "Analyste Développeur .NET",
+    "title": "Full Stack Developer .NET",
     "description": "Analyste développeur .NET Full Stack avec près de 4 ans d’expérience dans le développement d’applications web. Spécialisé en .NET Core (back-end), Vue.js et Blazor (front-end), j’interviens sur l’ensemble du cycle de développement ainsi que sur les aspects DevOps et infrastructure. Curieux et orienté solutions, j’apprécie relever des défis techniques et optimiser les processus."
   }
 }

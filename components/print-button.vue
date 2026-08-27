@@ -61,7 +61,7 @@ function print(){
                 <label class="label cursor-pointer justify-start gap-3 mb-2">
                     <input
                         type="checkbox"
-                        class="checkbox checkbox-primary"
+                        class="checkbox checkbox-primary text-white"
                         :checked="props.showMissions"
                         @change="updateShowMissions(($event.target as HTMLInputElement).checked)">
                     <span class="label-text">{{ $t("cvPrintShowMissions") }}</span>
@@ -69,7 +69,7 @@ function print(){
                 <label class="label cursor-pointer justify-start gap-3 mb-2">
                     <input
                         type="checkbox"
-                        class="checkbox checkbox-primary"
+                        class="checkbox checkbox-primary text-white"
                         :checked="props.showCertifications"
                         @change="updateShowCertifications(($event.target as HTMLInputElement).checked)">
                     <span class="label-text">{{ $t("cvPrintShowCertifications") }}</span>
@@ -77,7 +77,7 @@ function print(){
                 <label class="label cursor-pointer justify-start gap-3 mb-2">
                     <input
                         type="checkbox"
-                        class="checkbox checkbox-primary"
+                        class="checkbox checkbox-primary text-white"
                         :checked="props.showAbout"
                         @change="updateShowAbout(($event.target as HTMLInputElement).checked)">
                     <span class="label-text">{{ $t("cvPrintShowAbout") }}</span>
@@ -85,14 +85,14 @@ function print(){
             </div>
             <div class="modal-action">
                 <form method="dialog" class="gap-5">
-                    <button class="btn btn-outline hover:bg-gray-700 mr-4">{{$t("cancel")}}</button>
-                    <button class="btn btn-primary bg-blue-500" @click="print()">{{$t("print")}}</button>
+                    <button class="btn btn-outline mr-4">{{$t("cancel")}}</button>
+                    <button class="btn btn-primary bg-blue-500 text-white" @click="print()">{{$t("print")}}</button>
                 </form>
             </div>
         </div>
     </dialog>
 
-    <div class="aura aura-dual aura-xs duration-10000">
-        <button class="btn btn-primary lg:btn-lg bg-blue-500 border-0 shadow-blue-300 text-white" @click="openModal()">{{$t("printButton")}}</button>
+    <div class="aura bg-primary duration-10000">
+        <button class="btn btn-primary lg:btn-lg bg-primary border-0 shadow-blue-300 text-white" @click="openModal()">{{$t("printButton")}}</button>
     </div>
 </template>
