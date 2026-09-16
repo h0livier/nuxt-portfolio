@@ -3,6 +3,7 @@ import { pluralize } from '~/helpers/string'
 import type { Certification, ListOption, Place, WorkPlace } from '~/types'
 
 interface CVProps {
+  fullName: string
   educations: Place[]
   experiences: WorkPlace[]
   certifications: Certification[]
@@ -20,7 +21,7 @@ const props = defineProps<CVProps>()
 <template>
   <div class="hidden print:block bg-white px-6 py-5 text-[11px] leading-snug text-black">
     <header>
-      <h1 class="text-3xl font-bold">Olivier Hayot</h1>
+      <h1 class="text-3xl font-bold">{{ props.fullName }}</h1>
       <h2 class="mt-1 text-lg font-semibold">{{ $t('cvHeader.title') }}</h2>
       <p class="mt-2 break-words">
         <span v-for="(contact, index) in props.contacts" :key="contact.value">

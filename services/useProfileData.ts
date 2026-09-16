@@ -4,6 +4,7 @@ import type { Certification, ListOption, Mission, Place, WorkPlace } from '~/typ
 
 export const useProfileData = () => {
   const { t } = useI18n()
+  const fullName = 'Olivier Hayot'
 
   const oresMission: Mission = {
     title: t('experiences.wavenet.missions.0.title'),
@@ -130,5 +131,5 @@ export const useProfileData = () => {
     {name: 'CI/CD', image: 'devicon-github-original'}
   ]
 
-  return { experiences, educations, certifications, contacts, languages, skills, transverseSkills, skillsWithImages, skillsWithImagesReverse }
+  return { fullName, experiences, educations, certifications, contacts, languages, skills, transverseSkills, skillsWithImages, skillsWithImagesReverse }
 }

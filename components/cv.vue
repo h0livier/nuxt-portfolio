@@ -2,6 +2,7 @@
 import type { CVPrintVariant, Certification, ListOption, Place, WorkPlace } from '~/types'
 
 interface CVProps{
+    fullName: string
     educations: Place[]
     experiences: WorkPlace[]
     certifications: Certification[]
@@ -21,10 +22,12 @@ const certifications = props.certifications
 const contacts = props.contacts
 const languages = props.languages
 const skills = props.skills
+const fullName = props.fullName
 </script>
 <template>
     <cv-ats
         v-if="props.variant === 'ats'"
+        :full-name="fullName"
         :educations="educations"
         :experiences="experiences"
         :certifications="certifications"
