@@ -41,7 +41,7 @@ const props = defineProps<CVProps>()
         :show-certifications="props.showCertifications"
         :show-about="props.showAbout" />
     <cv-columns
-        v-else
+        v-else-if="props.variant === 'squared'"
         :educations="props.educations"
         :experiences="props.experiences"
         :certifications="props.certifications"
