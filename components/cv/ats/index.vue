@@ -24,13 +24,13 @@ const props = defineProps<CVProps>()
       <h1 class="text-3xl font-bold">{{ props.fullName }}</h1>
       <h2 class="mt-1 text-lg font-semibold">{{ $t('cvHeader.title') }}</h2>
       <p class="mt-2 break-words">
-        <span v-for="(contact, index) in props.contacts" :key="contact.value">
+        <span v-for="(contact, index) in props.contacts" :key="`${contact.name}-${contact.value}`">
           <span v-if="index > 0"> | </span>
           {{ contact.value }}
         </span>
       </p>
       <p class="mt-1">
-        <span v-for="(language, index) in props.languages" :key="language.name">
+        <span v-for="(language, index) in props.languages" :key="`${language.name}-${language.value}`">
           <span v-if="index > 0"> | </span>
           {{ language.name }}: {{ language.value }}
         </span>
@@ -42,7 +42,7 @@ const props = defineProps<CVProps>()
     </cv-ats-section>
 
     <cv-ats-section :title="$t('workExperience')">
-      <article v-for="(experience, index) in props.experiences" :key="index" class="mt-4 first:mt-0 break-inside-avoid">
+      <article v-for="experience in props.experiences" :key="`${experience.name}-${experience.date}-${experience.title}`" class="mt-4 first:mt-0 break-inside-avoid">
         <div class="flex items-baseline justify-between gap-3">
           <h4 class="font-bold">{{ experience.title }}</h4>
           <p class="text-right italic">{{ experience.date }}</p>
@@ -74,7 +74,7 @@ const props = defineProps<CVProps>()
     </cv-ats-section>
 
     <cv-ats-section v-if="props.showCertifications !== false" :title="$t('certificationsTitle')">
-      <article v-for="(certification, index) in props.certifications" :key="index" class="mt-3 first:mt-0 break-inside-avoid">
+      <article v-for="certification in props.certifications" :key="`${certification.name}-${certification.date}`" class="mt-3 first:mt-0 break-inside-avoid">
         <div class="flex items-baseline justify-between gap-3">
           <h4 class="font-bold">{{ certification.name }}</h4>
           <p class="text-right italic">{{ certification.date }}</p>
@@ -89,7 +89,7 @@ const props = defineProps<CVProps>()
     </cv-ats-section>
 
     <cv-ats-section :title="$t('education')">
-      <article v-for="(education, index) in props.educations" :key="index" class="mt-3 first:mt-0 break-inside-avoid">
+      <article v-for="education in props.educations" :key="`${education.name}-${education.date}`" class="mt-3 first:mt-0 break-inside-avoid">
         <div class="flex items-baseline justify-between gap-3">
           <h4 class="font-bold">{{ education.name }}</h4>
           <p class="text-right italic">{{ education.date }}</p>
@@ -99,7 +99,7 @@ const props = defineProps<CVProps>()
     </cv-ats-section>
 
     <cv-ats-section :title="$t('skills')">
-      <div v-for="(skill, index) in props.skills" :key="index" class="mt-2 first:mt-0 break-inside-avoid">
+      <div v-for="skill in props.skills" :key="skill.name" class="mt-2 first:mt-0 break-inside-avoid">
         <p>
           <span class="font-semibold">{{ skill.name }}:</span>
           {{ skill.value }}
