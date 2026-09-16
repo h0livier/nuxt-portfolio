@@ -28,4 +28,4 @@ export interface Certification extends Place {
     logo?: string
 }
 
-export type CVPrintVariant = 'lined' | 'squared'
+export type CVPrintVariant = 'ats' | 'lined' | 'squared'

@@ -1,7 +1,9 @@
 <script setup lang="ts">
 import type { CVPrintVariant, Certification, ListOption, Place, WorkPlace } from '~/types'
+import { computed } from 'vue'
 
 interface CVProps{
+    fullName: string
     educations: Place[]
     experiences: WorkPlace[]
     certifications: Certification[]
@@ -14,34 +16,44 @@ interface CVProps{
     showAbout?: boolean
 }
 const props = defineProps<CVProps>()
-
-const educations = props.educations
-const experiences = props.experiences
-const certifications = props.certifications
-const contacts = props.contacts
-const languages = props.languages
-const skills = props.skills
+const variant = computed<CVPrintVariant>(() => {
+    return props.variant === 'ats' || props.variant === 'lined' || props.variant === 'squared'
+        ? props.variant
+        : 'squared'
+})
 </script>
 <template>
+    <cv-ats
+        v-if="variant === 'ats'"
+        :full-name="props.fullName"
+        :educations="props.educations"
+        :experiences="props.experiences"
+        :certifications="props.certifications"
+        :contacts="props.contacts"
+        :languages="props.languages"
+        :skills="props.skills"
+        :show-missions="props.showMissions"
+        :show-certifications="props.showCertifications"
+        :show-about="props.showAbout" />
     <cv-lined
-        v-if="props.variant === 'lined'"
-        :educations="educations"
-        :experiences="experiences"
-        :certifications="certifications"
-        :contacts="contacts"
-        :languages="languages"
-        :skills="skills"
+        v-else-if="variant === 'lined'"
+        :educations="props.educations"
+        :experiences="props.experiences"
+        :certifications="props.certifications"
+        :contacts="props.contacts"
+        :languages="props.languages"
+        :skills="props.skills"
         :show-missions="props.showMissions"
         :show-certifications="props.showCertifications"
         :show-about="props.showAbout" />
     <cv-columns
         v-else
-        :educations="educations"
-        :experiences="experiences"
-        :certifications="certifications"
-        :contacts="contacts"
-        :languages="languages"
-        :skills="skills"
+        :educations="props.educations"
+        :experiences="props.experiences"
+        :certifications="props.certifications"
+        :contacts="props.contacts"
+        :languages="props.languages"
+        :skills="props.skills"
         :show-missions="props.showMissions"
         :show-certifications="props.showCertifications"
         :show-about="props.showAbout" />
