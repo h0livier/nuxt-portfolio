@@ -26,7 +26,7 @@ function openModal() {
 }
 
 function updateVariant(value: string) {
-    if (value === 'lined' || value === 'squared') {
+    if (value === 'ats' || value === 'lined' || value === 'squared') {
         emit('update:variant', value)
     }
 }
@@ -56,6 +56,7 @@ function print(){
             <select class="select select-bordered w-full mb-4" :value="props.variant" @change="updateVariant(($event.target as HTMLSelectElement).value)">
                 <option value="squared">{{ $t("cvPrintLayoutSquared") }}</option>
                 <option value="lined">{{ $t("cvPrintLayoutLined") }}</option>
+                <option value="ats">{{ $t("cvPrintLayoutATS") }}</option>
             </select>
             <div class="flex flex-col">
                 <label class="label cursor-pointer justify-start gap-3 mb-2">

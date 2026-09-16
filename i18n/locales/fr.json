@@ -56,6 +56,7 @@
   "cvPrintLayout": "Choisissez la mise en page du CV à imprimer",
   "cvPrintLayoutSquared": "Colonnes",
   "cvPrintLayoutLined": "Vertical",
+  "cvPrintLayoutATS": "ATS",
   "cvPrintShowMissions": "Afficher les missions",
   "cvPrintShowCertifications": "Afficher les certifications",
   "cvPrintShowAbout": "Afficher la section A propos",

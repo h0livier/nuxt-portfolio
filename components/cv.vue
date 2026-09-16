@@ -23,8 +23,19 @@ const languages = props.languages
 const skills = props.skills
 </script>
 <template>
+    <cv-ats
+        v-if="props.variant === 'ats'"
+        :educations="educations"
+        :experiences="experiences"
+        :certifications="certifications"
+        :contacts="contacts"
+        :languages="languages"
+        :skills="skills"
+        :show-missions="props.showMissions"
+        :show-certifications="props.showCertifications"
+        :show-about="props.showAbout" />
     <cv-lined
-        v-if="props.variant === 'lined'"
+        v-else-if="props.variant === 'lined'"
         :educations="educations"
         :experiences="experiences"
         :certifications="certifications"
