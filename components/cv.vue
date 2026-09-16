@@ -51,4 +51,15 @@ const props = defineProps<CVProps>()
         :show-missions="props.showMissions"
         :show-certifications="props.showCertifications"
         :show-about="props.showAbout" />
+    <cv-columns
+        v-else
+        :educations="props.educations"
+        :experiences="props.experiences"
+        :certifications="props.certifications"
+        :contacts="props.contacts"
+        :languages="props.languages"
+        :skills="props.skills"
+        :show-missions="props.showMissions"
+        :show-certifications="props.showCertifications"
+        :show-about="props.showAbout" />
 </template>
