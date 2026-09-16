@@ -2,9 +2,11 @@ import { useI18n } from 'vue-i18n'
 import type { ScrollingSkill } from '~/components/animation/defiling.vue'
 import type { Certification, ListOption, Mission, Place, WorkPlace } from '~/types'
 
+const PROFILE_FULL_NAME = 'Olivier Hayot'
+
 export const useProfileData = () => {
   const { t } = useI18n()
-  const fullName = 'Olivier Hayot'
+  const fullName = PROFILE_FULL_NAME
 
   const oresMission: Mission = {
     title: t('experiences.wavenet.missions.0.title'),
