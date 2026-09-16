@@ -75,14 +75,15 @@ const props = defineProps<CVProps>()
       <article v-for="certification in props.certifications" :key="`${certification.name}-${certification.date}`" class="mt-3 first:mt-0 break-inside-avoid">
         <div class="flex items-baseline justify-between gap-3">
           <h4 class="font-bold">{{ certification.name }}</h4>
-          <p class="text-right italic">{{ certification.date }}</p>
+          <p class="text-right italic">
+            {{ certification.date }} -
+            <span v-if="certification.validUntil">
+              {{ $t('validUntil') }}:
+              {{ certification.validUntil }}
+            </span>
+          </p>
         </div>
         <p>{{ certification.issuer }}</p>
-        <p v-if="certification.validUntil">
-          <span class="font-semibold">{{ $t('validUntil') }}:</span>
-          {{ certification.validUntil }}
-        </p>
-        <p v-if="certification.link" class="break-all">{{ certification.link }}</p>
       </article>
     </cv-ats-section>
 
