@@ -54,9 +54,7 @@ const props = defineProps<CVProps>()
           {{ experience.skills.join(', ') }}
         </p>
 
-        <div
-          v-if="props.showMissions !== false && experience.missions?.length"
-          class="mt-2">
+        <div v-if="props.showMissions !== false && experience.missions?.length" class="mt-2">
           <p class="font-semibold">{{ pluralize($t('mission'), experience.missions.length) }}:</p>
           <div v-for="mission in experience.missions" :key="`${experience.name}-${mission.date}`" class="mt-2 pl-3">
             <div class="flex items-baseline justify-between gap-3">

@@ -15,47 +15,39 @@ interface CVProps{
     showAbout?: boolean
 }
 const props = defineProps<CVProps>()
-
-const educations = props.educations
-const experiences = props.experiences
-const certifications = props.certifications
-const contacts = props.contacts
-const languages = props.languages
-const skills = props.skills
-const fullName = props.fullName
 </script>
 <template>
     <cv-ats
         v-if="props.variant === 'ats'"
-        :full-name="fullName"
-        :educations="educations"
-        :experiences="experiences"
-        :certifications="certifications"
-        :contacts="contacts"
-        :languages="languages"
-        :skills="skills"
+        :full-name="props.fullName"
+        :educations="props.educations"
+        :experiences="props.experiences"
+        :certifications="props.certifications"
+        :contacts="props.contacts"
+        :languages="props.languages"
+        :skills="props.skills"
         :show-missions="props.showMissions"
         :show-certifications="props.showCertifications"
         :show-about="props.showAbout" />
     <cv-lined
         v-else-if="props.variant === 'lined'"
-        :educations="educations"
-        :experiences="experiences"
-        :certifications="certifications"
-        :contacts="contacts"
-        :languages="languages"
-        :skills="skills"
+        :educations="props.educations"
+        :experiences="props.experiences"
+        :certifications="props.certifications"
+        :contacts="props.contacts"
+        :languages="props.languages"
+        :skills="props.skills"
         :show-missions="props.showMissions"
         :show-certifications="props.showCertifications"
         :show-about="props.showAbout" />
     <cv-columns
         v-else
-        :educations="educations"
-        :experiences="experiences"
-        :certifications="certifications"
-        :contacts="contacts"
-        :languages="languages"
-        :skills="skills"
+        :educations="props.educations"
+        :experiences="props.experiences"
+        :certifications="props.certifications"
+        :contacts="props.contacts"
+        :languages="props.languages"
+        :skills="props.skills"
         :show-missions="props.showMissions"
         :show-certifications="props.showCertifications"
         :show-about="props.showAbout" />
