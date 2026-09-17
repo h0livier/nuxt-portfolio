@@ -15,7 +15,7 @@ defineProps<ContentProps>()
 </script>
 
 <template>
-  <main class="w-[66%] px-5 pt-4">
+  <main class="w-[69%] px-4 pt-3">
 
     <cv-columns-section v-if="showAbout !== false" :title="$t('aboutMe')">
       <p class="mt-2 leading-snug">{{ $t('cvHeader.description') }}</p>

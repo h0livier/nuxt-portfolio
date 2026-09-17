@@ -8,6 +8,11 @@ html{
   themes: all;
 }
 
+@page {
+  size: A4;
+  margin: 8mm 10mm;
+}
+
 @media print {
     :root {
       color-scheme: light;

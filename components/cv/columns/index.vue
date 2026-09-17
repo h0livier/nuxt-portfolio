@@ -24,7 +24,7 @@ const skills = props.skills
 </script>
 
 <template>
-	<div class="hidden print:block flex-col bg-white text-black mx-auto overflow-hidden text-[14px] leading-tight">
+	<div class="hidden print:block flex-col bg-white text-black mx-auto overflow-hidden text-[11.5px] leading-tight">
 		<cv-columns-header />
 		<div class="flex">
 			<cv-columns-sidebar

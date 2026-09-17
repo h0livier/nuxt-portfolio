@@ -11,8 +11,8 @@ defineProps<SidebarProps>()
 </script>
 
 <template>
-  <aside class="w-[34%] border-r border-slate-300 px-4 py-4">
-    <cv-columns-section title="Contact">
+  <aside class="w-[31%] border-r border-slate-300 px-3.5 py-3">
+    <cv-columns-section :title="$t('contactTitle')">
       <div v-for="(contact, index) in contacts" :key="index" class="mt-2 break-words">
         <p class="font-semibold text-black">{{ contact.name }}</p>
         <p>{{ contact.value }}</p>

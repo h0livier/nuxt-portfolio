@@ -25,18 +25,18 @@ const skills = props.skills // ["C#", ".Net Core", "EF Core", "XUnit/NUnit", "Bl
         <div class="text-black rounded-md">
             <div class="flex items-start">
                 <p class="me-6">
-                    <img src="../../../assets/picture_squared.jpg" alt="Olivier Hayot's Picture" class="rounded-lg max-w-[120px]" />
+                    <img src="../../../assets/picture_squared.jpg" alt="Olivier Hayot's Picture" class="rounded-lg max-w-[100px]" />
                 </p>
                 <div>
-                    <h1 class="text-3xl">Olivier Hayot</h1>
-                    <h2 class="text-xl py-1.5 font-semibold">{{ $t("cvHeader.title") }}</h2>
+                    <h1 class="text-2xl font-bold">Olivier Hayot</h1>
+                    <h2 class="text-lg py-0.5 font-semibold">{{ $t("cvHeader.title") }}</h2>
                     <p>
                         <span v-for="(item, index) in contacts">
                             <span class="mx-1" v-if="index !== 0"> | </span>
                             {{ item.value }}
                         </span>
                     </p>
-                    <div class="flex flex-wrap gap-x-4 gap-y-1.5 pt-1.5">
+                    <div class="flex flex-wrap gap-x-4 gap-y-1 pt-1">
                         <div v-for="item in languages">
                             <span>{{ item.name }} | </span>
                             <span class="font-bold">{{ item.value }}</span>
@@ -47,7 +47,7 @@ const skills = props.skills // ["C#", ".Net Core", "EF Core", "XUnit/NUnit", "Bl
         </div>
         
         <cv-lined-section v-if="props.showAbout !== false" :title='$t("aboutMe")'>
-            <p class="pt-2.5 text-sm">{{ $t("cvHeader.description") }}</p>
+            <p class="pt-1 text-xs">{{ $t("cvHeader.description") }}</p>
         </cv-lined-section>
 
         <cv-lined-section :title='$t("workExperience")'>
