@@ -2,7 +2,7 @@
 import type { ListOption, Place, WorkPlace } from '~/types'
 
 interface CVProps{
-    fullName?: string
+    fullName: string
     educations: Place[]
     experiences: WorkPlace[]
     contacts: ListOption[]
@@ -41,7 +41,7 @@ const skills = props.skills
                 </div>
             </div>
             <div class="grow-3 ps-5">
-                <h1 class="text-3xl font-bold">{{ props.fullName || 'Olivier Hayot' }}</h1>
+                <h1 class="text-3xl font-bold">{{ props.fullName }}</h1>
                 <h2 class="text-lg pt-1 font-semibold">{{ $t("cvHeader.title") }}</h2>
                 <p class="pt-1.5 text-xs">{{ $t("cvHeader.description") }}</p>
                 <div class="pt-3">
