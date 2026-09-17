@@ -12,6 +12,10 @@ html{
     :root {
       color-scheme: light;
     }
+    @page {
+      size: A4;
+      margin: 8mm 10mm;
+    }
 }
 
 
