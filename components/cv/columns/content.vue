@@ -18,22 +18,22 @@ defineProps<ContentProps>()
   <main class="w-[69%] px-4 pt-3">
 
     <cv-columns-section v-if="showAbout !== false" :title="$t('aboutMe')">
-      <p class="mt-2 leading-snug">{{ $t('cvHeader.description') }}</p>
+      <p class="leading-snug">{{ $t('cvHeader.description') }}</p>
     </cv-columns-section>
 
     <cv-columns-section :title="$t('workExperience')">
-      <div v-for="(experience, index) in experiences" :key="index" class="mt-4 break-inside-avoid">
+      <div v-for="(experience, index) in experiences" :key="index" class="break-inside-avoid">
         <div class="flex items-baseline justify-between gap-2">
           <h4 class="font-semibold">{{ experience.name }} | {{ experience.title }}</h4>
           <p class="italic text-right">{{ experience.date }}</p>
         </div>
         <p class="mt-1 leading-snug">{{ experience.description }}</p>
         <div v-if="showMissions !== false && experience.missions && experience.missions.length > 0">
-          <p class="font-semibold mt-2 text-sm">{{ pluralize($t("mission"), experience.missions.length) }} : </p>
-          <div v-for="mission in experience.missions" :key="mission.date" class="ml-2 mt-2 text-sm">
+          <p class="font-semibold mt-1">{{ pluralize($t("mission"), experience.missions.length) }} : </p>
+          <div v-for="mission in experience.missions" :key="mission.date" class="ml-2 mt-1">
             <div class="flex items-baseline justify-between">
               <p class="font-semibold">
-                {{ mission.enterprise}}
+                {{ mission.enterprise }}
               </p>
               <p><span class="italic">{{ mission.date }}</span></p>
             </div>
@@ -44,16 +44,17 @@ defineProps<ContentProps>()
     </cv-columns-section>
 
     <cv-columns-section v-if="showCertifications !== false" :title="$t('certificationsTitle')">
-      <div v-for="(certification, index) in certifications" :key="index" class="mt-3 break-inside-avoid">
+      <div v-for="(certification, index) in certifications" :key="index" class="break-inside-avoid">
         <div class="flex items-baseline justify-between gap-2">
           <p><span class="font-semibold">{{ certification.name }}</span> - {{ certification.issuer }}</p>
           <p class="italic text-right">{{ certification.date }}</p>
         </div>
+        <p class="mt-1 leading-snug">{{ certification.description }}</p>
       </div>
     </cv-columns-section>
 
     <cv-columns-section :title="$t('education')">
-      <div v-for="(education, index) in educations" :key="index" class="mt-3 break-inside-avoid">
+      <div v-for="(education, index) in educations" :key="index" class="break-inside-avoid">
         <div class="flex items-baseline justify-between gap-2">
           <p class="font-semibold">{{ education.name }}</p>
           <p class="italic text-right">{{ education.date }}</p>
