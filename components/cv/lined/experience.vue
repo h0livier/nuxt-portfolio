@@ -12,13 +12,13 @@ const props = defineProps<{
 }>()
 </script>
 <template>
-    <div class="flex my-1.5 break-inside-avoid">
+    <div class="flex break-inside-avoid">
         <div class="flex-2">
-            <p class="italic text-xs">{{ props.date }}</p>
+            <p class="italic">{{ props.date }}</p>
         </div>
         <div class="flex-8 pl-4">
             <h4 class="font-bold">{{ props.place }} <span v-if="props.title !== undefined">| {{ props.title }}</span></h4>
-            <p class="pt-0.5 text-xs">{{ props.description }}</p>
+            <p class="pt-0.5">{{ props.description }}</p>
             <div v-if="props.missions && props.missions.length > 0 && props.showMission" class="mt-1">
                 <h4 class="font-semibold mb-0.5 text-xs">{{ pluralize($t("mission"), props.missions.length) }} : </h4>
                 <div v-for="mission in props.missions" :key="mission.date" class="ml-3 text-xs">
