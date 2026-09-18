@@ -19,7 +19,7 @@ const props = defineProps<CVProps>()
 </script>
 
 <template>
-  <div class="hidden print:block bg-white px-4 py-3 text-[10.5px] leading-snug text-black">
+  <div class="hidden print:block bg-white px-4 py-3 text-[12px] leading-snug text-black">
     <header>
       <h1 class="text-2xl font-bold">{{ props.fullName }}</h1>
       <h2 class="mt-0.5 text-base font-semibold">{{ $t('cvHeader.title') }}</h2>

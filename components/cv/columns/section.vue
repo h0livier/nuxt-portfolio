@@ -4,8 +4,10 @@ const props = defineProps<{
 }>()
 </script>
 <template>
-    <div class="my-1.5">
+    <div>
         <cv-columns-title v-if="props.title && props.title.length > 0" :value="props.title" />
-        <slot />
+        <div class="gap-2 flex flex-col">
+            <slot />
+        </div>
     </div>
 </template>

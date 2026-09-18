@@ -24,7 +24,7 @@ const experiences = ref(props.experiences)
                         clip-rule="evenodd" />
                 </svg>
             </div>
-            <div class="timeline-end lg:ms-10 md:mb-10 w-[100%]">
+            <div class="timeline-end lg:ms-10 md:mb-10 w-full">
                 <div class="card">
                     <div class="card-body px-5 py-1">
                         <time class="font-mono italic">{{ experience.date }}</time>

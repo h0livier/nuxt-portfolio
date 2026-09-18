@@ -47,7 +47,7 @@ const skills = props.skills // ["C#", ".Net Core", "EF Core", "XUnit/NUnit", "Bl
         </div>
         
         <cv-lined-section v-if="props.showAbout !== false" :title='$t("aboutMe")'>
-            <p class="pt-1 text-xs">{{ $t("cvHeader.description") }}</p>
+            <p class="text-xs">{{ $t("cvHeader.description") }}</p>
         </cv-lined-section>
 
         <cv-lined-section :title='$t("workExperience")'>
@@ -77,12 +77,10 @@ const skills = props.skills // ["C#", ".Net Core", "EF Core", "XUnit/NUnit", "Bl
         </cv-lined-section>
 
         <cv-lined-section :title='$t("skills")'>
-            
-                <cv-lined-skills
-                    v-for="(skill, index) in skills"
-                    :key="index"
-                    :skill="skill" />
-            
+            <cv-lined-skills
+                v-for="(skill, index) in skills"
+                :key="index"
+                :skill="skill" />
         </cv-lined-section>
     </div>
 </template>
