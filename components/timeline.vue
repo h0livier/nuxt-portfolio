@@ -80,3 +80,8 @@ const experiences = ref(props.experiences)
         </li>
     </ul>
 </template>
+<style scoped>
+.timeline-vertical.timeline-snap-icon > li {
+  --timeline-col-start: 0;
+}
+</style>
