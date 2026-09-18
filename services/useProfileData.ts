@@ -16,6 +16,14 @@ export const useProfileData = () => {
     skills: ['C#', 'ASP.NET Core', 'Blazor', 'SQL Server', 'Cosmos DB']
   }
 
+  const industeelMission: Mission = {
+    title: t('experiences.wavenet.missions.1.title'),
+    enterprise: t('experiences.wavenet.missions.1.enterprise'),
+    date: t('experiences.wavenet.missions.1.date'),
+    description: t('experiences.wavenet.missions.1.description'),
+    skills: ['C#', 'ASP.NET Core', 'Blazor', 'SQL Server', 'Cosmos DB']
+  }
+
   const experiences: WorkPlace[] = [
     { 
       name: 'Wavenet',
@@ -23,7 +31,7 @@ export const useProfileData = () => {
       date: t('experiences.wavenet.date'),
       title: t('experiences.wavenet.title'),
       skills: ['C#', 'ASP.NET Core', 'Blazor', 'Typescript', 'Vue.js', 'SQL Server', 'Cosmos DB', 'Terraform', 'Azure', 'Github Actions'],
-      missions: [ oresMission ]
+      missions: [ industeelMission, oresMission ]
     },
     { 
       name: 'Easi',
