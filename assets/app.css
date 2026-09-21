@@ -90,3 +90,10 @@ html{
   --depth: 1;
   --noise: 0;
 }
+
+@media (min-width: 2000px) {
+  #main-content > div:first-child {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+}
