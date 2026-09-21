@@ -9,7 +9,7 @@ const cvUrl = 'https://cv.olivierhayot.be/'
 const url = locale.value === 'fr' ? cvUrl : `${cvUrl}${locale.value}`
 </script>
 <template>
-    <main data-theme="default" class="flex justify-center py-10 min-h-screen bg-base-100">
+    <main data-theme="default" class="flex justify-center py-10 min-h-screen bg-base-100" id="main-content">
         <div class="pt-2 px-5 w-[95vw] md:w-[50vw] lg:w-[40vw] xl:w-[30vw]">
             <div class="flex justify-end mb-10">
                 <LanguageSwitch />
