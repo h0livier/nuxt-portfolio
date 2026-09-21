@@ -15,7 +15,7 @@ const cvPrintOptions = reactive({
 </script>
 <template >
     <Cv :full-name="fullName" :experiences="experiences" :educations="educations" :certifications="certifications" :contacts="contacts" :languages="languages" :skills="skills" :variant="cvVariant" :show-missions="cvPrintOptions.showMissions" :show-certifications="cvPrintOptions.showCertifications" :show-about="cvPrintOptions.showAbout" />
-    <div data-theme="default" class="flex justify-center bg-base-100">
+    <div data-theme="default" class="flex justify-center bg-base-100" id="main-content">
         <div class="min-h-screen print:hidden max-w-[90vw] md:max-w-[70vw] lg:max-w-[65vw] xl:max-w-[50vw] xxl:max-w-[40vw]">
             <div class="flex justify-between mt-10 lg:mt-20 mb-10">
                 <p><a href="mailto:olivier.hayot.dev@gmail.com">olivier.hayot.dev@gmail.com</a></p>
