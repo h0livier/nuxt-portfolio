@@ -1,8 +1,8 @@
 {
   "welcome": "Hello, je suis ",
   "profession": ".NET Full-Stack Developer",
-  "presentation_1": "Je suis Analyste Développeur avec une expérience pratique en développement web full-stack depuis plus de %YEARS% ans.",
-  "presentation_2": " Je travaille principalement avec .NET Core pour le back-end et Vue.js/Blazor pour le front-end tout en gérant les aspects DevOps et infrastructure. Curieux et orienté solutions, j’aime relever des défis techniques et optimiser les processus.",
+  "presentation_1": "Analyste développeur .NET Full Stack avec %YEARS% ans d’expérience dans la conception et le développement d’applications web. ",
+  "presentation_2": "Spécialisé en .NET Core côté back-end et en Vue.js / Blazor côté front-end, j’interviens sur l’ensemble du cycle de développement, de la conception à la mise en production, avec également une expertise sur les enjeux DevOps et infrastructure. Curieux, autonome et orienté solutions, j’aime relever des défis techniques et concevoir des solutions fiables, performantes et adaptées aux besoins métier.",
   "presentation_3": "Pendant mon temps libre, j’aime sortir avec des amis boire un verre et améliorer mon chez-moi.",
   "drivesMe": "Ce qui me motive",
   "getInTouchTitle": "Envie de me contacter ?",

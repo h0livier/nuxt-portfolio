@@ -1,8 +1,8 @@
 {
   "welcome": "Hi, I'm ",
   "profession": ".NET Full-Stack Developer",
-  "presentation_1": "I am an Analyst Developer with practical experience in full-stack web development for more than %YEARS% years.",
-  "presentation_2": " I work primarily with .NET Core for the back-end and Vue.js/Blazor for the front-end while managing DevOps and infrastructure aspects. Curious and solution-oriented, I enjoy tackling technical challenges and optimizing processes.",
+  "presentation_1": ".NET Full Stack Developer Analyst with %YEARS% years of experience in designing and developing web applications. ",
+  "presentation_2": "Specialized in .NET Core on the back-end and Vue.js / Blazor on the front-end, I work across the entire development lifecycle, from design to production, with also expertise in DevOps and infrastructure challenges. Curious, independent and solution-oriented, I enjoy tackling technical challenges and designing reliable, performant solutions adapted to business needs.",
   "presentation_3": "In my free time, I enjoy socializing with friends over a drink and tinkering with my home automation setup.",
   "drivesMe": "What drives me",
   "getInTouchTitle": "Want to get in touch ?",

@@ -103,6 +103,10 @@ export const useProfileData = () => {
     { name: t('contacts.website'), value: 'https://cv.olivierhayot.be' }
   ]
 
+  const contactHeader : ListOption[] = [
+    { name: t('contacts.phone'), value: '+32 471 64 60 15' },
+    { name: t('contacts.mail'), value: 'olivier.hayot.dev@gmail.com' },
+  ]
   const languages: ListOption[] = [
     { name: t('languages.french'), value: 'C2' },
     { name: t('languages.english'), value: 'B2' }
@@ -141,5 +145,5 @@ export const useProfileData = () => {
     {name: 'CI/CD', image: 'devicon-github-original'}
   ]
 
-  return { fullName, experiences, educations, certifications, contacts, languages, skills, transverseSkills, skillsWithImages, skillsWithImagesReverse }
+  return { fullName, experiences, educations, certifications, contacts, contactHeader, languages, skills, transverseSkills, skillsWithImages, skillsWithImagesReverse }
 }
