@@ -1,8 +1,8 @@
 {
   "welcome": "Hi, I'm ",
   "profession": ".NET Full-Stack Developer",
-  "presentation_1": "I am an Analyst Developer with practical experience in full-stack web development for more than %YEARS% years.",
-  "presentation_2": " I work primarily with .NET Core for the back-end and Vue.js/Blazor for the front-end while managing DevOps and infrastructure aspects. Curious and solution-oriented, I enjoy tackling technical challenges and optimizing processes.",
+  "presentation_1": ".NET Full Stack Developer Analyst with %YEARS% years of experience in designing and developing web applications. ",
+  "presentation_2": "Specialized in .NET Core on the back-end and Vue.js / Blazor on the front-end, I work across the entire development lifecycle, from design to production, with also expertise in DevOps and infrastructure challenges. Curious, independent and solution-oriented, I enjoy tackling technical challenges and designing reliable, performant solutions adapted to business needs.",
   "presentation_3": "In my free time, I enjoy socializing with friends over a drink and tinkering with my home automation setup.",
   "drivesMe": "What drives me",
   "getInTouchTitle": "Want to get in touch ?",
@@ -12,12 +12,10 @@
   "website": "Website",
   "cv": "Curriculum Vitae",
   "mail": "Mail",
-
   "links": {
     "portfolio": "Portfolio",
     "contact": "Contact Information"
   },
-
   "contact": {
     "formTitle": "Contact Form",
     "submit": "Send",
@@ -62,7 +60,6 @@
   "cvPrintShowAbout": "Show About section",
   "timelineTitle": "My Journey",
   "mission": "Mission",
-
   "experiences": {
     "wavenet": {
       "description": "Building and maintaining robust web applications with .NET Core, Blazor, TypeScript (Vue.js), and Azure. Focusing on scalability, performance, and clean code.",
@@ -95,14 +92,12 @@
       "title": "Web Developer Intern"
     }
   },
-
   "educations": {
     "heh": {
       "description": "Bachelor’s Degree in Computer Science and Systems, specializing in Telecommunications and Networks",
       "date": "September 2019 - June 2022"
     }
   },
-
   "certifications": {
     "gh300": {
       "name": "Github Copilot (GH-300)",
@@ -126,7 +121,6 @@
       "validUntil": "August 2028"
     }
   },
-
   "contacts": {
     "phone": "Phone number",
     "mail": "Mail",
@@ -136,7 +130,6 @@
     "french": "French",
     "english": "English"
   },
-
   "skill": {
     "languages": "Programming languages",
     "webBackend": "Backend",
@@ -149,7 +142,6 @@
     "communication": "Communication",
     "adaptive": "Adaptability"
   },
-
   "transverseSkillsTitle": "Transversal Skills",
   "transverseSkills": {
     "analysisAndDesign": {
@@ -177,19 +169,18 @@
       "description": "Automating processes and creating tools to improve productivity and efficiency."
     }
   },
-  
-    "aboutMe": "About Me",
-    "contactTitle": "Contact",
-    "workExperience": "Work Experiences",
-    "education": "Education",
-    "certificationsTitle": "Certifications",
-    "skills": "Skills",
-    "languagesTitle": "Languages",
-    "validUntil": "Valid until",
-    "viewBadge": "View badge",
-
-    "cvHeader": {
-        "title": "Full Stack Developer .NET",
-        "description": "Full-stack .NET developer with nearly four years’ experience in web application development. Specialising in .NET Core (back-end), Vue.js and Blazor (front-end), I am involved in the entire development lifecycle as well as DevOps and infrastructure. I am curious and solution-oriented, and I enjoy tackling technical challenges and optimising processes."
-    }
+  "aboutMe": "About Me",
+  "contactTitle": "Contact",
+  "workExperience": "Work Experiences",
+  "education": "Education",
+  "certificationsTitle": "Certifications",
+  "skills": "Skills",
+  "languagesTitle": "Languages",
+  "validUntil": "Valid until",
+  "viewBadge": "View badge",
+  "cvHeader": {
+    "title": "Full Stack Developer .NET",
+    "description": "Full-stack .NET developer with nearly four years’ experience in web application development. Specialising in .NET Core (back-end), Vue.js and Blazor (front-end), I am involved in the entire development lifecycle as well as DevOps and infrastructure. I am curious and solution-oriented, and I enjoy tackling technical challenges and optimising processes."
+  },
+  "technologiesTitle": "Technologies"
 }

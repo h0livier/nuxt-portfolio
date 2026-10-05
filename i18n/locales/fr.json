@@ -1,8 +1,8 @@
 {
   "welcome": "Hello, je suis ",
   "profession": ".NET Full-Stack Developer",
-  "presentation_1": "Je suis Analyste Développeur avec une expérience pratique en développement web full-stack depuis plus de %YEARS% ans.",
-  "presentation_2": " Je travaille principalement avec .NET Core pour le back-end et Vue.js/Blazor pour le front-end tout en gérant les aspects DevOps et infrastructure. Curieux et orienté solutions, j’aime relever des défis techniques et optimiser les processus.",
+  "presentation_1": "Analyste développeur .NET Full Stack avec %YEARS% ans d’expérience dans la conception et le développement d’applications web. ",
+  "presentation_2": "Spécialisé en .NET Core côté back-end et en Vue.js / Blazor côté front-end, j’interviens sur l’ensemble du cycle de développement, de la conception à la mise en production, avec également une expertise sur les enjeux DevOps et infrastructure. Curieux, autonome et orienté solutions, j’aime relever des défis techniques et concevoir des solutions fiables, performantes et adaptées aux besoins métier.",
   "presentation_3": "Pendant mon temps libre, j’aime sortir avec des amis boire un verre et améliorer mon chez-moi.",
   "drivesMe": "Ce qui me motive",
   "getInTouchTitle": "Envie de me contacter ?",
@@ -12,12 +12,10 @@
   "website": "Site web",
   "cv": "CV",
   "mail": "Email",
-
   "links": {
     "portfolio": "Portfolio",
     "contact": "Informations de contact"
   },
-
   "contact": {
     "formTitle": "Formulaire de contact",
     "submit": "Envoyer",
@@ -62,7 +60,6 @@
   "cvPrintShowAbout": "Afficher la section A propos",
   "timelineTitle": "Mon Parcours",
   "mission": "Mission",
-
   "experiences": {
     "wavenet": {
       "description": "Construction et maintenance d’applications web robustes avec .NET Core (API, Blazor), TypeScript (Vue.js) et Azure. Accent mis sur la scalabilité, la performance et la propreté du code.",
@@ -95,14 +92,12 @@
       "title": "Stagiaire Développeur Web"
     }
   },
-
   "educations": {
     "heh": {
       "description": "Bachelier en Informatique et Systèmes, spécialisation Télécommunications et Réseaux",
       "date": "Septembre 2019 - Juin 2022"
     }
   },
-
   "certifications": {
     "gh300": {
       "name": "Github Copilot (GH-300)",
@@ -126,7 +121,6 @@
       "validUntil": "Août 2028"
     }
   },
-
   "contacts": {
     "phone": "Numéro de téléphone",
     "mail": "E-mail",
@@ -136,7 +130,6 @@
     "french": "Français",
     "english": "Anglais"
   },
-
   "skill": {
     "languages": "Langages de programmation",
     "webBackend": "Web Back-end",
@@ -149,7 +142,6 @@
     "communication": "Communication",
     "adaptive": "Adaptabilité"
   },
-
   "transverseSkillsTitle": "Compétences transversales",
   "transverseSkills": {
     "analysisAndDesign": {
@@ -177,7 +169,6 @@
       "description": "Automatiser les processus et créer des outils pour améliorer la productivité et l'efficacité."
     }
   },
-
   "aboutMe": "À propos",
   "contactTitle": "Contact",
   "workExperience": "Expériences Professionnelles",
@@ -187,9 +178,9 @@
   "languagesTitle": "Langues",
   "validUntil": "Valide jusqu'à",
   "viewBadge": "Voir le badge",
-
   "cvHeader": {
     "title": "Full Stack Developer .NET",
     "description": "Analyste développeur .NET Full Stack avec plus de 4 ans d’expérience dans le développement d’applications web. Spécialisé en .NET Core (back-end), Vue.js et Blazor (front-end), j’interviens sur l’ensemble du cycle de développement ainsi que sur les aspects DevOps et infrastructure. Curieux et orienté solutions, j’apprécie relever des défis techniques et optimiser les processus."
-  }
+  },
+  "technologiesTitle": "Technologies"
 }
