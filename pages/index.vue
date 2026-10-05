@@ -12,6 +12,13 @@ const cvPrintOptions = reactive({
     showCertifications: true,
     showAbout: true,
 })
+
+function contactHref(value: string): string | undefined {
+    if (value.includes('@')) return `mailto:${value}`
+    if (value.startsWith('+')) return `tel:${value}`
+    if (value.startsWith('http')) return value
+    return undefined
+}
 </script>
 <template>
     <Cv :full-name="fullName" :experiences="experiences" :educations="educations" :certifications="certifications" :contacts="contacts" :languages="languages" :skills="skills" :variant="cvVariant" :show-missions="cvPrintOptions.showMissions" :show-certifications="cvPrintOptions.showCertifications" :show-about="cvPrintOptions.showAbout" />
@@ -53,14 +60,16 @@ const cvPrintOptions = reactive({
                         <h1 class="text-2xl font-bold leading-tight">{{ fullName }}</h1>
                         <p class="text-base-content/70 mt-0.5">{{ $t('cvHeader.title') }}</p>
                         <div class="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-sm text-base-content/60">
-                            <a
-                                v-for="contact in contacts"
-                                :key="contact.name"
-                                :href="contact.value.startsWith('@') || contact.value.includes('@') ? `mailto:${contact.value}` : contact.value.startsWith('+') ? `tel:${contact.value}` : contact.value.startsWith('http') ? contact.value : undefined"
-                                :target="contact.value.startsWith('http') ? '_blank' : undefined"
-                                rel="noopener noreferrer"
-                                class="hover:text-primary transition-colors"
-                            >{{ contact.value }}</a>
+                            <template v-for="contact in contacts" :key="contact.name">
+                                <a
+                                    v-if="contactHref(contact.value)"
+                                    :href="contactHref(contact.value)"
+                                    :target="contact.value.startsWith('http') ? '_blank' : undefined"
+                                    rel="noopener noreferrer"
+                                    class="hover:text-primary transition-colors"
+                                >{{ contact.value }}</a>
+                                <span v-else>{{ contact.value }}</span>
+                            </template>
                         </div>
                         <div class="mt-3 flex gap-3">
                             <NuxtLink href="https://github.com/h0livier" target="_blank" rel="noopener noreferrer">
@@ -74,7 +83,7 @@ const cvPrintOptions = reactive({
                 </div>
             </Fade>
 
-            <!-- Main 3-column grid -->
+            <!-- Main 2-column grid -->
             <div class="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-4">
 
                 <!-- Left column -->
@@ -100,12 +109,15 @@ const cvPrintOptions = reactive({
                                 <h2 class="card-title text-lg">{{ $t('contactTitle') }}</h2>
                                 <div v-for="contact in contacts" :key="contact.name" class="text-sm">
                                     <p class="font-semibold text-base-content/60 text-xs uppercase tracking-wide">{{ contact.name }}</p>
-                                    <a
-                                        :href="contact.value.includes('@') ? `mailto:${contact.value}` : contact.value.startsWith('+') ? `tel:${contact.value}` : contact.value.startsWith('http') ? contact.value : undefined"
-                                        :target="contact.value.startsWith('http') ? '_blank' : undefined"
-                                        rel="noopener noreferrer"
-                                        class="text-base-content hover:text-primary transition-colors"
-                                    >{{ contact.value }}</a>
+                                    <template v-if="contactHref(contact.value)">
+                                        <a
+                                            :href="contactHref(contact.value)"
+                                            :target="contact.value.startsWith('http') ? '_blank' : undefined"
+                                            rel="noopener noreferrer"
+                                            class="text-base-content hover:text-primary transition-colors"
+                                        >{{ contact.value }}</a>
+                                    </template>
+                                    <span v-else class="text-base-content">{{ contact.value }}</span>
                                 </div>
                             </div>
                         </div>
