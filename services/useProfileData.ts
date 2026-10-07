@@ -100,12 +100,14 @@ export const useProfileData = () => {
   const contacts: ListOption[] = [
     { name: t('contacts.phone'), value: '+32 471 64 60 15' },
     { name: t('contacts.mail'), value: 'olivier.hayot.dev@gmail.com' },
-    { name: t('contacts.website'), value: 'https://cv.olivierhayot.be' }
+    { name: t('contacts.website'), value: 'https://cv.olivierhayot.be' },
+    { name: t('contacts.location'), value: 'Soignies, Hainaut, Belgique' }
   ]
 
   const contactHeader : ListOption[] = [
     { name: t('contacts.phone'), value: '+32 471 64 60 15' },
     { name: t('contacts.mail'), value: 'olivier.hayot.dev@gmail.com' },
+    { name: t('contacts.location'), value: 'Soignies, Hainaut, Belgique' }
   ]
   const languages: ListOption[] = [
     { name: t('languages.french'), value: 'C2' },
