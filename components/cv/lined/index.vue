@@ -63,17 +63,20 @@ const skills = props.skills // ["C#", ".Net Core", "EF Core", "XUnit/NUnit", "Bl
         </cv-lined-section>
         
         <cv-lined-section :title='$t("education")'>
-            <cv-lined-certification
-                v-if="props.showCertifications !== false"
-                v-for="(certification, index) in certifications"
-                :key="index"
-                :certification="certification" />
             <cv-lined-experience
                 v-for="(education, index) in educations"
                 :key="index"
                 :place="education.name"
                 :date="education.date"
                 :description="education.description" />
+        </cv-lined-section>
+
+        <cv-lined-section :title='$t("Certifications")'>
+            <cv-lined-certification
+                v-if="props.showCertifications !== false"
+                v-for="(certification, index) in certifications"
+                :key="index"
+                :certification="certification" />
         </cv-lined-section>
 
         <cv-lined-section :title='$t("skills")'>
