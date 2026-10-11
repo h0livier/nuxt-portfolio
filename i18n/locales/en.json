@@ -124,7 +124,9 @@
   "contacts": {
     "phone": "Phone number",
     "mail": "Mail",
-    "website": "Website"
+    "website": "Website",
+    "location": "Location",
+    "locationValue": "Soignies, Hainaut, Belgium"
   },
   "languages": {
     "french": "French",
