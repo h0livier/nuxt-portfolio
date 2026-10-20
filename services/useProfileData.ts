@@ -118,7 +118,7 @@ export const useProfileData = () => {
     {name: t('skill.webFrontend'), value: 'Vue.js,, Blazor(WASM/Server), HTML5/CSS3/SASS'},
     {name: t('skill.databases'), value: 'PostgreSQL, SQL Server, Cosmos DB, SQLite'},
     {name: t('skill.devOps'), value: 'Microsoft Azure, Docker, Terraform, Git, Github, CI/CD (Github Actions)'},
-    {name: t('skill.ai'), value: 'Github Copilot'},
+    {name: t('skill.ai'), value: 'GitHub Copilot'},
     {name: t('skill.soft'), value: `${t('skill.analytic')}, ${t('skill.team')}, ${t('skill.communication')}, ${t('skill.adaptive')}`}
   ]
 
