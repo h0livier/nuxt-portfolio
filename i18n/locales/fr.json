@@ -124,7 +124,8 @@
   "contacts": {
     "phone": "Numéro de téléphone",
     "mail": "E-mail",
-    "website": "Site web"
+    "website": "Site web",
+    "location": "Localisation"
   },
   "languages": {
     "french": "Français",
