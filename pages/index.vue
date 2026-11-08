@@ -1,9 +1,20 @@
 <script setup lang="ts">
-import type { CVPrintVariant } from '~/types'
+import type { CVPrintVariant, CVDataStoreType } from '~/types'
 import LinkedinMain from '~/components/linkedin/Main.vue'
-import { reactive, ref } from 'vue'
+import { reactive, ref, computed } from 'vue'
 import { useProfileData } from '~/services/useProfileData'
-const {fullName, experiences, educations, certifications, contacts, contactHeader, languages, skills, transverseSkills, skillsWithImages, skillsWithImagesReverse} = useProfileData()
+import { useDevOpsProfileData } from '~/services/useDevOpsProfileData'
+
+const cvDataStore = ref<CVDataStoreType>('classic')
+const profileClassic = useProfileData()
+const profileDevOps = useDevOpsProfileData()
+
+const profileData = computed(() => {
+    return cvDataStore.value === 'devops' ? profileDevOps : profileClassic
+})
+
+const { fullName, experiences, educations, certifications, contacts, contactHeader, languages, skills, transverseSkills, skillsWithImages, skillsWithImagesReverse } = profileData.value
+
 const cvVariant = ref<CVPrintVariant>('squared')
 const cvPrintOptions = reactive({
     showMissions: true,
@@ -19,7 +30,7 @@ function contactHref(value: string): string | undefined {
 }
 </script>
 <template>
-    <Cv :full-name="fullName" :experiences="experiences" :educations="educations" :certifications="certifications" :contacts="contacts" :languages="languages" :skills="skills" :variant="cvVariant" :show-missions="cvPrintOptions.showMissions" :show-certifications="cvPrintOptions.showCertifications" :show-about="cvPrintOptions.showAbout" />
+    <Cv :full-name="profileData.fullName" :experiences="profileData.experiences" :educations="profileData.educations" :certifications="profileData.certifications" :contacts="profileData.contacts" :languages="profileData.languages" :skills="profileData.skills" :variant="cvVariant" :show-missions="cvPrintOptions.showMissions" :show-certifications="cvPrintOptions.showCertifications" :show-about="cvPrintOptions.showAbout" />
 
     <div data-theme="default" class="min-h-screen bg-base-200 print:hidden" id="main-content">
         <div class="max-w-5xl mx-auto px-3 pt-[12.5vh] md:pt-[17.5vh] lg:pt-[25vh] pb-6">
@@ -40,10 +51,10 @@ function contactHref(value: string): string | undefined {
                                 <LanguageSwitch />
                             </div>
                         </div>
-                        <h1 class="text-2xl font-bold leading-tight">{{ fullName }}</h1>
+                        <h1 class="text-2xl font-bold leading-tight">{{ profileData.fullName }}</h1>
                         <p class="text-base-content/70 mt-0.5">{{ $t('cvHeader.title') }}</p>
                         <div class="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-sm text-base-content/60">
-                            <template v-for="contact in contactHeader" :key="contact.name">
+                            <template v-for="contact in profileData.contactHeader" :key="contact.name">
                                 <a
                                     v-if="contactHref(contact.value)"
                                     :href="contactHref(contact.value)"
@@ -60,10 +71,12 @@ function contactHref(value: string): string | undefined {
                                 :show-missions="cvPrintOptions.showMissions"
                                 :show-certifications="cvPrintOptions.showCertifications"
                                 :show-about="cvPrintOptions.showAbout"
+                                :data-store="cvDataStore"
                                 @update:variant="cvVariant = $event"
                                 @update:showMissions="cvPrintOptions.showMissions = $event"
                                 @update:showCertifications="cvPrintOptions.showCertifications = $event"
                                 @update:showAbout="cvPrintOptions.showAbout = $event"
+                                @update:dataStore="cvDataStore = $event"
                             />
                             <NuxtLink href="https://github.com/h0livier" target="_blank" rel="noopener noreferrer">
                                 <i class="devicon-github-plain text-2xl hover:text-primary transition-colors"></i>
