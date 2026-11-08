@@ -29,3 +29,4 @@ export interface Certification extends Place {
 }
 
 export type CVPrintVariant = 'ats' | 'lined' | 'squared'
+export type CVDataStoreType = 'classic' | 'devops'

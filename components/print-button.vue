@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { CVPrintVariant } from '~/types'
+import type { CVPrintVariant, CVDataStoreType } from '~/types'
 import { useAppInsights } from '~/helpers/appinsight'
 
 const appInsights = useAppInsights();
@@ -9,6 +9,7 @@ interface PrintButtonProps {
     showMissions: boolean
     showCertifications: boolean
     showAbout: boolean
+    dataStore: CVDataStoreType
 }
 
 const props = defineProps<PrintButtonProps>()
@@ -17,6 +18,7 @@ const emit = defineEmits<{
     (e: 'update:showMissions', value: boolean): void
     (e: 'update:showCertifications', value: boolean): void
     (e: 'update:showAbout', value: boolean): void
+    (e: 'update:dataStore', value: CVDataStoreType): void
 }>()
 
 const modal = ref<HTMLDialogElement | null>(null)
@@ -43,6 +45,12 @@ function updateShowAbout(value: boolean) {
     emit('update:showAbout', value)
 }
 
+function updateDataStore(value: string) {
+    if (value === 'classic' || value === 'devops') {
+        emit('update:dataStore', value)
+    }
+}
+
 function print(){
     appInsights.trackTrace('PrintButtonClicked');
     window.print()
@@ -52,7 +60,12 @@ function print(){
     <dialog ref="modal" class="modal modal-bottom sm:modal-middle">
         <div class="modal-box">
             <h3 class="text-xl font-bold">{{ $t("printButton") }}</h3>
-            <p class="pt-4 py-6">{{ $t("cvPrintLayout") }}</p>
+            <p class="pt-4 py-2">{{ $t("cvDataStore") }}</p>
+            <select class="select select-bordered w-full mb-4" :value="props.dataStore" @change="updateDataStore(($event.target as HTMLSelectElement).value)">
+                <option value="classic">{{ $t("cvDataStoreClassic") }}</option>
+                <option value="devops">{{ $t("cvDataStoreDevOps") }}</option>
+            </select>
+            <p class="py-2">{{ $t("cvPrintLayout") }}</p>
             <select class="select select-bordered w-full mb-4" :value="props.variant" @change="updateVariant(($event.target as HTMLSelectElement).value)">
                 <option value="squared">{{ $t("cvPrintLayoutSquared") }}</option>
                 <option value="lined">{{ $t("cvPrintLayoutLined") }}</option>
