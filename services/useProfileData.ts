@@ -114,10 +114,11 @@ export const useProfileData = () => {
 
   const skills: ListOption[] = [
     {name: t('skill.languages'), value: 'C#, Typescript, SQL'},
-    {name: t('skill.webBackend'), value: '.Net 8/10, ASP.NET Core, CQRS, EF Core, XUnit/NUnit/BUnit'},
-    {name: t('skill.webFrontend'), value: 'Vue.js, Blazor(WASM/Server), HTML5/CSS3/SASS, Playwright'},
+    {name: t('skill.webBackend'), value: '.Net 8, .NET 10, ASP.NET Core, CQRS, EF Core, XUnit, NUnit, BUnit'},
+    {name: t('skill.webFrontend'), value: 'Vue.js, Blazor WebAssembly, Blazor Interactive Server, HTML5/CSS3/SASS, Playwright'},
     {name: t('skill.databases'), value: 'PostgreSQL, SQL Server, Cosmos DB, SQLite'},
-    {name: t('skill.devOps'), value: 'Microsoft Azure, Docker, Terraform, Git, GitHub, CI/CD (GitHub Actions)'},
+    {name: t('skill.devOps'), value: 'Docker, Terraform, Git, GitHub, CI/CD (GitHub Actions), Azure DevOps'},
+    {name: t('skill.cloud'), value: 'Azure App Services, Azure Container Apps, Azure Static Web Apps, Azure Functions, Azure Key Vault, Azure Container Registry, Azure Blob Storage, Azure Queue Storage, Azure Service Bus, Azure Application Insights, Microsoft Entra ID'},
     {name: t('skill.ai'), value: 'GitHub Copilot, Copilot Agent Mode, Prompt Engineering, Agentic Workflows'},
     {name: t('skill.soft'), value: `${t('skill.analytic')}, ${t('skill.team')}, ${t('skill.communication')}, ${t('skill.adaptive')}`}
   ]
