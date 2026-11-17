@@ -9,6 +9,12 @@ const isPageNotFound = props.error?.statusCode == 404
 const errorMessage = isPageNotFound ? "Page not found" : "An error Occured"
 
 const handleError = () => clearError({ redirect: '/' })
+
+onMounted(() => {
+  if (isPageNotFound) {
+    navigateTo('/')
+  }
+})
 </script>
 
 <template>
