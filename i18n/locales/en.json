@@ -51,6 +51,9 @@
     }
   },
   "printButton": "Check out my resume",
+  "cvDataStore": "Choose your CV type",
+  "cvDataStoreClassic": "Classic (.NET Full-Stack)",
+  "cvDataStoreDevOps": "DevOps",
   "cvPrintLayout": "Choose the CV layout to print",
   "cvPrintLayoutSquared": "Columns",
   "cvPrintLayoutLined": "Vertical",

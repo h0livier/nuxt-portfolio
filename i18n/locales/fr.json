@@ -51,6 +51,9 @@
     }
   },
   "printButton": "Consultez mon CV",
+  "cvDataStore": "Choisissez le type de CV",
+  "cvDataStoreClassic": "Classique (.NET Full-Stack)",
+  "cvDataStoreDevOps": "DevOps",
   "cvPrintLayout": "Choisissez la mise en page du CV à imprimer",
   "cvPrintLayoutSquared": "Colonnes",
   "cvPrintLayoutLined": "Vertical",
