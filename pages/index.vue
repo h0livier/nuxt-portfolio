@@ -13,8 +13,6 @@ const profileData = computed(() => {
     return cvDataStore.value === 'devops' ? profileDevOps : profileClassic
 })
 
-const { fullName, experiences, educations, certifications, contacts, contactHeader, languages, skills, transverseSkills, skillsWithImages, skillsWithImagesReverse } = profileData.value
-
 const cvVariant = ref<CVPrintVariant>('squared')
 const cvPrintOptions = reactive({
     showMissions: true,

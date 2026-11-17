@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { Certification, ListOption, Place, WorkPlace } from '~/types'
+import { toRefs } from 'vue'
 
 interface CVProps {
 	educations: Place[]
@@ -15,12 +16,7 @@ interface CVProps {
 
 const props = defineProps<CVProps>()
 
-const educations = props.educations
-const experiences = props.experiences
-const certifications = props.certifications
-const contacts = props.contacts
-const languages = props.languages
-const skills = props.skills
+const { educations, experiences, certifications, contacts, languages, skills } = toRefs(props)
 </script>
 
 <template>
